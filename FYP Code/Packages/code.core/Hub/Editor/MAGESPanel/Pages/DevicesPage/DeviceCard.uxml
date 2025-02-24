@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/DevicesPage/DeviceCard.uss?fileID=7433441132597879392&amp;guid=e3cfbb3eee5ef1941aa31335ec14f2bc&amp;type=3#DeviceCard" />
+    <ui:Label tabindex="-1" text="Example Scene" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sample-title" class="h2" />
+    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sample-description" text="An empty mages scene to " />
+    <ui:Button text="Select" parse-escape-sequences="true" display-tooltip-when-elided="true" name="select" />
+</ui:UXML>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.JARIA.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.JARIA.Editor.HistoryDataObject">
+            <summary>
+            Scriptable object that contains the history of the conversation with jaria.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.HistoryDataObject.UserHistory">
+            <summary>
+            Gets or sets the user message history.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.HistoryDataObject.AIHistory">
+            <summary>
+            Gets or sets the AI message history.
+            </summary>
+        </member>
+        <member name="T:MAGES.JARIA.Editor.JARIA">
+            <summary>
+            Singleton class for JARIA.
+            </summary>
+        </member>
+        <member name="T:MAGES.JARIA.Editor.JARIA.ResponseUpdatedDelegate">
+            <summary>
+            Delegate for when the response is updated.
+            </summary>
+            <param name="newresponse">The updated data.</param>
+        </member>
+        <member name="E:MAGES.JARIA.Editor.JARIA.ResponseUpdated">
+            <summary>
+            Event for when the response is updated.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIA.Instance">
+            <summary>
+            Gets singleton instance of JARIA.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIA.Response">
+            <summary>
+            Gets or sets the response label data.
+            </summary>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIA.ResetResponse">
+            <summary>
+            Resets the response data.
+            </summary>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIA.GetModelURL(System.String)">
+            <summary>
+            Gets the URL of the model.
+            </summary>
+            <param name="filename">The filename of the model requested from the user.</param>
+            <returns>The download url of the model.</returns>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIA.RequestToJariaAsync(System.String,System.String,System.String)">
+            <summary>
+            Sends API call to JARIA and returns the response.
+            </summary>
+            <param name="userInput">The user's input text.</param>
+            <param name="openAIKey">User's openAI key.</param>
+            <param name="selection">The selected model for inference.</param>
+            <returns>The response data.</returns>
+        </member>
+        <member name="T:MAGES.JARIA.Editor.JARIAPane">
+            <summary>
+            Class for ARIA editor window.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIAPane.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIAPane.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIAPane.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.JARIAPane.ShowBundleSelectionUI">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIAPane.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIAPane.Deselect">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIAPane.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.JARIAPane.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.JARIA.Editor.ResponseData">
+            <summary>
+            Class that stores the response data from JARIA.
+            </summary>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.ResponseData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.JARIA.Editor.ResponseData"/> class.
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.ResponseData.History">
+            <summary>
+            Gets or sets the history of the user and JARIA chat.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.ResponseData.JARIAResponse">
+            <summary>
+            Gets or sets jARIA revision response.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.Editor.ResponseData.UserInput">
+            <summary>
+            Gets or sets the user input.
+            </summary>
+        </member>
+        <member name="M:MAGES.JARIA.Editor.ResponseData.Copy">
+            <summary>
+            Copies the current instance of the <see cref="T:MAGES.JARIA.Editor.ResponseData"/> class.
+            </summary>
+            <returns>Copy of current instance.</returns>
+        </member>
+    </members>
+</doc>

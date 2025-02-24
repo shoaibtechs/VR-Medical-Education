@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="RemoveObject" binding-path="removeObject" />
+    <uie:PropertyField name="ReleaseDistance" binding-path="releaseDistance" />
+    <uie:PropertyField name="AxisToLock" binding-path="axisToLock" />
+    <uie:PropertyField name="PerformOnObjectRelease" binding-path="peformOnObjectRelease" />
+</ui:UXML>

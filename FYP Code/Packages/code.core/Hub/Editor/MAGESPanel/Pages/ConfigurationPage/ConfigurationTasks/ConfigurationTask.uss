@@ -1,0 +1,40 @@
+:root{
+	flex-direction: row;
+	align-items:center;
+	height:auto;
+	--c-pressable-ui-background: #3C3C3C;
+	--c-pressable-ui-text: white;
+	--c-pressable-ui-text-disabled: #3C3C3C;
+
+	--c-list-view-item-hover: #3C3C3C;
+	--c-list-view-item-selected: #3C3C3C;
+}
+
+#icon{
+    -unity-background-scale-mode: scale-to-fit;
+	width:20px;
+	height:20px;
+	margin-right:5px;
+}
+
+#message{
+	margin: 5px;
+	height: 100%;
+	white-space: normal;
+	-unity-text-align: middle-left;
+}
+
+.h1 {
+	font-size: 20px;
+	-unity-font-style: bold;
+}
+
+.h2 {
+	font-size: 15px;
+	-unity-font-style: bold;
+}
+
+.h3 {
+	font-size: 12px;
+	-unity-font-style: bold;
+}

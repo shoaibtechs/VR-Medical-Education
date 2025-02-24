@@ -1,0 +1,22 @@
+using MAGES;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class #SCRIPT_NAME# : MonoBehaviour
+{
+    // Called when the action is initialized.
+    void ActionInitialized(BaseActionData data)
+    {
+    }
+
+    // Called when the action is performed.
+    void ActionPerformed(BaseActionData data)
+    {
+    }
+
+    // Called when the action is undone.
+    void ActionUndone(BaseActionData data)
+    {
+    }
+}

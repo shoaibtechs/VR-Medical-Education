@@ -1,0 +1,22 @@
+.step-event {
+    color: rgb(175, 175, 175);
+    background-color: rgba(50, 50, 50, 0);
+    margin: 4px 0 4px 0;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.step-event:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+    transition: color 0.15s ease-in-out;
+}
+
+.step-event-active {
+    background-color: rgb(60, 60, 60);
+}
+
+PopupPanel > #content {
+    padding-left: 0;
+}

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="ObjectUsed" binding-path="objectUsed" />
+    <ui:Button text="New trajectory line" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewTrajectoryButton" />
+    <uie:PropertyField name="TrajectoryLine" binding-path="trajectoryLine" />
+    <uie:PropertyField binding-path="animatedObject" name="AnimatedObject" />
+    <ui:DropdownField label="Animator State" index="-1" binding-path="animatorStates" name="AnimatorStates" />
+    <ui:DropdownField label="Animator Layer" index="0" binding-path="animatorLayers" name="AnimatorLayers" />
+    <uie:PropertyField name="RequiresActivation" binding-path="requiresActivation" />
+</ui:UXML>

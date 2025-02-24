@@ -1,0 +1,1588 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.SceneGraph.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.SceneGraph.ActionFactory">
+            <summary>
+            A factory for creating actions for a specific graph.
+            </summary>
+            To create a factory, add it as a nested class inside of the corresponding action data class.
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.InvokeInitialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <summary>
+            Shortcut to invoke <see cref="M:MAGES.SceneGraph.ActionFactory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)"/>.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="trigger">The trigger.</param>
+            <param name="runner">The graph runner.</param>
+            <returns>True on success, false otherwise.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.InvokeUndo(MAGES.BaseActionData)">
+            <summary>
+            Shortcut to invoke <see cref="M:MAGES.SceneGraph.ActionFactory.Undo(MAGES.BaseActionData)"/>.
+            </summary>
+            <param name="data">The data.</param>
+            <returns>True on success, false otherwise.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.InvokeWriteDefaults(MAGES.BaseActionData)">
+            <summary>
+            Shortcut to invoke <see cref="M:MAGES.SceneGraph.ActionFactory.WriteDefaults(MAGES.BaseActionData)"/>.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.CreateAction(System.Type)">
+            <summary>
+            Create an action of type <paramref name="actionType"/>.
+            </summary>
+            <param name="actionType">The action type.</param>
+            <returns>The new instance of the action object.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if the type argument is not a subclass of <see cref="T:MAGES.BaseActionData"/>.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.WriteDefaults(MAGES.BaseActionData)">
+            <summary>
+            Write the default values for the action data.
+            </summary>
+            <param name="data">The action data.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <summary>
+            Initialize the action based on <paramref name="data"/>.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="trigger">Invoke this action to move to the next one.</param>
+            <param name="runner">The graph runner.</param>
+            <returns>Whether (or not) the action was properly initialized.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionFactory.Undo(MAGES.BaseActionData)">
+            <summary>
+            Undo the action <paramref name="data"/>.
+            </summary>
+            <param name="data">The action data.</param>
+            <returns>Whether (or not) the action was properly undone.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActionGameObject">
+            <summary>
+            property Drawer of the collection of all the properties an object needs in an Action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.AdvancedMode">
+            <summary>
+            Gets or sets a value indicating whether the advanced mode is enabled.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.ActionObject">
+            <summary>
+            Gets or sets the action object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.DestroyOnPerform">
+            <summary>
+            Gets or sets a value indicating whether the action object should be destroyed on perform.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.ActionObjectParent">
+            <summary>
+            Gets the parent object of the action object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.ActionGameObjectLabel">
+            <summary>
+            Gets or sets the object's editor lablel.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionGameObject.ActionGameObjectTooltip">
+            <summary>
+            Gets or sets the object's editor tooltip.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActionNameAttribute">
+            <summary>
+            Used to customize editor details about a specific action data object.
+            </summary>
+            Usage: Add this attribute to a class that inherits from <see cref="!:ActionData"/> to customize the name of the action in the editor.
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.ActionNameAttribute"/> class.
+            </summary>
+            <param name="name">The action name.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActionNameAttribute.Name">
+            <summary>
+            Gets the name of the action.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActivateActionData">
+            <summary>
+            Class that contains the data for the Activate action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.ActivateActionData.activateObject">
+            <summary>
+            The object to be Activated.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.ActivateActionData.animationClip">
+            <summary>
+            The Animation to be played along with the activation.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.ActivateActionData.numberOfActivations">
+            <summary>
+            The number of times the object should be activated in order to perform the action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.ActivateActionData.activateOnPress">
+            <summary>
+            If true, the action will perform when the button is pressed.
+            If false,  the action will perform when the button is released.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateActionData.ActivateObjectSpawned">
+            <summary>
+            Gets the instantiated activate object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateActionData.ActivateObject">
+            <summary>
+            Gets or sets the activate object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActivateActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActivateActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActivateActionData.Factory.WriteDefaults(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActivateActionGhostEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.GhostEffectData"/> for <see cref="T:MAGES.SceneGraph.ActivateActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActivateActionGhostEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActivateActionLabelEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.LabelEffectData"/> for <see cref="T:MAGES.SceneGraph.ActivateActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActivateActionLabelEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.ActivateBehavior">
+            <summary>
+            This behavior is performed when the user interacts with the object and presses the activation button.
+            An animation also can be played when the object is activated.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateBehavior.OnActivated">
+            <summary>
+            Gets the on Activated event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateBehavior.NumberOfActivations">
+            <summary>
+            Gets or sets the number of activations needed to perform the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateBehavior.ActivateOnPress">
+            <summary>
+            Gets or sets a value indicating whether the action performs according to the activation of the object.
+            If true, the action will perform when the button is pressed.
+            If false,  the action will perform when the button is released.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ActivateBehavior.AnimationClip">
+            <summary>
+            Gets or sets the animation attached with the activations Action.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.ArrowEffectData">
+            <summary>
+            Data for the arrow effect.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ArrowEffectData.Theme">
+            <summary>
+            Gets or sets the theme for the arrow.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.ArrowEffectData.ShowOnInteractable">
+            <summary>
+            Gets or sets a value indicating whether the arrow should be shown on the interactable.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.ArrowEffectData.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.BaseBehavior">
+            <summary>
+            The base class for all behaviors.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.BaseBehavior.objectID">
+            <summary>
+            The ID of the object.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.BaseBehavior.actionData">
+            <summary>
+            Save the action data of Action to get the functionalities.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.BaseBehavior.ObjectID">
+            <summary>
+            Gets or sets the ID of the object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.BaseBehavior.ActionData">
+            <summary>
+            Gets or sets the actionData of Action.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.CallFunctionStep">
+            <summary>
+            Call a function given a gameobject either in the scene or as a prefab. If a prefab is selected, spawn the prefab first.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.CallFunctionStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.DestroyActionObjectStep">
+            <summary>
+            A step that network-destroys an action object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.DestroyActionObjectStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.DestroyStep">
+            <summary>
+            A step that destroys an object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.DestroyStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.DisplayOnlyOnActionsAttribute">
+            <summary>
+            Used on serialized properties declared inside <see cref="T:MAGES.EffectData"/>.
+            Only allows the specified property to be displayed when an action is one of the specified types.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.DisplayOnlyOnActionsAttribute.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.DisplayOnlyOnActionsAttribute"/> class.
+            </summary>
+            <param name="applicableActions">The actions on which the property can only be displayed.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.DisplayOnlyOnActionsAttribute.IsApplicable(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.DontDisplayOnActionAttribute">
+            <summary>
+            Used on serialized properties declared inside <see cref="T:MAGES.EffectData"/>.
+            Hides the specified property from the inspector when the action is of the specified type.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.DontDisplayOnActionAttribute.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.DontDisplayOnActionAttribute"/> class.
+            </summary>
+            <param name="hideActionTypes">The actions to hide this property from.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.DontDisplayOnActionAttribute.IsApplicable(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.EffectPropertyAttribute">
+            <summary>
+            Base class for attributes that can be used to decorate effect data properties.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.EffectPropertyAttribute.IsApplicable(System.Type)">
+            <summary>
+            Returns true if the attribute is applicable to the given action data type.
+            </summary>
+            <param name="actionDataType">The action data type context.</param>
+            <returns>Whether (or not) this property is applicable to the action type.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.EnableIfAttribute">
+            <summary>
+            Used in <see cref="!:MAGES.SceneGraph.Editor.VisualizerPropertyField"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.EnableIfAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.EnableIfAttribute"/> class.
+            </summary>
+            <param name="propertyName">The property name to test.</param>
+            <param name="evaluate">The bool value to compare against.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.EnableIfAttribute.PropertyPath">
+            <summary>
+            Gets the property path to the property to test.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.EnableIfAttribute.IsApplicable(System.Boolean)">
+            <summary>
+            Test the value.
+            </summary>
+            <param name="value">The current state of the referenced property field.</param>
+            <returns>Whether or not it's applicable.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.EndActionData">
+            <summary>
+            Data for the end action.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.EndActionData.Factory">
+            <summary>
+            Factory for the end action.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.EndActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.GhostEffectData">
+            <summary>
+            Data for the ghost effect.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GhostEffectData.Theme">
+            <summary>
+            Gets or sets the theme for the ghost.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GhostEffectData.ShowOnInteractable">
+            <summary>
+            Gets or sets a value indicating whether the ghost should be shown on the interactable.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GhostEffectData.ShowOnTarget">
+            <summary>
+            Gets or sets a value indicating whether the ghost should be shown on the target item.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.GhostEffectData.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.GraphRunner">
+            <summary>
+            An object that can run a single graph.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.RuntimeGraph">
+            <summary>
+            Gets or sets the graph data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.OriginalGraph">
+            <summary>
+            Gets or sets the original graph data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.ActionInitialized">
+            <summary>
+            Gets or sets the action initialized event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.ActionPerformed">
+            <summary>
+            Gets or sets the action performed event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.ActionUndone">
+            <summary>
+            Gets or sets the action performed event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.GraphRunner.ActionStateChanged">
+            <summary>
+            Gets or sets the action state changed event.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.Perform(System.Boolean)">
+            <summary>
+            Perform the currently running actions.
+            </summary>
+            <param name="skip">Set to true if user has skipped the action.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.Undo">
+            <summary>
+            Undo the currently running actions.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.PerformAction(MAGES.BaseActionData,System.Boolean)">
+            <summary>
+            Perform an action.
+            </summary>
+            <param name="data">The action.</param>
+            <param name="skip">Set to true if the user skipped it.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.UndoAction(MAGES.BaseActionData)">
+            <summary>
+            Undo an action.
+            </summary>
+            <param name="data">The action.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.StartGraph">
+            <summary>
+            Initialize the graph and start simulating the actions.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.GraphRunner.InitializeAction(MAGES.BaseActionData)">
+            <summary>
+            Initialize an action.
+            </summary>
+            <param name="data">The action data.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionArrowEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.ArrowEffectData"/> for <see cref="T:MAGES.SceneGraph.InsertActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionArrowEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionData">
+            <summary>
+            Class that contains the data for the Insert action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertActionData.insertObject">
+            <summary>
+            The object to be inserted.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertActionData.finalPosition">
+            <summary>
+            The final position of the object.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertActionData.maxInsertAngle">
+            <summary>
+            The max accepted angle the object should be inserted at.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionData.InsertionType">
+            <summary>
+            Enum with the types of insertion.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertActionData.InsertionType.Snap">
+            <summary>
+            Directly snap the object into place.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertActionData.InsertionType.Lerp">
+            <summary>
+            Play a smooth lerp to the final position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.InsertObjectSpawned">
+            <summary>
+            Gets the instantiated insert object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.FinalPositionSpawned">
+            <summary>
+            Gets the instantiated final position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.InsertObject">
+            <summary>
+            Gets or sets the insert object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.FinalPosition">
+            <summary>
+            Gets or sets the final position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.ActionInsertObject">
+            <summary>
+            Gets or sets the action insert object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.ActionFinalPosition">
+            <summary>
+            Gets or sets the action final position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionData.Factory.Undo(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionData.Factory.WriteDefaults(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionGhostEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.GhostEffectData"/> for <see cref="T:MAGES.SceneGraph.InsertActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionGhostEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertActionLabelEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.LabelEffectData"/> for <see cref="T:MAGES.SceneGraph.InsertActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertActionLabelEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.InsertBehavior">
+            <summary>
+            Behavior that handles the Insert action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertBehavior.snapIntoPlace">
+            <summary>
+            if true, the object will snap into place when inserted.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertBehavior.finalPosition">
+            <summary>
+            The instantiated final position object.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.InsertBehavior.lerpInProgress">
+            <summary>
+            If true, the object is currently lerping to the final position (internal use only).
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertBehavior.OnInserted">
+            <summary>
+            Gets the on triggered event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertBehavior.InsertedAngleDiff">
+            <summary>
+            Gets the angle difference between the inserted object and the final position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertBehavior.FinalPosition">
+            <summary>
+            Gets or sets the inal position of the insert Action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertBehavior.AngleTolerance">
+            <summary>
+            Gets or sets the insertion angle. If angle tolerance is 0, the object must be inserted at the exact angle.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.InsertBehavior.InsertionType">
+            <summary>
+            Gets or sets the insertion type.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.Start">
+            <summary>
+            Initialize the script.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.FinalizeAction">
+            <summary>
+            Finalizes the action of inserting the object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.SetupFinalPosition(UnityEngine.GameObject)">
+            <summary>
+            Sets up the final position of the object.
+            </summary>
+            <param name="gameObject">The final position of the object.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.DeactivateRenderers(UnityEngine.GameObject)">
+            <summary>
+            Deactivates the rendererers of the object.
+            </summary>
+            <param name="spawnedFinalObject">The object to deactivate the renderers.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.MakeAllCollidersTrigger(UnityEngine.GameObject)">
+            <summary>
+            Makes all the colliders of the object trigger.
+            </summary>
+            <param name="spawnedFinalObject">The object to modify the colliders.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.IsSimilarOrientation(UnityEngine.Transform)">
+            <summary>
+            Checks if the orientation of the object is similar to the final position.
+            </summary>
+            <param name="finalPosition">The transform of the final postion.</param>
+            <returns>True if the objects have similar orientation.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.IsCloseDistance(UnityEngine.Transform)">
+            <summary>
+            Check if the given transform is close enough to the object.
+            </summary>
+            <param name="finalPosition">The transform of the final object.</param>
+            <returns>True if obejcts are in close distance.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.InsertBehavior.LerpToObjectPosition(UnityEngine.Transform)">
+            <summary>
+            Coroutine that lerps the object to the final position.
+            </summary>
+            <param name="targetObject">The transform of the object to lerp.</param>
+            <returns>Nothing.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.LabelEffectData">
+            <summary>
+            Effect data for <see cref="!:LabelEffectImplementor"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.LabelData">
+            <summary>
+            Gets or sets the label data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.ShowOnInteractable">
+            <summary>
+            Gets or sets a value indicating whether the label should be shown on the interactable.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.InteractableItemLabel">
+            <summary>
+            Gets or sets the label for the interactable.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.InteractableLabelTrajectory">
+            <summary>
+            Gets or sets a value indicating whether the label should be shown on the target item.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.ShowOnTarget">
+            <summary>
+            Gets or sets a value indicating whether the label should be shown on the target item.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.TargetItemLabel">
+            <summary>
+            Gets or sets the label for the target item.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.LabelEffectData.TargetLabelTrajectory">
+            <summary>
+            Gets or sets a value indicating whether the label should be shown on the target item.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.LabelEffectData.Clone">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.MAGESSceneGraph">
+            <summary>
+            The MAGES implementation of the Scene Graph module.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.MAGESSceneGraph.Runner">
+            <summary>
+            Gets the runner.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.Skip">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.Undo">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.SkipAction(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.UndoAction(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.GetActionCategory(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.ActionInitialized(MAGES.SceneGraphModule.ActionInitializedEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.ActionPerformed(MAGES.SceneGraphModule.ActionPerformedEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.ActionUndone(MAGES.SceneGraphModule.ActionUndoneEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.MAGESSceneGraph.ForEachAction(System.Action{MAGES.BaseActionData})">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.ManagedObject">
+            <summary>
+            An object that is managed by the scene graph.
+            </summary>
+            Added at runtime in order to bind the object's lifetime to an action.
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.Bind(MAGES.SceneGraph.GraphRunner,MAGES.BaseActionData)">
+            <summary>
+            Bind the object's lifetime to an action.
+            </summary>
+            <param name="runner">The graph runner.</param>
+            <param name="data">The action to which this object's lifetime will be bound to.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.DestroyOnPerform(System.Boolean)">
+            <summary>
+            Destroy the object after the action is performed.
+            </summary>
+            <param name="destroyOnPerform">Set to true to destroy.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.Initialized(System.Action)">
+            <summary>
+            Call a method or lambda when initialized.
+            </summary>
+            <param name="onInitialize">The method or lambda to call.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.Performed(System.Action)">
+            <summary>
+            Call a method or lambda when performed.
+            </summary>
+            <param name="onPerform">The method or lambda to call.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.Undone(System.Action)">
+            <summary>
+            Call a method or lambda when undone.
+            </summary>
+            <param name="onUndo">The method or lambda to call.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.FirstSelectEntered(System.Action)">
+            <summary>
+            Call a method or lambda when the first select enter interaction is triggered.
+            </summary>
+            <param name="action">The action to invoke.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.SelectEntered(System.Action)">
+            <summary>
+            Call a method or lambda when the select enter interaction is triggered.
+            </summary>
+            <param name="action">The action to invoke.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.ManagedObject.GetSpawnActionId">
+            <summary>
+            Get the action ID to which this object's lifetime is bound to.
+            </summary>
+            <returns>The ActionID that spawned this object.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.QuestionActionAnswer">
+            <summary>
+            The type of answer for a question.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionAnswer.Correct">
+            <summary>
+            Gets or sets a value indicating whether the answer is correct.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionAnswer.AnswerText">
+            <summary>
+            Gets or sets the text of the answer.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionAnswer.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether the answer is selected.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionAnswer.AnswerObject">
+            <summary>
+            Gets or sets the answer object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionAnswer.Index">
+            <summary>
+            Gets or sets the index of the answer.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.QuestionActionArrowEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.ArrowEffectData"/> for <see cref="T:MAGES.SceneGraph.QuestionActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionActionArrowEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.QuestionActionData">
+            <summary>
+            Class that contains the data for the Question action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.QuestionSpawned">
+            <summary>
+            Gets the spawned question object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.QuestionState">
+            <summary>
+            Gets or sets a value indicating the current question state.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.Question">
+            <summary>
+            Gets or sets the question.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.Answers">
+            <summary>
+            Gets or sets the answers.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.QuestionPosition">
+            <summary>
+            Gets or sets the position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.QuestionRotation">
+            <summary>
+            Gets or sets the rotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.QuestionActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionActionData.Factory.WriteDefaults(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.QuestionBehavior">
+            <summary>
+            Behavior that handles a question. Set the question and answers in the inspector.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.QuestionBehavior.numberOfAnswers">
+            <summary>
+            How many answers the user can give.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.OnAnswered">
+            <summary>
+            Gets the on triggered event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.NumberOfAnswers">
+            <summary>
+            Gets or sets the number of answers the user can give.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.Answers">
+            <summary>
+            Gets or sets the answers to the question.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.SubmitElement">
+            <summary>
+            Gets the submit button.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.Question">
+            <summary>
+            Gets or sets the question for the user.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.RevealAnswers">
+            <summary>
+            Gets or sets a value indicating whether the answers should be revealed.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.QuestionBehavior.QuestionResult">
+            <summary>
+            Gets or sets a value indicating whether the question was answered correctly.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.Start">
+            <summary>
+            Gets the question.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.DisplayAnswer(MAGES.SceneGraph.QuestionActionAnswer)">
+            <summary>
+            Displays an answer to the question UI.
+            </summary>
+            <param name="answer">The answer to display.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.PreviewQuestions(System.Collections.Generic.List{MAGES.SceneGraph.QuestionActionAnswer})">
+            <summary>
+            On Edit mode preview the available answers.
+            </summary>
+            <param name="answersTemp">The avaiable answers to preview.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.SetupQuestion">
+            <summary>
+            Sets and displays the question.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.AnswerPressed(UnityEngine.GameObject)">
+            <summary>
+            Set which answer was pressed.
+            </summary>
+            <param name="answer">The given answer.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.QuestionBehavior.SubmitPressed">
+            <summary>
+            Submit your final anwser.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionArrowEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.ArrowEffectData"/> for <see cref="T:MAGES.SceneGraph.RemoveActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveActionArrowEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionData">
+            <summary>
+            Class that contains the data for the Remove action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.removeObject">
+            <summary>
+            The object to be removed.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.removeObjectSpawned">
+            <summary>
+            The spawned object to be removed.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionData.LockAxis">
+            <summary>
+            Enum to select which axis to lock during the object removal.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.None">
+            <summary>
+            None of the axis are locked. The object can be removed in any direction.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.X">
+            <summary>
+            The object can be removed only in the X axis.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.XReveresed">
+            <summary>
+            The object can be removed only in the S axis (reversed).
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.Y">
+            <summary>
+            The object can be removed only in the Y axis.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.YReveresed">
+            <summary>
+            The object can be removed only in the Y axis (reversed).
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.Z">
+            <summary>
+            The object can be removed only in the Z axis.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.RemoveActionData.LockAxis.ZReveresed">
+            <summary>
+            The object can be removed only in the Z axis (reversed).
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.RemoveObjectSpawned">
+            <summary>
+            Gets the instantiated remove object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.RemoveObject">
+            <summary>
+            Gets or sets the remove object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.ReleaseDistance">
+            <summary>
+            Gets or sets the remove distance.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.PeformOnObjectRelease">
+            <summary>
+            Gets or sets a value indicating whether the action performs.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.ActionRemoveObject">
+            <summary>
+            Gets or sets remove action object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveActionData.Factory.WriteDefaults(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionGhostEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.GhostEffectData"/> for <see cref="T:MAGES.SceneGraph.RemoveActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveActionGhostEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveActionLabelEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.LabelEffectData"/> for <see cref="T:MAGES.SceneGraph.RemoveActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveActionLabelEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.RemoveBehavior">
+            <summary>
+            Behavior to be attached to the removable Objects.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveBehavior.OnRemoved">
+            <summary>
+            Gets the event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveBehavior.ReleaseDistance">
+            <summary>
+            Gets or sets a value indicating the distance for the object to unlock from its axis so we can freely handle it.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveBehavior.PeformOnObjectRelease">
+            <summary>
+            Gets or sets a value indicating whether the action performs.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveBehavior.AxisToLock">
+            <summary>
+            Gets or sets a value indicating the axis to lock the object during its removal.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RemoveBehavior.DestroyObjectOnRemove">
+            <summary>
+            Gets or sets a value indicating whether to destroy the object on remove.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveBehavior.Start">
+            <summary>
+            Initialize the Remove Behavior.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveBehavior.Update">
+            <summary>
+            Update the Remove Behavior.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RemoveBehavior.FinalizeAction">
+            <summary>
+            Finalize the Action by removing all restrictions.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.RepeatActionData">
+            <summary>
+            A repeat action: repeats the action that is attached to it a fixed number of times.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RepeatActionData.LoopActions">
+            <summary>
+            Gets or sets the actions to be repeated.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RepeatActionData.RepeatCount">
+            <summary>
+            Gets or sets the number of times to repeat the actions.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.RepeatActionData.RepeatForever">
+            <summary>
+            Gets or sets a value indicating whether the actions should be repeated forever.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.RepeatActionData.GetLinkedActions">
+            <summary>
+            Gets the actions that are linked to this action.
+            </summary>
+            <returns>The linked action list.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.RepeatActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.RepeatActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.SceneGraphUtility">
+            <summary>
+            Utility class for all things scenegraph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.IsEffectDataPropertyVisible(System.Type,System.Reflection.FieldInfo)">
+            <summary>
+            Returns true if the field is visible for the given action data context.
+            </summary>
+            <param name="actionDataContext">The action data context.</param>
+            <param name="field">The field to check.</param>
+            <returns>Whether (or not) the field should be displayed in the inspector for the given action.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetAllActionDataTypes">
+            <summary>
+            Gets all action data types.
+            </summary>
+            <returns>An enumerable of action data types.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetAllEffectDataTypes">
+            <summary>
+            Gets all effect data types.
+            </summary>
+            <returns>An enumerable of effect data types.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetAvailableEffectDataTypes(System.Type)">
+            <summary>
+            Returns all the effects that have implementors for this action.
+            </summary>
+            <param name="actionDataType">The action data type.</param>
+            <returns>Enumerable of <see cref="T:MAGES.EffectData"/> derivatives.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetAllEffectImplementorTypes">
+            <summary>
+            Gets all effect implementor types.
+            </summary>
+            <returns>An enumerable of effect implementor types.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.CreateEffectImplementorsForAction(MAGES.BaseActionData)">
+            <summary>
+            Implenents the effects for the given action data.
+            </summary>
+            <param name="actionData">The given ActionData.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetEffectImplementor(System.Type,System.Type)">
+            <summary>
+            Returns the effect implementor for the given effect data and action data.
+            </summary>
+            <param name="effectDataType">Set the effect Data Type.</param>
+            <param name="actionDataType">Set the ActionData type.</param>
+            <returns>The edffect Implementor.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetImplementorAttribute(System.Type)">
+            <summary>
+            Gets the implementor attribute for the given implementor type.
+            </summary>
+            <param name="implementorType">Set the Implementor Type.</param>
+            <returns>The immplementor attribute.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetEffectImplementorsByAction(System.Type)">
+            <summary>
+            Gets all the effect implementors for the given action data type.
+            </summary>
+            <param name="actionDataType">Set the Implementor Type.</param>
+            <returns>All the effect implementor types.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.ImplementsSomeEffectForAction(System.Type,System.Type)">
+            <summary>
+            Implements the given effect for the given action.
+            </summary>
+            <param name="implementorType">The effect to implement.</param>
+            <param name="actionDataType">The given Action.</param>
+            <returns>True if everything was ok.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.TryGetImplementorEffectAndAction(System.Type,System.Type@,System.Type@)">
+            <summary>
+            Try get the effect and action data types for the given implementor type.
+            </summary>
+            <param name="implementorType">Set the implementor type.</param>
+            <param name="effectDataType">Set the effect data type.</param>
+            <param name="actionDataType">Set the action data type.</param>
+            <returns>The bool value.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.FindEffectImplementor(System.Type,System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Find the effect implementor for the given effect data type and action data types.
+            </summary>
+            <param name="effectDataType">Set the effect data type.</param>
+            <param name="actionDataTypes">Set the action data types.</param>
+            <returns>The returned type.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.IsEffectImplementedForAction(System.Type,System.Type)">
+            <summary>
+            Check if the effect is implemented for the given action.
+            </summary>
+            <param name="effectDataType">Set the effect data type.</param>
+            <param name="actionDataType">Set the action data type.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.GetEffectDataFieldInfoForActions(System.Type,System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Gets all the effect implementors for the given action data type.
+            </summary>
+            <param name="effectDataType">The given effect data type.</param>
+            <param name="actionTypes">The give action types.</param>
+            <returns>The data field.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.ToHumanReadableActionTypeName(System.Type)">
+            <summary>
+            Converts the given type to a human readable string.
+            </summary>
+            <param name="t">The given type.</param>
+            <returns>The type name.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.ToHumanReadableEffectTypeName(System.Type)">
+            <summary>
+            Converts the given type to a human readable string.
+            </summary>
+            <param name="t">The given type.</param>
+            <returns>The type name.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.SceneGraphUtility.ToHumanReadableStepName(System.Type)">
+            <summary>
+            Generate a human readable name from a step type.
+            </summary>
+            <param name="t">The step type.</param>
+            <returns>The human readable name.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.SceneGraphUtility.EffectDataFieldInfo">
+            <summary>
+            Represents the complete contextual information of a <see cref="T:MAGES.EffectData"/> derived property.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.SceneGraphUtility.EffectDataFieldInfo.ApplicableActions">
+            <summary>
+            Gets or sets the list of actions for which this field is used.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.SceneGraphUtility.EffectDataFieldInfo.FieldType">
+            <summary>
+            Gets or sets the type of the field.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.SceneGraphUtility.EffectDataFieldInfo.Name">
+            <summary>
+            Gets or sets the name of the field.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.SendMessageStep">
+            <summary>
+            A step that sends a message to a game object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.SendMessageStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.SetAnimatorPropertyStep">
+            <summary>
+            Set a property on animator component, given a unique reference to a scene object.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.SetAnimatorPropertyStep.AnimatorControllerPropertyType">
+            <summary>
+            The animator controller property type.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.SetAnimatorPropertyStep.AnimatorControllerPropertyType.Bool">
+            <summary>
+            A boolean property.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.SetAnimatorPropertyStep.AnimatorControllerPropertyType.Float">
+            <summary>
+            A float property.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.SetAnimatorPropertyStep.AnimatorControllerPropertyType.Int">
+            <summary>
+            An integer property.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.SetAnimatorPropertyStep.AnimatorControllerPropertyType.Trigger">
+            <summary>
+            A trigger property.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.SetAnimatorPropertyStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.SnapObjectBehavior">
+            <summary>
+            A behavior that can be attached to an object to allow other objects to snap to it.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.SnapObjectBehavior.ObjectSnapped">
+            <summary>
+            Gets the event that is triggered when an object is snapped to this object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.SnapObjectBehavior.AcceptedObjects">
+            <summary>
+            Gets or sets the list of objects that can snap to this object.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.SpawnActionObjectStep">
+            <summary>
+            A step that spawns an action object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.SpawnActionObjectStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.SpawnStep">
+            <summary>
+            A step that spawns an object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.SpawnStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.StartActionData">
+            <summary>
+            Data for the start action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.StartActionData.IsStartAction">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.StartActionData.Factory">
+            <summary>
+            Factory for the start action.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.StartActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.TrajectoryActionArrowEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.ArrowEffectData"/> for <see cref="T:MAGES.SceneGraph.TrajectoryActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.TrajectoryActionArrowEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.TrajectoryActionData">
+            <summary>
+            Class that contains the data for the Trajectory action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryActionData.ObjectUsedSpawned">
+            <summary>
+            Gets the object that will be used to perform the trajectory.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.TrajectoryActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.TrajectoryActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.TrajectoryActionData.Factory.WriteDefaults(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.TrajectoryActionGhostEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.GhostEffectData"/> for <see cref="T:MAGES.SceneGraph.TrajectoryActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.TrajectoryActionGhostEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.TrajectoryBehavior">
+            <summary>
+            Take the proper object and follow the trajectory. You need to hit all the colliders to complete the behavior.
+            Used with Animations as well.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.OnTrajectoryCompleted">
+            <summary>
+            Gets the on triggered event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.ObjectUsed">
+            <summary>
+            Gets or sets the object to use on the Trajectory.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.Animator">
+            <summary>
+            Gets or sets the animator to play along with the trajectory.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.AnimatorStateName">
+            <summary>
+            Gets or sets the name of the state to play.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.AnimatorLayerName">
+            <summary>
+            Gets or sets the name of the animator layer.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.TrajectoryBehavior.IsActivationRequired">
+            <summary>
+            Gets or sets a value indicating whether the object needs to be activated.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.TrajectoryBehavior.Start">
+            <summary>
+            Start is called before the first frame update.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseActionArrowEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.ArrowEffectData"/> for <see cref="T:MAGES.SceneGraph.UseActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.UseActionArrowEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseActionData">
+            <summary>
+            Class that contains the data for the Use action.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.UseActionData.useObject">
+            <summary>
+            The object to be used.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.UseActionData.useCollider">
+            <summary>
+            The collider (other object) to iteract with the use object.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.UseActionData.useTime">
+            <summary>
+            The time the object must be inside or touching the collider in order for the action to be performed.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.UseActionData.resetTimerOnExit">
+            <summary>
+            Reset the timer when the object exits the collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.UseObjectSpawned">
+            <summary>
+            Gets the instantiated use object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.UseColliderSpawned">
+            <summary>
+            Gets the instantiated use collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.UseObject">
+            <summary>
+            Gets or sets the use object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.UseCollider">
+            <summary>
+            Gets or sets the use collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.ActionUseObject">
+            <summary>
+            Gets or sets the action use object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.ActionUseCollider">
+            <summary>
+            Gets or sets the action use collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.ActionGameObjects">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseActionData.UseTime">
+            <summary>
+            Gets or sets the use time.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseActionData.Factory">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.UseActionData.Factory.Initialize(MAGES.BaseActionData,System.Action,MAGES.SceneGraph.GraphRunner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseActionGhostEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.GhostEffectData"/> for <see cref="T:MAGES.SceneGraph.UseActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.UseActionGhostEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseActionLabelEffectImplementor">
+            <summary>
+            Implements <see cref="T:MAGES.SceneGraph.LabelEffectData"/> for <see cref="T:MAGES.SceneGraph.UseActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.UseActionLabelEffectImplementor.Initialized(MAGES.BaseActionData)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.UseBehavior">
+            <summary>
+            Behavior for the Use Action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseBehavior.UseCollider">
+            <summary>
+            Gets or sets the use Collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseBehavior.TimetoUse">
+            <summary>
+            Gets or sets the time to use the object. If 0, the object will perform the action as soon as the user touches it.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseBehavior.ResetTimerOnExit">
+            <summary>
+            Gets or sets a value indicating whether the timer resets on exit.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseBehavior.UseColliderIsTrigger">
+            <summary>
+            Gets or sets a value indicating whether the colliders of the Use Collider object will be set to trigger.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.UseBehavior.OnUsed">
+            <summary>
+            Gets the event.
+            </summary>
+        </member>
+    </members>
+</doc>

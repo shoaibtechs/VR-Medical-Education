@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/USS/PanelContent.uss?fileID=7433441132597879392&amp;guid=7cde914a2c17f124a97c05fefd99e7f6&amp;type=3#PanelContent" />
+    <ui:VisualElement name="bundle-selection">
+        <ui:DropdownField name="bundle-selection-dropdown" view-data-key="bundle-selection" />
+    </ui:VisualElement>
+    <ui:VisualElement name="no-bundles-page" style="background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center; flex-grow: 1; align-self: auto; -unity-text-align: upper-left; display: none;">
+        <ui:Label text="No Projects" name="title" class="h1" style="color: rgb(255, 255, 255); -unity-text-align: lower-center;" />
+        <ui:Label text="Please navigate to the &quot;Getting Started&quot; section and follow the instructions provided for importing a sample." name="description" style="white-space: normal; color: rgb(255, 255, 255); -unity-text-align: upper-center; margin-top: 15px; font-size: 14px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="page-content" />
+</ui:UXML>

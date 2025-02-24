@@ -1,0 +1,44 @@
+DropDownSelect {
+    background-color: rgb(50, 50, 50);
+    color: rgba(255, 255, 255, 1.0);
+    border-radius: 4px;
+    padding-left: 16px;
+    margin-left: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+DropDownSelect:hover {
+    background-color: rgb(55, 55, 55);
+    transition: background-color 0.15s ease-in-out;
+}
+
+DropDownSelect:active {
+    background-color: rgb(60, 60, 60);
+}
+
+DropDownSelect > #container {
+    flex-direction: row;
+}
+
+DropDownSelect > #container > #label {
+    flex-grow: 1;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 128px;
+}
+
+DropDownSelect > #container > #separator {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+DropDownSelect > #container > #arrow {
+    background-image: resource("Packages/com.oramavr.mages.core/Hub/Editor/UIElements/DropDownToggle/Assets/toggle-on.png");
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    align-self: center;
+}

@@ -1,0 +1,90 @@
+:root
+{
+	flex-grow: 1;
+
+	--c-content-background: #1E1E1E;
+
+	--c-pressable-ui-background: #3C3C3C;
+    --c-pressable-ui-text: white;
+    --c-pressable-ui-text-disabled: #3C3C3C;
+
+    background-color: var(--c-content-background);
+
+    min-width: 450px;
+}
+
+#bundle-selection
+{
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 15px 5px 20px 5px;
+}
+
+#bundle-selection DropdownField
+{
+    width: 400px; 
+}
+
+#bundle-selection Label {
+    font-size: 16px;
+    margin: 0;
+}
+
+#bundle-selection Button{
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* DropDown Style */
+#bundle-selection .unity-base-field__input {
+    background-color: var(--c-pressable-ui-background);
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 300px;
+}
+
+#bundle-selection .unity-base-popup-field__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+#bundle-selection .unity-base-popup-field__text {
+    color: var(--c-pressable-ui-text);
+    font-size: 16px;
+}
+
+#no-bundles-page
+{
+    flex-grow: 1;
+}
+
+#page-content
+{
+    flex-grow: 1;
+    padding: 0px 5px 0px 5px;
+}
+
+/*Generic Styling*/
+
+.h1 {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.h2 {
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.h3 {
+    font-size: 12px;
+    -unity-font-style: bold;
+}

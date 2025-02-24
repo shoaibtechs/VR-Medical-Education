@@ -1,0 +1,27 @@
+{
+    "name": "MAGES.DeviceManager.Editor",
+    "rootNamespace": "MAGES.DeviceManager.Editor",
+    "references": [
+        "GUID:f497828fe647f9a459c771de7e4fcd19"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Hub.Editor.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.management",
+            "expression": "",
+            "define": "XR_MANAGEMENT"
+        }
+    ],
+    "noEngineReferences": false
+}

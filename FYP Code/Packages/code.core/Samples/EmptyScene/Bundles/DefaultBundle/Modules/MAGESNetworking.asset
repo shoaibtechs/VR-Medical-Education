@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38be69c6a90018e428a8ee3b78e35ba0, type: 3}
+  m_Name: MAGESNetworking
+  m_EditorClassIdentifier: 
+  automaticSceneSetup: 1
+  networkHandLeft: {fileID: 5789310592009211286, guid: 7c9b2ed83d7797e4e80c1c293c23f56b,
+    type: 3}
+  networkHandRight: {fileID: 6016984384870593031, guid: bae902c8f9b987d458c0e62bd4ac827c,
+    type: 3}
+  networkAvatar: {fileID: 2860800430695251868, guid: accfd374445ee924bb22fbddb70cbca5,
+    type: 3}
+  messageHandlerPrefab: {fileID: 908942595246231463, guid: a361a3293222e28499db2e161eeebd67,
+    type: 3}
+  networkingInfoUI: {fileID: 2775463711314371571, guid: ead8fc7302d200d49ba634994d26e0b6,
+    type: 3}

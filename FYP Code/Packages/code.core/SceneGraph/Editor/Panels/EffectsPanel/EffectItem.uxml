@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Foldout text="Foldout" name="foldout">
+        <ui:VisualElement name="content" style="flex-grow: 1;">
+            <ui:Button text="Remove Element" parse-escape-sequences="true" display-tooltip-when-elided="true" name="delete-button" style="flex-shrink: 0; align-items: stretch; align-self: flex-end;" />
+        </ui:VisualElement>
+    </ui:Foldout>
+</ui:UXML>

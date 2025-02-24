@@ -1,0 +1,47 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:PropertyField name="ControllerSide" />
+    <uie:PropertyField name="FollowTransform" />
+    <uie:PropertyField name="PalmCollider" />
+    <uie:PropertyField name="RaycastUI" />
+    <uie:PropertyField name="RaycastObject" />
+    <ui:Foldout text="Poses" name="PosesFoldout" view-data-key="PosesFoldout" value="false">
+        <uie:PropertyField name="IdlePose" />
+        <uie:PropertyField name="GripIdlePose" />
+        <uie:PropertyField name="GripPose" />
+        <uie:PropertyField name="TriggerIdlePose" />
+        <uie:PropertyField name="TriggerPose" />
+    </ui:Foldout>
+    <ui:Foldout text="Sounds" name="SoundsFoldout" view-data-key="SoundsFoldout" value="false">
+        <uie:PropertyField name="SoundSource" />
+        <uie:PropertyField name="HoverEnterSound" />
+        <uie:PropertyField name="HoverExitSound" />
+        <uie:PropertyField name="SelectEnterSound" />
+        <uie:PropertyField name="SelectExitSound" />
+        <uie:PropertyField name="ActivateEnterSound" />
+        <uie:PropertyField name="ActivateExitSound" />
+    </ui:Foldout>
+    <ui:Foldout text="Haptics" name="HapticsFoldout" view-data-key="HapticsFoldout" value="false">
+        <uie:PropertyField name="HoverEnterHapticIntensity" />
+        <uie:PropertyField name="HoverExitHapticIntensity" />
+        <uie:PropertyField name="SelectEnterHapticIntensity" />
+        <uie:PropertyField name="SelectExitHapticIntensity" />
+        <uie:PropertyField name="ActivateEnterHapticIntensity" />
+        <uie:PropertyField name="ActivateExitHapticIntensity" />
+    </ui:Foldout>
+    <ui:Foldout text="Events" name="EventsFoldout" view-data-key="EventsFoldout" value="false">
+        <uie:PropertyField name="HoverEnteredEvent" />
+        <uie:PropertyField name="HoverExitedEvent" />
+        <uie:PropertyField name="SelectEnteredEvent" />
+        <uie:PropertyField name="SelectExitedEvent" />
+        <uie:PropertyField name="ActivateEnteredEvent" />
+        <uie:PropertyField name="ActivateExitedEvent" />
+    </ui:Foldout>
+    <ui:Foldout text="Advanced Options" name="AdvancedOptions" value="false" view-data-key="AdvancedOptionsFoldout">
+        <uie:PropertyField name="InteractionManager" binding-path="interactionManager" />
+        <uie:PropertyField name="Transform" />
+        <uie:PropertyField name="Rigidbody" />
+        <uie:PropertyField name="Colliders" />
+        <uie:PropertyField name="RayOrigin" />
+        <uie:PropertyField name="RayLength" />
+    </ui:Foldout>
+</ui:UXML>

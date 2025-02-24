@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Interaction/Editor/Scripts/Interaction/Interactors/HandInteractor/HandPoses/EditHandPoseSceneStageOptionsWindow.uss?fileID=7433441132597879392&amp;guid=b849f5ec3fa125c4f9ae1e4cc8dfd8bf&amp;type=3#EditHandPoseSceneStageOptionsWindow" />
+    <ui:Label tabindex="-1" text="Hand Pose Settings" parse-escape-sequences="true" name="title" class="h1" />
+    <ui:Toggle label="Enable Editor Auto Pose" name="auto-pose-toggle" tooltip="Enables the automatic pose generation." value="false" />
+    <ui:VisualElement name="pose-options-pane">
+        <ui:Button text="Set Extended Pose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="set-extended-pose-btn" />
+        <ui:Button text="Set Retracted Pose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="set-retracted-pose-btn" />
+        <ui:Button text="Set Custom Pose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="set-custom-pose-btn" />
+    </ui:VisualElement>
+    <ui:VisualElement name="save-options-pane">
+        <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="save-btn" />
+        <ui:Button text="Save As..." parse-escape-sequences="true" display-tooltip-when-elided="true" name="save-as-btn" />
+    </ui:VisualElement>
+</ui:UXML>

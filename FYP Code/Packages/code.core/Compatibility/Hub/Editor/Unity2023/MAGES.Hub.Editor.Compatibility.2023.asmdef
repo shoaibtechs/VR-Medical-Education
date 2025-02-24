@@ -1,0 +1,21 @@
+{
+    "name": "MAGES.Hub.Editor.Compatibility.2023",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Editor.dll",
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_2023_1_OR_NEWER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

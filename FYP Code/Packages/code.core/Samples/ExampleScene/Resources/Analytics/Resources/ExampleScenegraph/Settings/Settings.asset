@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 56510332, guid: 207089db17bfa0d183618047d0b13300, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  <SceneGraphActions>k__BackingField:
+  - R Cube 1
+  - R Cube 2
+  - Injection Question
+  - Pour Alcohol on cotton ball
+  - Disinfect skin area
+  - Dispose the Cotton Ball
+  - Insert the syringe into the arm
+  - Activate Syringe
+  - Remove the syringe from the arm
+  - Dispose the Syringe
+  - Cut the fake skin
+  <StorePath>k__BackingField: Assets\Samples\MAGES - Core\0.1.0\Example Scene\Resources/AnalyticsStorage/Resources/7c0ef457289daa941a6eb7c1648ac6d9/Errors

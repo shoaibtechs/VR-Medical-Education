@@ -1,0 +1,2780 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Interaction.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Interaction.AvatarData">
+            <summary>
+            Class that holds the avatar data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.AvatarData.BodyType">
+            <summary>
+            Gets or sets the selected body type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.AvatarData.Save">
+            <summary>
+            Saves the avatar data to a file.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.AvatarData.Load">
+            <summary>
+            Loads the avatar data from a file.
+            </summary>
+            <returns>True if the file was written correctly, otherwise false.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.BaseControllerInteractor">
+            <summary>
+            Class for basic functionality for all controller based interactors.
+            It handles the input from the controller and can play sounds and haptics on events.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.BaseControllerInteractor.ControllerSide">
+            <summary>
+            A reference to the controller side to bind to.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.BaseControllerInteractor.ControllerSide.Left">
+            <summary>
+            If selected will bind to left controller's events.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.BaseControllerInteractor.ControllerSide.Right">
+            <summary>
+            If selected will bind to right controller's events.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.BaseControllerInteractor.ControllerSide.Other">
+            <summary>
+            If selected will bind to custom given controller's events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.InputControllerSide">
+            <summary>
+            Gets or sets the controller side to bind to.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SoundSource">
+            <summary>
+            Gets or sets the sound source to play sounds from.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.HoverEnterSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.HoverEnterSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.HoverExitSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.HoverExitSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SelectEnterSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.SelectEnterSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SelectExitSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.SelectExitSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.ActivateEnterSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.ActivateEnterSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.ActivateExitSound">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.ActivateExitSound"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.HoverEnterHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.HoverEnterHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.HoverExitHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.HoverExitHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SelectEnterHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.SelectEnterHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SelectExitHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.SelectExitHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.ActivateEnterHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.ActivateEnterHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.ActivateExitHapticIntensity">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.ActivateExitHapticIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.IsSelectEnabled">
+            <inheritdoc cref="P:MAGES.IInteractor.IsSelectEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.IsActivateEnabled">
+            <inheritdoc cref="P:MAGES.IInteractor.IsActivateEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.SelectionIntensity">
+            <summary>
+            Gets the intensity with which the controller's selection button is pressed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.ActivationIntensity">
+            <summary>
+            Gets the intensity with which the controller's activation button is pressed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.IsSelectInputEnabled">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.IsSelectInputEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasSelectInputEnabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasSelectInputEnabledThisFrame"/>/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasSelectInputDisabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasSelectInputDisabledThisFrame"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.IsActivateInputEnabled">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.IsActivateInputEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasActivateInputEnabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasActivateInputEnabledThisFrame"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasActivateInputDisabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasActivateInputDisabledThisFrame"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.IsUISelectInputEnabled">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.IsUISelectInputEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasUISelectInputEnabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasUISelectInputEnabledThisFrame"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseControllerInteractor.WasUISelectInputDisabledThisFrame">
+            <inheritdoc cref="P:MAGES.IControllerInteractor.WasUISelectInputDisabledThisFrame"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.CanSelect(MAGES.IInteractable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.PlayHaptics(System.Single,System.Single)">
+            <inheritdoc cref="M:MAGES.IControllerInteractor.PlayHaptics(System.Single,System.Single)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.Start">
+            <summary>
+            Monobehaviour Start method. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnHoverExit(MAGES.HoverExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverExit(MAGES.HoverExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnSelectInput">
+            <summary>
+            Called the frame when the controller select button is pressed. Similar to OnButtonDown.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnDeselectInput">
+            <summary>
+            Called the frame when the controller select button is released. Similar to OnButtonUp.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnActivateInput">
+            <summary>
+            Called the frame when the controller activate button is pressed. Similar to OnButtonDown.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnDeactivateInput">
+            <summary>
+            Called the frame when the controller activate button is released. Similar to OnButtonUp.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnUISelectInput">
+            <summary>
+            Called the frame when the controller UI select button is pressed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.OnUIDeselectInput">
+            <summary>
+            Called the frame when the controller UI select button is released.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseControllerInteractor.Reset">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.BaseInteractor">
+            <summary>
+            Base Interactor.
+            <seealso cref="T:MAGES.IInteractor"/>
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.InteractionManager">
+            <inheritdoc cref="P:MAGES.IInteractor.InteractionManager"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.Transform">
+            <inheritdoc cref="P:MAGES.IInteractor.Transform"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.Rigidbody">
+            <inheritdoc cref="P:MAGES.IInteractor.Rigidbody"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.Colliders">
+            <inheritdoc cref="P:MAGES.IInteractor.Colliders"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.RegisterEntered">
+            <inheritdoc cref="P:MAGES.IInteractor.RegisterEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.DeregisterEntered">
+            <inheritdoc cref="P:MAGES.IInteractor.DeregisterEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HoverEntered">
+            <inheritdoc cref="P:MAGES.IInteractor.HoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HoverExited">
+            <inheritdoc cref="P:MAGES.IInteractor.HoverExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.SelectEntered">
+            <inheritdoc cref="P:MAGES.IInteractor.SelectEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.SelectExited">
+            <inheritdoc cref="P:MAGES.IInteractor.SelectExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.ActivateEntered">
+            <inheritdoc cref="P:MAGES.IInteractor.ActivateEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.ActivateExited">
+            <inheritdoc cref="P:MAGES.IInteractor.ActivateExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.IsHoverEnabled">
+            <inheritdoc cref="P:MAGES.IInteractor.IsHoverEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HasHover">
+            <inheritdoc cref="P:MAGES.IInteractor.HasHover"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HoveredInteractable">
+            <inheritdoc cref="P:MAGES.IInteractor.HoveredInteractable"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.IsSelectEnabled">
+            <inheritdoc cref="P:MAGES.IInteractor.IsSelectEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HasSelection">
+            <inheritdoc cref="P:MAGES.IInteractor.HasSelection"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.SelectionIntensity">
+            <inheritdoc cref="P:MAGES.IInteractor.SelectionIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.SelectedInteractable">
+            <inheritdoc cref="P:MAGES.IInteractor.SelectedInteractable"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.IsActivateEnabled">
+            <inheritdoc cref="P:MAGES.IInteractor.IsActivateEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.HasActivation">
+            <inheritdoc cref="P:MAGES.IInteractor.HasActivation"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.ActivationIntensity">
+            <inheritdoc cref="P:MAGES.IInteractor.ActivationIntensity"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.BaseInteractor.ActivatedInteractable">
+            <inheritdoc cref="P:MAGES.IInteractor.ActivatedInteractable"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnHoverExit(MAGES.HoverExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverExit(MAGES.HoverExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnHoverExited(MAGES.HoverExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnHoverExited(MAGES.HoverExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnSelectExited(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnSelectExited(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnActivateExit(MAGES.ActivateExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnActivateExited(MAGES.ActivateExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnRegisterEnter(MAGES.InteractorRegisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnRegisterEnter(MAGES.InteractorRegisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnRegisterEntered(MAGES.InteractorRegisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnRegisterEntered(MAGES.InteractorRegisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnDeregisterEnter(MAGES.InteractorDeregisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnDeregisterEnter(MAGES.InteractorDeregisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.MAGES#IInteractor#OnDeregisterEntered(MAGES.InteractorDeregisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractor.OnDeregisterEntered(MAGES.InteractorDeregisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.CanHover(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractor.CanHover(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.CanSelect(MAGES.IInteractable)">
+            <inheritdoc cref="!:IInteractor."/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.CanActivate(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractor.CanActivate(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.GetValidTargets(System.Collections.Generic.List{MAGES.IInteractable})">
+            <inheritdoc cref="M:MAGES.IInteractor.GetValidTargets(System.Collections.Generic.List{MAGES.IInteractable})"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.IsActivating(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractor.IsActivating(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.IsHovering(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractor.IsHovering(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.IsSelecting(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractor.IsSelecting(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.PreprocessInteractor(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.IInteractor.PreprocessInteractor(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.ProcessInteractor(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.IInteractor.ProcessInteractor(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)">
+            <summary>
+            Called before a hover begins.
+            See <see cref="M:MAGES.IInteractor.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)">
+            <summary>
+            Called before a hover begins.
+            See <see cref="M:MAGES.IInteractor.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnHoverExit(MAGES.HoverExitInteractionEventArgs)">
+            <summary>
+            Called before a hover ends.
+            See <see cref="M:MAGES.IInteractor.OnHoverExit(MAGES.HoverExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnHoverExited(MAGES.HoverExitInteractionEventArgs)">
+            <summary>
+            Called after a hover ends.
+            See <see cref="M:MAGES.IInteractor.OnHoverExited(MAGES.HoverExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <summary>
+            Called before a select event begins.
+            See <see cref="M:MAGES.IInteractor.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)">
+            <summary>
+            Called after a select event begins.
+            See <see cref="M:MAGES.IInteractor.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <summary>
+            Called before a select exit begins.
+            See <see cref="M:MAGES.IInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnSelectExited(MAGES.SelectExitInteractionEventArgs)">
+            <summary>
+            Called after a select exit begins.
+            See <see cref="M:MAGES.IInteractor.OnSelectExited(MAGES.SelectExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)">
+            <summary>
+            Called before an activate enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)">
+            <summary>
+            Called after an activate enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)">
+            <summary>
+            Called before an activate exit event begins.
+            See <see cref="M:MAGES.IInteractor.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)">
+            <summary>
+            Called after an activate exit event begins.
+            See <see cref="M:MAGES.IInteractor.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnRegisterEnter(MAGES.InteractorRegisterEventArgs)">
+            <summary>
+            Called before a register enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnRegisterEntered(MAGES.InteractorRegisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnRegisterEntered(MAGES.InteractorRegisterEventArgs)">
+            <summary>
+            Called after a register enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnRegisterEntered(MAGES.InteractorRegisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnDeregisterEnter(MAGES.InteractorDeregisterEventArgs)">
+            <summary>
+            Called before a deregister enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnDeregisterEnter(MAGES.InteractorDeregisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnDeregisterEntered(MAGES.InteractorDeregisterEventArgs)">
+            <summary>
+            Called after a deregister enter event begins.
+            See <see cref="M:MAGES.IInteractor.OnDeregisterEntered(MAGES.InteractorDeregisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnEnable">
+            <summary>
+            Unity's OnEnable. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            Registers the interactor to the <see cref="P:MAGES.Interaction.Interactors.BaseInteractor.InteractionManager"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.OnDisable">
+            <summary>
+            Unity's OnDisable. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            Deregisters the interactor from the <see cref="P:MAGES.Interaction.Interactors.BaseInteractor.InteractionManager"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.Awake">
+            <summary>
+            Monobehvaiour Awake. See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.Reset">
+            <summary>
+            Resets the BaseInteractor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.BaseInteractor.FindOrCreateInteractionManager">
+            <summary>
+            Finds the Interaction Manager in the scene or, if not found, creates a new game object and adds to it the Interaction Manager.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.HandInteractor">
+            <summary>
+            A VR hand interactor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.HandPoser">
+            <summary>
+            Gets the handposer of this interactor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.FollowTransform">
+            <summary>
+            Gets or sets the transform the hand will follow. Usually this is the controller's transform.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.PalmCollider">
+            <summary>
+            Gets or sets the collider of the palm.
+            Mainly used to bring items closer to the palm when using auto grasp.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.IdlePose">
+            <summary>
+            Gets or sets the idle pose with all fingers extended.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.GripIdlePose">
+            <summary>
+            Gets or sets the grip idle pose. Typically with all fingers extended, except the index.
+            </summary>
+            <remarks>
+            This pose should contain poses for all the fingers except the index.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.TriggerIdlePose">
+            <summary>
+            Gets or sets the grip pose. Typically with the index finger extended.
+            </summary>
+            <remarks>
+            This pose should only contain the index finger poses.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.GripPose">
+            <summary>
+            Gets or sets the grip pose. Typically with all fingers retracted, except the index.
+            </summary>
+            <remarks>
+            This pose should contain poses for all the fingers except the index.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.TriggerPose">
+            <summary>
+            Gets or sets the grip pose. Typically with the index finger retracted.
+            </summary>
+            <remarks>
+            This pose should only contain the index finger poses.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.IsHoverEnabled">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.HandPoseVisualEnabled">
+            <inheritdoc cref="P:MAGES.Interaction.IHandPoseVisualizer.HandPoseVisualEnabled"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.HandPoseVisualizerIndex">
+            <inheritdoc cref="P:MAGES.Interaction.IHandPoseVisualizer.HandPoseVisualizerIndex"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.UIInteractionWithRaycast">
+            <inheritdoc cref="!:IUIInteractor.UIInteractionWithRaycast"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.ObjectInteractionWithRaycast">
+            <summary>
+            Gets or sets a value indicating whether interaction with objects using raycasts.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.RayOrigin">
+            <inheritdoc cref="P:MAGES.Interaction.IUIInteractor.RayOrigin"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.RayLength">
+            <summary>
+            Gets or sets length of the raycast.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.Reticle">
+            <summary>
+            Gets or sets the reticle that will be used to visualize the hit point.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.HandInteractor.Interactor">
+            <inheritdoc cref="!:IUIInteractor.Interactor"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.CanHover(MAGES.IInteractable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.CanSelect(MAGES.IInteractable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.CanActivate(MAGES.IInteractable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.GetValidTargets(System.Collections.Generic.List{MAGES.IInteractable})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.PreprocessInteractor(MAGES.UpdatePhase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.ProcessInteractor(MAGES.UpdatePhase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.SetHandPose(MAGES.Interaction.HandPose)">
+            <inheritdoc cref="M:MAGES.Interaction.IHandPoseVisualizer.SetHandPose(MAGES.Interaction.HandPose)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.SetHandPose(MAGES.Interaction.HandPose,System.Single,System.Action{MAGES.Interaction.HandPose})">
+            <inheritdoc cref="M:MAGES.Interaction.IHandPoseVisualizer.SetHandPose(MAGES.Interaction.HandPose,System.Single,System.Action{MAGES.Interaction.HandPose})"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.ResetDefaultHandPose">
+            <inheritdoc cref="M:MAGES.Interaction.IHandPoseVisualizer.ResetDefaultHandPose"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.GetCurrentHandPose(MAGES.Interaction.HandPose)">
+            <inheritdoc cref="M:MAGES.Interaction.IHandPoseVisualizer.GetCurrentHandPose(MAGES.Interaction.HandPose)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.OverrideFollowTransform(UnityEngine.Transform)">
+            <summary>
+            Overrides the current follow transform, with the given one.
+            </summary>
+            <param name="overrideVal">The new transform to follow.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.RestoreFollowTransform">
+            <summary>
+            If the follow transform was overriden with <see cref="M:MAGES.Interaction.Interactors.HandInteractor.OverrideFollowTransform(UnityEngine.Transform)"/>, it restores it.
+            </summary>
+            <param name="lerpDuration">The time for switching between the current overriden follow transform and the initial one.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.SetMovementWithInteractable(System.Boolean)">
+            <summary>
+            Enables hand movement with the interactable. This hides any physics jittering from the hand.
+            </summary>
+            <param name="enabled">Whether to enable or disable movement with interactable.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.TryGetLinePoints(UnityEngine.Vector3[]@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetLinePoints(UnityEngine.Vector3[]@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.TryGetHitPoint(UnityEngine.Vector3@,UnityEngine.Vector3@,System.Int32@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetHitPoint(UnityEngine.Vector3@,UnityEngine.Vector3@,System.Int32@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.TryGetReticle(UnityEngine.GameObject@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetReticle(UnityEngine.GameObject@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.CanInteractWithUIs">
+            <inheritdoc cref="M:MAGES.Interaction.IUIInteractor.CanInteractWithUIs"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.UpdateUIModel(MAGES.Interaction.TrackedDeviceModel@)">
+            <inheritdoc cref="M:MAGES.Interaction.IUIInteractor.UpdateUIModel(MAGES.Interaction.TrackedDeviceModel@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.Awake">
+            <inheritdoc cref="M:MAGES.Interaction.Interactors.BaseInteractor.Awake"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.Start">
+            <inheritdoc cref="M:MAGES.Interaction.Interactors.BaseControllerInteractor.Start"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.OnDisable">
+            <inheritdoc cref="M:MAGES.Interaction.Interactors.BaseInteractor.OnDisable"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.Reset">
+            <inheritdoc cref="M:MAGES.Interaction.Interactors.BaseControllerInteractor.Reset"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.OnDestroy">
+            <summary>
+            Unity's OnDestroy method. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.UpdateVelocity(UnityEngine.Vector3,System.Single)">
+            <summary>
+            Update velocity of the hand to move to the follow transform.
+            </summary>
+            <param name="deltaTime">Time passed since last update.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.HandInteractor.UpdateAngularVelocity(UnityEngine.Quaternion,System.Single)">
+            <summary>
+            Update angular velocity of the hand to match follow transform rotation.
+            </summary>
+            <param name="deltaTime">Time passed since last update.</param>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.SimpleUIInteractor">
+            <summary>
+            A simple interactor for UI elements.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Interactors.SimpleUIInteractor.Input">
+            <summary>
+            The input for selecting UI elements.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.SimpleUIInteractor.Input.Left">
+            <summary>
+            Gets the input from UI Select/Deselect Left action.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.SimpleUIInteractor.Input.Right">
+            <summary>
+            Gets the input from UI Select/Deselect Right action.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactors.SimpleUIInteractor.Input.Manual">
+            <summary>
+            No input is used for selecting UI elements. You must manually call Select/Deselect on the UIInteractor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.SimpleUIInteractor.InputSource">
+            <summary>
+            Gets or sets the input source for selecting UI elements.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.SimpleUIInteractor.RayOrigin">
+            <inheritdoc cref="P:MAGES.Interaction.IUIInteractor.RayOrigin"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.SimpleUIInteractor.RayLength">
+            <inheritdoc cref="P:MAGES.Interaction.IUIInteractor.RayLength"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.SimpleUIInteractor.Reticle">
+            <summary>
+            Gets the reticle to be used when hovering over UI Elements. Will be initialized on Start.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactors.SimpleUIInteractor.ShowLineVisualOnlyWhenPointingUI">
+            <summary>
+            Gets or sets a value indicating whether the line should be visible only when hovering over UI elements.
+            </summary>
+            <remarks>
+            In order for visuals to work a <see cref="T:MAGES.Interaction.LineVisualizer"/> component must be attached to this GameObject or its children.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.CanInteractWithUIs">
+            <inheritdoc cref="M:MAGES.Interaction.IUIInteractor.CanInteractWithUIs"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.UpdateUIModel(MAGES.Interaction.TrackedDeviceModel@)">
+            <inheritdoc cref="M:MAGES.Interaction.IUIInteractor.UpdateUIModel(MAGES.Interaction.TrackedDeviceModel@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.BeginSelection">
+            <summary>
+            Begin Selection Input for UIInteractor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.EndSelection">
+            <summary>
+            End Selection Input for UIInteractor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.TryGetHitPoint(UnityEngine.Vector3@,UnityEngine.Vector3@,System.Int32@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetHitPoint(UnityEngine.Vector3@,UnityEngine.Vector3@,System.Int32@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.TryGetLinePoints(UnityEngine.Vector3[]@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetLinePoints(UnityEngine.Vector3[]@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.TryGetReticle(UnityEngine.GameObject@)">
+            <inheritdoc cref="M:MAGES.Interaction.ILineRenderable.TryGetReticle(UnityEngine.GameObject@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.RegisterWithUIInputModule">
+            <summary>
+            Registers to MAGESUIInputModule.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.DeregisterWithUIInputModule">
+            <summary>
+            Deregisters from MAGESUIInputModule.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.OnEnable">
+            <summary>
+            Unity's OnEnable function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.OnDisable">
+            <summary>
+            Unity's OnDisable function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.Start">
+            <summary>
+            Unity's Start function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.Update">
+            <summary>
+            Unity's Update function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactors.SimpleUIInteractor.Reset">
+            <summary>
+            Unity's Reset function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Interactables.BaseInteractable">
+            <summary>
+            Base Interactable.
+            </summary>
+            <seealso cref="T:MAGES.IInteractable"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.InteractionManager">
+            <inheritdoc cref="P:MAGES.IInteractable.InteractionManager"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.Transform">
+            <inheritdoc cref="P:MAGES.IInteractable.Transform"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.Rigidbody">
+            <inheritdoc cref="P:MAGES.IInteractable.Rigidbody"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.Colliders">
+            <inheritdoc cref="P:MAGES.IInteractable.Colliders"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.AttachTransform">
+            <inheritdoc cref="P:MAGES.IInteractable.AttachTransform"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.InteractionMode">
+            <inheritdoc cref="P:MAGES.IInteractable.InteractionMode"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.DisableKinematicOnSelectEnter">
+            <inheritdoc cref="P:MAGES.IInteractable.DisableKinematicOnSelectEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.EnableKinematicOnSelectExit">
+            <inheritdoc cref="P:MAGES.IInteractable.EnableKinematicOnSelectExit"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.RegisterEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.RegisterEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.DeregisterEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.DeregisterEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.HoverEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.HoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.HoverExited">
+            <inheritdoc cref="P:MAGES.IInteractable.HoverExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstHoverEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstHoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastHoverExited">
+            <inheritdoc cref="P:MAGES.IInteractable.LastHoverExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.SelectEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.SelectEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.SelectExited">
+            <inheritdoc cref="P:MAGES.IInteractable.SelectExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstSelectEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstSelectEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastSelectExited">
+            <inheritdoc cref="P:MAGES.IInteractable.LastSelectExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.ActivateEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.ActivateEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.ActivateExited">
+            <inheritdoc cref="P:MAGES.IInteractable.ActivateExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstActivateEntered">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstActivateEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastActivateExited">
+            <inheritdoc cref="P:MAGES.IInteractable.LastActivateExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.EnableHoverMaterial">
+            <summary>
+            Gets or sets a value indicating whether a hovering material should be used.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.HoverMaterial">
+            <summary>
+            Gets or sets the HoverMaterial.
+            </summary>
+            <remarks>If null and <see cref="P:MAGES.Interaction.Interactables.BaseInteractable.EnableHoverMaterial"/> is <see langword="true"/> then the default hover material assigned in <see cref="P:MAGES.Interaction.MAGESInteractionSystem.DefaultHoverMaterial"/> will be used.</remarks>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.IsHovered">
+            <inheritdoc cref="P:MAGES.IInteractable.IsHovered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.IsSelected">
+            <inheritdoc cref="P:MAGES.IInteractable.IsSelected"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.IsActivated">
+            <inheritdoc cref="P:MAGES.IInteractable.IsActivated"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.HoveringInteractors">
+            <inheritdoc cref="P:MAGES.IInteractable.HoveringInteractors"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.SelectingInteractors">
+            <inheritdoc cref="P:MAGES.IInteractable.SelectingInteractors"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.ActivatingInteractors">
+            <inheritdoc cref="P:MAGES.IInteractable.ActivatingInteractors"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstHoverInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstHoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastHoverInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.LastHoverInteractor"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstSelectInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstSelectEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastSelectInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.LastSelectInteractor"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.FirstActivateInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.FirstActivateInteractor"/>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.BaseInteractable.LastActivateInteractor">
+            <inheritdoc cref="P:MAGES.IInteractable.LastActivateInteractor"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.IsHoveredBy(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.IsHoveredBy(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.IsSelectedBy(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.IsSelectedBy(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.IsActivatedBy(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.IsActivatedBy(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeHovered(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.CanBeHovered(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeSelected(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.CanBeSelected(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeActivated(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.CanBeActivated(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnHoverExit(MAGES.HoverExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnHoverExit(MAGES.HoverExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnHoverExited(MAGES.HoverExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnHoverExited(MAGES.HoverExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnSelectExited(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnSelectExited(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnActivateExit(MAGES.ActivateExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnActivateExited(MAGES.ActivateExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnRegisterEnter(MAGES.InteractableRegisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnRegisterEnter(MAGES.InteractableRegisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnRegisterEntered(MAGES.InteractableRegisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnRegisterEntered(MAGES.InteractableRegisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnDeregisterEnter(MAGES.InteractableDeregisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnDeregisterEnter(MAGES.InteractableDeregisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.MAGES#IInteractable#OnDeregisterEntered(MAGES.InteractableDeregisterEventArgs)">
+            <inheritdoc cref="M:MAGES.IInteractable.OnDeregisterEntered(MAGES.InteractableDeregisterEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitHover">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitHover"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitHover(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitHover(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitSelection">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitSelection"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitSelection(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitSelection(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitActivation">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitActivation"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ExitActivation(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.ExitActivation(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.GetSelectionIntensity">
+            <inheritdoc cref="M:MAGES.IInteractable.GetSelectionIntensity"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.GetSelectionIntensity(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.GetSelectionIntensity(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.GetActivationIntensity">
+            <inheritdoc cref="M:MAGES.IInteractable.GetActivationIntensity"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.GetActivationIntensity(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractable.GetActivationIntensity(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.PreprocessInteractable(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.IInteractable.PreprocessInteractable(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ProcessInteractable(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.IInteractable.ProcessInteractable(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.ProcessInteractorInput(MAGES.UpdatePhase)">
+            <inheritdoc cref="!:IInteractable.ProcessInteractorInput(UpdatePhase)(UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.TryGetAttachPose(MAGES.IInteractor,UnityEngine.Transform@)">
+            <inheritdoc cref="M:MAGES.IInteractable.TryGetAttachPose(MAGES.IInteractor,UnityEngine.Transform@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)">
+            <summary>
+            Called before an Interactor begins hovering over this Interactable.
+            See <see cref="M:MAGES.IInteractable.OnHoverEnter(MAGES.HoverEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)">
+            <summary>
+            Called after an Interactor begins hovering over this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnHoverEntered(MAGES.HoverEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnHoverExit(MAGES.HoverExitInteractionEventArgs)">
+            <summary>
+            Called before an Interactor ends hovering over this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnHoverExit(MAGES.HoverExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnHoverExited(MAGES.HoverExitInteractionEventArgs)">
+            <summary>
+            Called after an Interactor ends hovering over this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnHoverExited(MAGES.HoverExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <summary>
+            Called before an Interactor begins selecting this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)">
+            <summary>
+            Called after an Interactor begins selecting this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnSelectEntered(MAGES.SelectEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <summary>
+            Called before an Interactor ends selecting this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectExited(MAGES.SelectExitInteractionEventArgs)">
+            <summary>
+            Called after an Interactor ends selecting this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnSelectExited(MAGES.SelectExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)">
+            <summary>
+            Called before an Interactor starts activating this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnActivateEnter(MAGES.ActivateEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)">
+            <summary>
+            Called after an Interactor starts activating this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnActivateEntered(MAGES.ActivateEnterInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)">
+            <summary>
+            Called before an Interactor stops activating this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnActivateExit(MAGES.ActivateExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)">
+            <summary>
+            Called after an Interactor stops activating this Interactable.<br/>
+            See <see cref="M:MAGES.IInteractable.OnActivateExited(MAGES.ActivateExitInteractionEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnRegisterEnter(MAGES.InteractableRegisterEventArgs)">
+            <summary>
+            Called before the interactor is registered with an InteractionManager.<br/>
+            <see cref="M:MAGES.IInteractor.OnRegisterEnter(MAGES.InteractorRegisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnRegisterEntered(MAGES.InteractableRegisterEventArgs)">
+            <summary>
+            Called after the interactor has been registered with an InteractionManager.<br/>
+            <see cref="M:MAGES.IInteractor.OnRegisterEntered(MAGES.InteractorRegisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnDeregisterEnter(MAGES.InteractableDeregisterEventArgs)">
+            <summary>
+            Called before the interactor is deregistered from an InteractionManager.<br/>
+            <see cref="M:MAGES.IInteractor.OnDeregisterEnter(MAGES.InteractorDeregisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnDeregisterEntered(MAGES.InteractableDeregisterEventArgs)">
+            <summary>
+            Called after the interactor has been deregistered from an InteractionManager.<br/>
+            <see cref="M:MAGES.IInteractor.OnDeregisterEntered(MAGES.InteractorDeregisterEventArgs)"/>.
+            </summary>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnEnable">
+            <summary>
+            Called when the GameObject is enabled.
+            Registers the interactable to the <see cref="P:MAGES.Interaction.Interactables.BaseInteractable.InteractionManager"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.OnDisable">
+            <summary>
+            Called when the GameObject is enabled.
+            Deregisters the interactable from the <see cref="P:MAGES.Interaction.Interactables.BaseInteractable.InteractionManager"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.Awake">
+            <summary>
+            Unity's Awake. See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.Reset">
+            <summary>
+            Resets the Base interactable. See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.SetHoverMaterialEnabled(System.Boolean)">
+            <summary>
+            Enables or disables the Hover Material.
+            </summary>
+            <param name="enabled">Defines whether to enable or disable the hover material.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.BaseInteractable.FindOrCreateInteractionManager">
+            <summary>
+            Finds the Interaction Manager in the scene or, if not found, creates a new game object and adds to it the Interaction Manager.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Interactables.Grabbable">
+            <summary>
+            A Grabbable interactable.
+            </summary>
+            <remarks>
+            Attach it to a GameObject to enable grabbing with Interactors.
+            </remarks>
+            <seealso cref="T:MAGES.Interaction.Interactables.BaseInteractable"/>
+            <seealso cref="T:MAGES.IInteractable"/>
+            <seealso cref="T:MAGES.Interaction.Interactors.BaseInteractor"/>
+            <seealso cref="T:MAGES.Interaction.Interactors.HandInteractor"/>
+        </member>
+        <member name="T:MAGES.Interaction.Interactables.Grabbable.GrabMode">
+            <summary>
+            Defines how the Interactor (Hand) and the Grabbable should move until they are close enough to connect.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactables.Grabbable.GrabMode.GrabbableToInteractor">
+            <summary>
+            The grabbable moves to the interactor.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactables.Grabbable.GrabMode.HandToGrabbable">
+            <summary>
+            The interactor moves to grabbable.
+            </summary>
+            <remarks>The interactor must be HandInteractor otherwise will fallback to the <see cref="F:MAGES.Interaction.Interactables.Grabbable.GrabMode.GrabbableToInteractor"/> option.</remarks>
+        </member>
+        <member name="T:MAGES.Interaction.Interactables.Grabbable.GrabMovementMode">
+            <summary>
+            The physics mode with which the grabbable will be moved.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactables.Grabbable.GrabMovementMode.VelocityChange">
+            <summary>
+            Use velocities to change the position of the grabbable.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.Interactables.Grabbable.GrabMovementMode.FixedJoint">
+            <summary>
+            Use fixed joints to connect the grabbable to the interactor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.HandPoses">
+            <summary>
+            Gets or sets the handposes to be used with the grabbable.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.ResetDistance">
+            <summary>
+            Gets or sets the distance between prefab's starting and current position to enable the reset.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.ManualReset">
+            <summary>
+            Gets or sets a value indicating whether or not the prefab will reset to starting position when the Reset Distance it exceeded.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.EnableThrow">
+            <summary>
+            Gets or sets a value indicating whether throw velocity should be applied when releasing the grabbable.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.ThrowVelocityMultiplier">
+            <summary>
+            Gets or sets the factor with which the throw velocity should be multiplied.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.ThrowVelocityWindow">
+            <summary>
+            Gets or sets the window in fixed update frames in which the throw velocity is calculated.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.Colliders">
+            <inheritdoc cref="P:MAGES.Interaction.Interactables.BaseInteractable.Colliders"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.CanBeHovered(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeHovered(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.CanBeActivated(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeActivated(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.CanBeSelected(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.CanBeSelected(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.ProcessInteractable(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.ProcessInteractable(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.TryGetReticleForInteractor(MAGES.IInteractor,UnityEngine.GameObject@)">
+            <inheritdoc cref="M:MAGES.Interaction.IReticleProvider.TryGetReticleForInteractor(MAGES.IInteractor,UnityEngine.GameObject@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectEnter(MAGES.SelectEnterInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.OnSelectExit(MAGES.SelectExitInteractionEventArgs)">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.OnSelectExit(MAGES.SelectExitInteractionEventArgs)"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.Reset">
+            <summary>
+            Unity's Reset.
+            See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.Awake">
+            <inheritdoc cref="M:MAGES.Interaction.Interactables.BaseInteractable.Awake"/>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.OnDestroy">
+            <summary>
+            Unity's OnDestroy method. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.TryGetBestFitHandPose(MAGES.Interaction.IHandPoseVisualizer,UnityEngine.Pose,MAGES.Interaction.Interactables.Grabbable.HandPoseGroup@)">
+            <summary>
+            Finds the best/closest handpose group for the given <paramref name="fromPose"/>.
+            </summary>
+            <param name="handPoseVisualizer">The visualizer for which to find the best handpose.</param>
+            <param name="fromPose">The position/rotation for which to find the best/closest handpose group.</param>
+            <param name="poseGroup">The best suited handpose group, if it exist.</param>
+            <returns><see langword="true"/> if a handpose was found, false otherwise.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Interactables.Grabbable.AttachToInteractor(MAGES.IInteractor)">
+            <summary>
+            Attached the grabbable to the interactor with the selected transform provider.
+            </summary>
+            <param name="interactor">The interactor to attach to.</param>
+        </member>
+        <member name="T:MAGES.Interaction.Interactables.Grabbable.HandPoseGroup">
+            <summary>
+            A group for storing two handposes.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.HandPoseGroup.SelectPose">
+            <summary>
+            Gets or sets the handpose responsible for grabbing.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Interactables.Grabbable.HandPoseGroup.ActivatePose">
+            <summary>
+            Gets or sets the handpose responsible for activating.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.BaseLocomotionProvider">
+            <summary>
+            The base class for locomotion providers.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.BaseLocomotionProvider.LocomotionSystem">
+            <inheritdoc cref="P:MAGES.ILocomotionProvider.LocomotionSystem"/>
+        </member>
+        <member name="P:MAGES.Interaction.BaseLocomotionProvider.LocomotionPhase">
+            <inheritdoc cref="P:MAGES.ILocomotionProvider.LocomotionPhase"/>
+        </member>
+        <member name="P:MAGES.Interaction.BaseLocomotionProvider.LocomotionStarted">
+            <inheritdoc cref="P:MAGES.ILocomotionProvider.LocomotionStarted"/>
+            <remarks>The event arguments are only valid while the event is invoked. Do not hold reference of them.</remarks>
+        </member>
+        <member name="P:MAGES.Interaction.BaseLocomotionProvider.LocomotionEnded">
+            <inheritdoc cref="P:MAGES.ILocomotionProvider.LocomotionEnded"/>
+            <remarks>The event arguments are only valid while the event is invoked. Do not hold reference of them.</remarks>
+        </member>
+        <member name="M:MAGES.Interaction.BaseLocomotionProvider.CanStartLocomotion">
+            <inheritdoc cref="M:MAGES.ILocomotionProvider.CanStartLocomotion"/>
+        </member>
+        <member name="M:MAGES.Interaction.BaseLocomotionProvider.StartLocomotion(System.Single)">
+            <inheritdoc cref="M:MAGES.ILocomotionProvider.StartLocomotion(System.Single)"/>
+        </member>
+        <member name="M:MAGES.Interaction.BaseLocomotionProvider.EndLocomotion">
+            <inheritdoc cref="M:MAGES.ILocomotionProvider.EndLocomotion"/>
+        </member>
+        <member name="M:MAGES.Interaction.BaseLocomotionProvider.Reset">
+            <summary>
+            Monobehaviour's Reset. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.BaseTransformProvider">
+            <summary>
+            Provides movement of an Interactable based on an Interactor.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.BaseTransformProvider.Interactable">
+            <summary>
+            Gets or sets the interactable this transform provider must move.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.BaseTransformProvider.Interactors">
+            <summary>
+            Gets or sets a list of all the interactors that are attached in the interactable.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.Attach(MAGES.IInteractor)">
+            <summary>
+            Attach the object to the AttachedTransform.
+            </summary>
+            <param name="interactor">The interactor to attach to.</param>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.Detach(MAGES.IInteractor)">
+            <summary>
+            Detach the interactable from the <paramref name="interactor"/>.
+            </summary>
+            <param name="interactor">The interactor to detach from.</param>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.DetachCompletely">
+            <summary>
+            Detached completely from all interactors.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.IsAttachedTo(MAGES.IInteractor)">
+            <summary>
+            Gets if the Interactable is attached to the given <paramref name="interactor"/>.
+            </summary>
+            <param name="interactor">The interactor to check if the interactable is attached to.</param>
+            <returns><see langword="true"/> if the interactable is attached to the <paramref name="interactor"/>.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.Process(MAGES.UpdatePhase)">
+            <summary>
+            Called by the master to update the TransformProvider in the given <paramref name="updatePhase"/>.
+            </summary>
+            <param name="updatePhase">The update phase this is called.</param>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.OnInteractorCountChanged(MAGES.IInteractor,System.Int32,System.Int32)">
+            <summary>
+            Called when an attached interactor is added/removed.
+            </summary>
+            <param name="interactor">The interactor that altered the count.</param>
+            <param name="oldCount">The old count.</param>
+            <param name="newCount">The new count.</param>
+        </member>
+        <member name="M:MAGES.Interaction.BaseTransformProvider.OnDestroy">
+            <summary>
+            See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.FingerPose">
+            <summary>
+            A predefined finger pose.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.FingerPose"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.#ctor(System.Int32,System.Collections.Generic.List{UnityEngine.Pose})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.FingerPose"/> class.
+            </summary>
+            <param name="fingerIndex">The finger index of this finger pose.</param>
+            <param name="bonePoses">The finger bones' poses.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.#ctor(MAGES.Interaction.FingerPose)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.FingerPose"/> class.
+            The new instance is a copy of the given finger pose.
+            </summary>
+            <param name="from">The pose to copy data from.</param>
+        </member>
+        <member name="P:MAGES.Interaction.FingerPose.FingerIndex">
+            <summary>
+            Gets or sets the finger index.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.FingerPose.BonePoses">
+            <summary>
+            Gets or sets the poses for each bone in the finger.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.op_Equality(MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose)">
+            <summary>
+            Checks if two finger poses are equal. Equality is defined as having the same finger index and the same bone poses.
+            </summary>
+            <param name="p1">Finger pose 1.</param>
+            <param name="p2">Finger pose 2.</param>
+            <returns><see langword="true"/> if equal.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.op_Inequality(MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose)">
+            <summary>
+            Checks if two finger poses are not equal. Equality is defined as having the same finger index and the same bone poses.
+            </summary>
+            <param name="p1">Finger pose 1.</param>
+            <param name="p2">Finger pose 2.</param>
+            <returns><see langword="true"/> if not equal.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.Copy(MAGES.Interaction.FingerPose)">
+            <summary>
+            Creates a copy of the given finger pose.
+            </summary>
+            <param name="original">The pose to get data from.</param>
+            <returns>A new copy of the <paramref name="original"/>.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.Lerp(MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose,System.Single)">
+            <summary>
+            Lerps between two finger poses.
+            </summary>
+            <param name="p1">FingerPose 1.</param>
+            <param name="p2">FingerPose 2.</param>
+            <param name="t">The interpolation factor. A value between 0 and 1.</param>
+            <returns>The interpolated finger pose.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.LerpNonAlloc(MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose,System.Single,MAGES.Interaction.FingerPose)">
+            <summary>
+            Lerps between two finger poses, and stores the result in the given finger pose, without allocating new memory.
+            </summary>
+            <param name="p1">FingerPose 1.</param>
+            <param name="p2">FingerPose 2.</param>
+            <param name="t">The interpolation factor. A value between 0 and 1.</param>
+            <param name="result">The FingerPose where the result should be stored. Must not be <see langword="null"/>.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.CopyValuesFrom(MAGES.Interaction.FingerPose)">
+            <summary>
+            Copies all the bone poses from the given finger pose to this.
+            </summary>
+            <param name="pose">The pose to get the values from.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.Equals(System.Object)">
+            <summary>
+            Checks if the finger pose is equals to <paramref name="obj"/>. Equality is defined as <paramref name="obj"/> beeing a finger pose and having the same finger index and the same bone poses.
+            </summary>
+            <param name="obj">The object to compare to.</param>
+            <returns><see langword="true"/> if equal.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPose.GetHashCode">
+            <summary>
+            Gets the hash code for this finger pose.
+            </summary>
+            <returns>The hashcode.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.FingerPoser">
+            <summary>
+            A class to be attached on a finger to pose it.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.FingerPoser.FingerIndex">
+            <summary>
+            Gets or sets the finger index for this finger poser.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.FingerPoser.Bones">
+            <summary>
+            Gets or sets the bones of this finger.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.FingerPoser.FingerRadius">
+            <summary>
+            Gets or sets the finger collision radius used for automatic posing.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.AddAutomaticColliders">
+            <summary>
+            Adds automatic colliders to the finger.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.LerpPose(MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose,System.Single)">
+            <summary>
+            Lerps between the two poses.
+            </summary>
+            <param name="p1">Pose 1.</param>
+            <param name="p2">Pose 2.</param>
+            <param name="t">Interpolation factor. A value between 0 and 1.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.GetCurrentPose(MAGES.Interaction.FingerPose)">
+            <summary>
+            Gets the current pose of the finger.
+            </summary>
+            <param name="currentPose">The instance in which to store the pose.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.SetFingerPose(MAGES.Interaction.FingerPose,System.Single)">
+            <summary>
+            Sets the finger with the given <paramref name="pose"/>.
+            </summary>
+            <param name="pose">The pose to use for the finger.</param>
+            <param name="interpolationTime">The time to interpolate between current pose and the given new one.</param>
+            <remarks>
+            This will stop any ongoing interpolation.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.GetAutomaticFingerPose(System.Int32,UnityEngine.QueryTriggerInteraction,MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose,MAGES.Interaction.FingerPose,System.Int32,System.Int32,System.Nullable{UnityEngine.PhysicsScene})">
+            <summary>
+            Creates an automatic finger pose at the position the finger hits something by interpolating between the extended and retracted poses.
+            </summary>
+            <param name="layerMask">The collision layer mask. Use -1 for everything.</param>
+            <param name="triggerInteraction">Whether or not to check for tirgger collisions.</param>
+            <param name="extendedPose">The pose to start the interpolation from.</param>
+            <param name="retractedPose">The pose to end the interpolation to.</param>
+            <param name="hitPose">The finger pose at the hit position. Function expects to get a valid FingerPose instance to fill.</param>
+            <param name="iterations">The iteractions to perform.</param>
+            <param name="subSteps">The backwards substeps to perform in each iteration.</param>
+            <param name="physicsScene">The physics scene to use for the simulation. If <see langword="null"/> wil use the default physics scene.</param>
+            <returns><see langword="true"/> if the finger hits something int the <paramref name="layerMask"/> layer.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.Reset">
+            <summary>
+            Reset method, see <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FingerPoser.AreChildBonesHitting(System.Int32,System.Int32,UnityEngine.QueryTriggerInteraction,System.Nullable{UnityEngine.PhysicsScene})">
+            <summary>
+            Gets the child bone index that hits something.
+            </summary>
+            <param name="boneIndex">The bone index to check children of and itself.</param>
+            <param name="layerMask">The layermask for physics hits.</param>
+            <param name="triggerInteraction">The trigger interactaction.</param>
+            <returns>The index of the bone that hits, -1 if not hits occur.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.FixedJointTransformProvider">
+            <summary>
+            Will use fixed joints to try to match the gameobject this component is attached to, to the target.
+            It initially will move the gamobject closer to the target using Rigidbody.MovePosition and Rigidbody.MoveRotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.FixedJointTransformProvider.MoveCloserTime">
+            <summary>
+            Gets or sets a value betwen 0 and 1, for the time it takes to initially move the object closer to the target, before applying velocity.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.FixedJointTransformProvider.Attach(MAGES.IInteractor)">
+            <inheritdoc cref="!:BaseTransformProvider.Attach(IInteractor, Pose)"/>
+        </member>
+        <member name="M:MAGES.Interaction.FixedJointTransformProvider.Attach(MAGES.IInteractor,System.Single,System.Action{MAGES.IInteractor,MAGES.IInteractable})">
+            <inheritdoc cref="!:BaseTransformProvider.Attach(IInteractor, Pose)"/>
+            <param name="onMovedCloser">A callback that will be called when the interactable has moved closer to the interactor, and the fixed joint has been created.</param>
+            <param name="jointBreakForce">The force at which the fixed joint will break.</param>
+            <param name="onJointBreak">Action to be called after the fixed joint breaks.</param>
+        </member>
+        <member name="M:MAGES.Interaction.FixedJointTransformProvider.Detach(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.Interaction.BaseTransformProvider.Detach(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.FixedJointTransformProvider.Process(MAGES.UpdatePhase)">
+            <inheritdoc cref="M:MAGES.Interaction.BaseTransformProvider.Process(MAGES.UpdatePhase)"/>
+        </member>
+        <member name="M:MAGES.Interaction.FixedJointTransformProvider.OnInteractorCountChanged(MAGES.IInteractor,System.Int32,System.Int32)">
+            <inheritdoc cref="M:MAGES.Interaction.BaseTransformProvider.OnInteractorCountChanged(MAGES.IInteractor,System.Int32,System.Int32)"/>
+        </member>
+        <member name="T:MAGES.Interaction.HandPose">
+            <summary>
+            A predefined HandPose for a hand.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.HandPose.HandIndex">
+            <summary>
+            Gets or sets the index of the hand this pose is for.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.HandPose.LocalPose">
+            <summary>
+            Gets or sets the local Pose of the hand relative to the gameobject this pose is for.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.HandPose.FingerPoses">
+            <summary>
+            Gets the finger poses.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.op_Addition(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose)">
+            <summary>
+            Combines the two hand poses.
+            </summary>
+            <param name="p1">The first handpose.</param>
+            <param name="p2">The second handpose.</param>
+            <returns>The combined hand pose.</returns>
+            <remarks>
+            This can be used in cases where one handpose contains some fingers and the other the rest, in order to combine them.
+            If both hand poses contain the same finger, the one from the first hand pose will be used.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.op_Subtraction(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose)">
+            <summary>
+            Removes from the hand pose <paramref name="p1"/> the fingers contained in the handpose <paramref name="p2"/>.
+            </summary>
+            <param name="p1">The first handpose.</param>
+            <param name="p2">The second handpose.</param>
+            <returns>The new hand pose.</returns>
+            <remarks>
+            This can be used in cases where one handpose contains some fingers and the other the rest, in order to mask them.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.op_Equality(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose)">
+            <summary>
+            Checks if two hand poses are equal. Equality is defined as having the same <see cref="P:MAGES.Interaction.HandPose.HandIndex"/>, <see cref="P:MAGES.Interaction.HandPose.LocalPose"/> and by calling the Equals operator for each finger pose in <see cref="P:MAGES.Interaction.HandPose.FingerPoses"/>.
+            </summary>
+            <param name="p1">Hand pose 1.</param>
+            <param name="p2">Hand pose 2.</param>
+            <returns><see langword="true"/> if equal.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.op_Inequality(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose)">
+            <summary>
+            Checks if two hand poses are not equal. Equality is defined as having the same <see cref="P:MAGES.Interaction.HandPose.HandIndex"/>, <see cref="P:MAGES.Interaction.HandPose.LocalPose"/> and by calling the Equals operator for each finger pose in <see cref="P:MAGES.Interaction.HandPose.FingerPoses"/>.
+            </summary>
+            <param name="p1">Hand pose 1.</param>
+            <param name="p2">Hand pose 2.</param>
+            <returns><see langword="true"/> if not equal.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.Lerp(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose,System.Single)">
+            <summary>
+            Lerps between the two hand poses.
+            </summary>
+            <param name="p1">HandPose 1.</param>
+            <param name="p2">HandPose 2.</param>
+            <param name="t">Interpolation factor. A value between 0 and 1.</param>
+            <returns>The interpolated hand pose.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.LerpNonAlloc(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose,System.Single,MAGES.Interaction.HandPose)">
+            <summary>
+            Lerps between p1 and p2 and stores the result in <paramref name="result"/>.
+            </summary>
+            <param name="p1">HandPose 1.</param>
+            <param name="p2">HandPose 2.</param>
+            <param name="t">Interpolation factor. A value between 0 and 1.</param>
+            <param name="result">The HandPose where the result will be stored.</param>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.Combine(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose)">
+            <summary>
+            Combines the two hand poses.
+            </summary>
+            <param name="p1">The first handpose.</param>
+            <param name="p2">The second handpose.</param>
+            <returns>The combined hand pose.</returns>
+            <remarks>
+            This can be used in cases where one handpose contains some fingers and the other the rest, in order to combine them.
+            If both hand poses contain the same finger, the one from the first hand pose will be used.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.TryGetFingerPose(System.Int32,MAGES.Interaction.FingerPose@)">
+            <summary>
+            Tries to find and get the finger pose for the given finger index.
+            </summary>
+            <param name="fingerIndex">The finger index to get the pose for.</param>
+            <param name="pose">The pose that was found, if any.</param>
+            <returns><see langword="true"/> if the requested finger pose was found.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.GetFingerPose(System.Int32)">
+            <summary>
+            Returns the finger pose for the given finger index.
+            </summary>
+            <param name="fingerIndex">The finger index to get the pose for.</param>
+            <returns>The requested finger pose or null if not found.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.ContainsFingerPose(System.Int32)">
+            <summary>
+            Gets if this handpose contains a FingerPose for the given finger index.
+            </summary>
+            <param name="fingerIndex">The index for the finger pose to check for.</param>
+            <returns><see langword="true"/> if the HandPose contains a FingerPose for this index.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.AddFingerPose(MAGES.Interaction.FingerPose)">
+            <summary>
+            Adds the given finger pose for the given finger index.
+            </summary>
+            <param name="pose">The pose to add.</param>
+            <remarks>If a pose with the same finger index exits, it will override it.</remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.RemoveFingerPose(MAGES.Interaction.FingerPose)">
+            <summary>
+            Removes the <paramref name="pose"/> from the saved finger poses.
+            </summary>
+            <param name="pose">The pose to remove.</param>
+            <remarks>
+            The pose must be contained in the handpose.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.RemoveFingerPose(System.Int32)">
+            <summary>
+            Removes the finger pose with the given <paramref name="fingerIndex"/> from the saved finger poses.
+            </summary>
+            <param name="fingerIndex">The finger index of the pose to remove.</param>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.ClearFingerPoses">
+            <summary>
+            Removes all saved finger poses.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.CopyValuesFrom(MAGES.Interaction.HandPose)">
+            <summary>
+            Copies all the finger poses from the given hand pose to this.
+            </summary>
+            <param name="pose">The pose to get the values from.</param>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.Equals(System.Object)">
+            <summary>
+            Checks if this hand pose is equal to the given object.<br/>
+            Equality is defined as having the same <see cref="P:MAGES.Interaction.HandPose.HandIndex"/>, <see cref="P:MAGES.Interaction.HandPose.LocalPose"/> and by calling the Equals operator for each finger pose in <see cref="P:MAGES.Interaction.HandPose.FingerPoses"/>.
+            </summary>
+            <param name="other">The object to compare to.</param>
+            <returns><see langword="true"/> if the two hand poses are the same.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPose.GetHashCode">
+            <summary>
+            Gets the hash code for this hand pose.
+            </summary>
+            <returns>The hashcode.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.HandPoser">
+            <summary>
+            A class to be attached on a hand to pose it.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.HandPoser.HandIndex">
+            <summary>
+            Gets or sets the finger index for this finger poser.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.HandPoser.FingerPosers">
+            <summary>
+            Gets or sets the finger posers this hand poser is composed of.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.LerpPose(MAGES.Interaction.HandPose,MAGES.Interaction.HandPose,System.Single)">
+            <summary>
+            Lerps between the two poses.
+            </summary>
+            <param name="p1">Pose 1.</param>
+            <param name="p2">Pose 2.</param>
+            <param name="t">Interpolation factor. A value between 0 and 1.</param>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.SetHandPose(MAGES.Interaction.HandPose,System.Action{MAGES.Interaction.HandPose},System.Single)">
+            <summary>
+            Sets the finger with the given <paramref name="pose"/>.
+            </summary>
+            <param name="pose">The pose to use for the finger.</param>
+            <param name="onInterpolationFinished">Action to be called when the interpolation finished. i.e. after <paramref name="interpolationTime"/> seconds.</param>
+            <param name="interpolationTime">The time to interpolate between current pose and the given new one.</param>
+            <remarks>
+            This will stop any ongoing interpolation.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.GetAutomaticHandPose(System.Int32,UnityEngine.QueryTriggerInteraction,MAGES.Interaction.HandPose,MAGES.Interaction.HandPose,MAGES.Interaction.HandPose,System.Int32,System.Int32,System.Nullable{UnityEngine.PhysicsScene})">
+            <summary>
+            Creates an automatic finger pose at the position the finger hits something by interpolating between the extended and retracted poses.
+            </summary>
+            <param name="layerMask">The collision layer mask. Use -1 for everything.</param>
+            <param name="triggerInteraction">Whether or not to check for tirgger collisions.</param>
+            <param name="extendedPose">The pose to start the interpolation from.</param>
+            <param name="retractedPose">The pose to end the interpolation to.</param>
+            <param name="hitPose">The hand pose output at the hit position. Function expects to get a valid HandPose instance to populate.</param>
+            <param name="iterations">The iteractions to perform.</param>
+            <param name="subSteps">The backwards substeps to perform in each iteration.</param>
+            <param name="physicsScene">The physics scene to use for the simulation. If <see langword="null"/> wil use the default physics scene.</param>
+            <returns><see langword="true"/> if the finger hits something in the <paramref name="layerMask"/> layer.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.GetCurrentPose(MAGES.Interaction.HandPose)">
+            <summary>
+            Gets the current pose of the finger.
+            </summary>
+            <param name="currentPose">The instance in which to store the pose.</param>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.Reset">
+            <summary>
+            Reset method, see <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.HandPoser.Awake">
+            <summary>
+            Awake method, see <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.HelpUrls">
+            <summary>
+            Help URLs for the interaction system.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.Version">
+            <summary>
+            The docs version.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.BaseURL">
+            <summary>
+            The base URL for the docs. Contains the version of the docs.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.MAGESInteractionSystem">
+            <summary>
+            Documentation URL for the <see cref="T:MAGES.Interaction.MAGESInteractionSystem"/>, module of hub.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.InteractionManager">
+            <summary>
+            Documentation URL for the <see cref="T:MAGES.Interaction.InteractionManager"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.PlayerRig">
+            <summary>
+            Documentation URL for the <see cref="T:MAGES.Interaction.PlayerRig"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.MAGESUIInputModule">
+            <summary>
+            Documentation URL for the <see cref="T:MAGES.Interaction.MAGESUIInputModule"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.MAGESGraphicRaycaster">
+            <summary>
+            Documentation URL for the <see cref="T:MAGES.Interaction.MAGESGraphicRaycaster"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.HandInteractor">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.Interactors.HandInteractor"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.SimpleUIInteractor">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.Interactors.SimpleUIInteractor"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.Grabbable">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.Interactables.Grabbable"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.LocomotionSystem">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.LocomotionSystem"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.SmoothMovementProvider">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.SmoothMovementProvider"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.SnapTurnProvider">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.SnapTurnProvider"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.SmoothTurnProvider">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.SmoothTurnProvider"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.HandPose">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.HandPose"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.HandPoser">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.HandPoser"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.InteractableAnimationController">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.InteractableAnimationController"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.HelpUrls.LineVisualizer">
+            <summary>
+            Documentation URL for <see cref="T:MAGES.Interaction.LineVisualizer"/>.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.IHandPoseVisualizer">
+            <summary>
+            An object that can visualize a hand pose.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.IHandPoseVisualizer.HandPoseVisualEnabled">
+            <summary>
+            Gets or sets a value indicating whether the hand pose visual is enabled.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.IHandPoseVisualizer.HandPoseVisualizerIndex">
+            <summary>
+            Gets the index for the hand pose visualizer. Used to find the HandPoses for this visualizer.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.IHandPoseVisualizer.SetHandPose(MAGES.Interaction.HandPose)">
+            <summary>
+            Sets the current pose to the given one.
+            </summary>
+            <param name="pose">The pose to set.</param>
+        </member>
+        <member name="M:MAGES.Interaction.IHandPoseVisualizer.SetHandPose(MAGES.Interaction.HandPose,System.Single,System.Action{MAGES.Interaction.HandPose})">
+            <summary>
+            Sets the current pose to the given one.
+            </summary>
+            <param name="pose">The pose to set.</param>
+            <param name="interpolationDuration">The time to interpolate from the current pose to the given pose.</param>
+            <param name="onInterpolationFinished">
+                The action to be called when the interpolation finishes.
+                <param name="arg1">The final handpose after the interpolation.</param>
+            </param>
+        </member>
+        <member name="M:MAGES.Interaction.IHandPoseVisualizer.ResetDefaultHandPose">
+            <summary>
+            Resets the hand pose to the default.
+            </summary>
+            <remarks>Use it after calling <see cref="M:MAGES.Interaction.IHandPoseVisualizer.SetHandPose(MAGES.Interaction.HandPose)"/> in order to go back to the default hand pose.</remarks>
+        </member>
+        <member name="M:MAGES.Interaction.IHandPoseVisualizer.GetCurrentHandPose(MAGES.Interaction.HandPose)">
+            <summary>
+            Gets the current hand pose and stores it in the given handpose <paramref name="result"/>.
+            </summary>
+            <param name="result">The handpose in which to store the result.</param>
+        </member>
+        <member name="T:MAGES.Interaction.ILineRenderable">
+            <summary>
+            An interface for objects that can be rendered as a line.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.ILineRenderable.TryGetLinePoints(UnityEngine.Vector3[]@)">
+            <summary>
+            Returns a list of the points that make up the line.
+            </summary>
+            <param name="points">An array of all the points defining the line.</param>
+            <returns><see langword="true"/> if able to get at least 2 points (that make a line).</returns>
+        </member>
+        <member name="M:MAGES.Interaction.ILineRenderable.TryGetHitPoint(UnityEngine.Vector3@,UnityEngine.Vector3@,System.Int32@)">
+            <summary>
+            Gets the hit point of the line.
+            </summary>
+            <param name="hitPosition">The position the line hits the object.</param>
+            <param name="hitNormal">The normal at the hit position.</param>
+            <param name="pointIndex">The point index in the line points at which the hit occurs.</param>
+            <returns><see langword="true"/> if the line hits an object and the object can be interacted.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.ILineRenderable.TryGetReticle(UnityEngine.GameObject@)">
+            <summary>
+            Gets the reticle for the line end.
+            </summary>
+            <param name="reticle">The reticle gameobject. Forward will be aligned with the normal of the hit point.</param>
+            <returns><see langword="true"/> if the reticle exists.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.InteractableAnimationController">
+            <summary>
+            Controlls an animation based on the Selection/Activation intensity.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractableAnimationController.Interactable">
+            <summary>
+            Gets or sets the interactable to be used for getting selection/animation intensities.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractableAnimationController.Animator">
+            <summary>
+            Gets or sets the animator to control.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractableAnimationController.SelectionIntensityAnimatorFloatValue">
+            <summary>
+            Gets or sets the name of the float value to set on the animator for selection intensity.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractableAnimationController.ActivationIntensityAnimatorFloatValue">
+            <summary>
+            Gets or sets the name of the float value to set on the animator for activation intensity.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.InteractionManager">
+            <summary>
+            The InteractionManager is responsible for managing the interaction between interactable objects and interactors.
+            Many of the methods in <see cref="T:MAGES.IInteractable"/> and <see cref="T:MAGES.IInteractor"/> are called from here.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.Managers">
+            <summary>
+            Gets all the active interaction managers.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.RegisterManagerEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.RegisterManagerEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.DeregisterManagerEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.DeregisterManagerEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.RegisterInteractorEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.RegisterInteractorEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.DeregisterInteractorEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.DeregisterInteractorEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.RegisterInteractableEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.RegisterInteractableEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.DeregisterInteractableEnter">
+            <inheritdoc cref="P:MAGES.IInteractionManager.DeregisterInteractableEnter"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.HoverEntered">
+            <inheritdoc cref="P:MAGES.IInteractionManager.HoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.HoverExited">
+            <inheritdoc cref="P:MAGES.IInteractionManager.HoverEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.SelectEntered">
+            <inheritdoc cref="P:MAGES.IInteractionManager.SelectEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.SelectExited">
+            <inheritdoc cref="P:MAGES.IInteractionManager.SelectExited"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.ActivateEntered">
+            <inheritdoc cref="P:MAGES.IInteractionManager.ActivateEntered"/>
+        </member>
+        <member name="P:MAGES.Interaction.InteractionManager.ActivateExited">
+            <inheritdoc cref="P:MAGES.IInteractionManager.ActivateExited"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.RegisterManager(MAGES.IInteractionManager)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.RegisterManager(MAGES.IInteractionManager)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.DeregisterManager(MAGES.IInteractionManager)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.DeregisterManager(MAGES.IInteractionManager)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.RegisterInteractable(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.RegisterInteractable(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.DeregisterInteractable(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.DeregisterInteractable(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.RegisterInteractor(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.RegisterInteractor(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.DeregisterInteractor(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.DeregisterInteractor(MAGES.IInteractor)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.GetRegisteredInteractors(System.Collections.Generic.List{MAGES.IInteractor})">
+            <inheritdoc cref="M:MAGES.IInteractionManager.GetRegisteredInteractors(System.Collections.Generic.List{MAGES.IInteractor})"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.GetRegisteredInteractables(System.Collections.Generic.List{MAGES.IInteractable})">
+            <inheritdoc cref="M:MAGES.IInteractionManager.GetRegisteredInteractables(System.Collections.Generic.List{MAGES.IInteractable})"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.IsInteractorRegistered(MAGES.IInteractor)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.IsInteractableRegistered(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.IsInteractableRegistered(MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.IsInteractableRegistered(MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.TryGetInteractorFromCollider(UnityEngine.Collider,MAGES.IInteractor@)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.TryGetInteractorFromCollider(UnityEngine.Collider,MAGES.IInteractor@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.TryGetInteractableFromCollider(UnityEngine.Collider,MAGES.IInteractable@)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.TryGetInteractableFromCollider(UnityEngine.Collider,MAGES.IInteractable@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.HoverEnter(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.HoverEnter(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.HoverExit(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.HoverExit(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.SelectEnter(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.SelectEnter(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.SelectExit(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.SelectExit(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.ActivateEnter(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.ActivateEnter(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.ActivateExit(MAGES.IInteractor,MAGES.IInteractable)">
+            <inheritdoc cref="M:MAGES.IInteractionManager.ActivateExit(MAGES.IInteractor,MAGES.IInteractable)"/>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.ResolveCurrentSelection(MAGES.IInteractor,MAGES.IInteractable)">
+            <summary>
+            Resolves multiple activations from multiple interactors.
+            </summary>
+            <param name="interactor">The interactor to resolve for.</param>
+            <param name="interactable">The interactable to resolve for.</param>
+            <returns>Returns <see langword="true"/> if this interactor can start interaction.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.ResolveCurrentActivation(MAGES.IInteractor,MAGES.IInteractable)">
+            <summary>
+            Resolves multiple activations from multiple interactors.
+            </summary>
+            <param name="interactor">The interactor to resolve for.</param>
+            <param name="interactable">The interactable to resolve for.</param>
+            <returns>Returns <see langword="true"/> if this interactor can start interaction.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.InteractionManager.FlushRegistrations">
+            <summary>
+            Flushes all registration lists and moves pending interactors/interactables to the snapshot.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.IReticleProvider">
+            <summary>
+            Interface for objects that can provide a reticle.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.IReticleProvider.TryGetReticleForInteractor(MAGES.IInteractor,UnityEngine.GameObject@)">
+            <summary>
+            Gets the reticle.
+            </summary>
+            <param name="interactor">The interactor to get a reticle for.</param>
+            <param name="reticle">The reticle gameobject.</param>
+            <returns>Returns true if a reticle exists.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.IUIInteractor">
+            <summary>
+            An interactor that can interact with UI elements.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.IUIInteractor.RayOrigin">
+            <summary>
+            Gets the transform from which the Raycast for UIs originates.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.IUIInteractor.RayLength">
+            <summary>
+            Gets the length of the Raycast for UIs.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.IUIInteractor.CanInteractWithUIs">
+            <summary>
+            Gets a value indicating whether this <see cref="T:MAGES.Interaction.IUIInteractor"/> has the ability to interact with UIs.
+            </summary>
+            <returns><see langword="true"/> if can hover UIs.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.IUIInteractor.UpdateUIModel(MAGES.Interaction.TrackedDeviceModel@)">
+            <summary>
+            Updates the UI model with the current state of the interactor.
+            </summary>
+            <param name="model">The model to fill with the current state of the <see cref="T:MAGES.Interaction.IUIInteractor"/>.</param>
+        </member>
+        <member name="T:MAGES.Interaction.LineVisualizer">
+            <summary>
+            Visualizes a <see cref="T:MAGES.Interaction.ILineRenderable"/> object using a <see cref="T:UnityEngine.LineRenderer"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.LineVisualizer.LineRenderable">
+            <summary>
+            Gets or sets the line renderable object that will be visualized.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.LineVisualizer.LineRenderer">
+            <summary>
+            Gets or sets the line renderer that will be used for visualization.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.LineVisualizer.Awake">
+            <summary>
+            Unity's Monobehaviour Awake method. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.LineVisualizer.Update">
+            <summary>
+            Unity's Monobehaviour Update method. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.LineVisualizer.EnableReticle(UnityEngine.GameObject)">
+            <summary>
+            Disables previous reticle if active and enables the given one. If the given reticle is the same as the previous one, nothing happens.
+            </summary>
+            <param name="reticle">Reticle to enable.</param>
+        </member>
+        <member name="T:MAGES.Interaction.LocomotionSystem">
+            <summary>
+            The locomotion system responsible for managing access to the Rig.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.LocomotionSystem.Rig">
+            <inheritdoc cref="P:MAGES.ILocomotionSystem.Rig"/>
+        </member>
+        <member name="P:MAGES.Interaction.LocomotionSystem.ExclusiveProvider">
+            <inheritdoc cref="P:MAGES.ILocomotionSystem.ExclusiveProvider"/>
+        </member>
+        <member name="P:MAGES.Interaction.LocomotionSystem.IsBusy">
+            <inheritdoc cref="P:MAGES.ILocomotionSystem.IsBusy"/>
+        </member>
+        <member name="P:MAGES.Interaction.LocomotionSystem.ExclusiveAccessGranted">
+            <inheritdoc cref="P:MAGES.ILocomotionSystem.ExclusiveAccessGranted"/>
+        </member>
+        <member name="P:MAGES.Interaction.LocomotionSystem.ExclusiveAccessEnded">
+            <inheritdoc cref="P:MAGES.ILocomotionSystem.ExclusiveAccessEnded"/>
+        </member>
+        <member name="M:MAGES.Interaction.LocomotionSystem.RequestExclusiveAccess(MAGES.ILocomotionProvider,System.Single)">
+            <inheritdoc cref="!:ILocomotionSystem.RequestExclusiveAccess(ILocomotionProvider)"/>
+        </member>
+        <member name="M:MAGES.Interaction.LocomotionSystem.EndExclusiveAccess(MAGES.ILocomotionProvider)">
+            <inheritdoc cref="M:MAGES.ILocomotionSystem.EndExclusiveAccess(MAGES.ILocomotionProvider)"/>
+        </member>
+        <member name="T:MAGES.Interaction.MAGESGraphicRaycaster">
+            <summary>
+            A raycaster for performing raycasts against the scene from UIInteractors.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.MAGESGraphicRaycaster.Raycasters">
+            <summary>
+            Gets a list with all the raycasters in the scene currently enabled.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.MAGESGraphicRaycaster.eventCamera">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESGraphicRaycaster.Raycast(UnityEngine.EventSystems.PointerEventData,System.Collections.Generic.List{UnityEngine.EventSystems.RaycastResult})">
+            <summary>
+            Raycast against the scene.
+            </summary>
+            <param name="eventData">Current event data.</param>
+            <param name="resultAppendList">List of hit Objects.</param>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESGraphicRaycaster.OnEnable">
+            <summary>
+            Unity's OnEnable function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESGraphicRaycaster.OnDisable">
+            <summary>
+            Unity's OnDisable function. See <see cref="T:UnityEngine.MonoBehaviour"/> for more information.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.MAGESInteractionSystem">
+            <summary>
+            The MAGES Interaction System module.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.MAGESInteractionSystem.DefaultHoverMaterial">
+            <summary>
+            Gets the default hover material to be used for hovered interactables.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.MAGESInteractionSystem.DefaultReticle">
+            <summary>
+            Gets the default reticle to use when hovering over interactables that do not provide their own.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.Startup">
+            <inheritdoc cref="M:MAGES.HubModule.Startup"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.Shutdown">
+            <inheritdoc cref="M:MAGES.HubModule.Shutdown"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.TryAddInteractable(UnityEngine.GameObject,System.String,MAGES.IInteractable@)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.TryAddInteractable(UnityEngine.GameObject,System.String,MAGES.IInteractable@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetInteractable(UnityEngine.GameObject,System.String)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetInteractable(UnityEngine.GameObject,System.String)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetOrAddInteractable(UnityEngine.GameObject,System.String)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetOrAddInteractable(UnityEngine.GameObject,System.String)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.AddGrabbable(UnityEngine.GameObject)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.AddGrabbable(UnityEngine.GameObject)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetGrabbable(UnityEngine.GameObject)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetGrabbable(UnityEngine.GameObject)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetOrAddGrabbable(UnityEngine.GameObject)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetOrAddGrabbable(UnityEngine.GameObject)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.TryAddInteractor(UnityEngine.GameObject,System.String,MAGES.IInteractor@)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.TryAddInteractor(UnityEngine.GameObject,System.String,MAGES.IInteractor@)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetInteractor(UnityEngine.GameObject,System.String)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetInteractor(UnityEngine.GameObject,System.String)"/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.GetOrAddInteractor(UnityEngine.GameObject,System.String)">
+            <inheritdoc cref="M:MAGES.InteractionSystemModule.GetOrAddInteractor(UnityEngine.GameObject,System.String)"/>/>
+        </member>
+        <member name="T:MAGES.Interaction.MAGESInteractionSystem.SetRaycastsEnabledStep">
+            <summary>
+            A step that sets the raycasts enabled or disabled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESInteractionSystem.SetRaycastsEnabledStep.Execute(MAGES.BaseActionData,MAGES.StepEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Interaction.MAGESUIInputModule">
+            <summary>
+            The MAGES UI Input Module.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.Process">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.RegisterInteractor(MAGES.Interaction.IUIInteractor)">
+            <summary>
+            Register a iUIInteractor with the input module.
+            </summary>
+            <param name="interactor">The interactor to register.</param>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.DeregisterInteractor(MAGES.Interaction.IUIInteractor)">
+            <summary>
+            Removes an IUIInteractor from the input module.
+            </summary>
+            <param name="interactor">The interactor to deregister.</param>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.GetPointerIdFromUIInteractor(MAGES.Interaction.IUIInteractor)">
+            <summary>
+            Gets the pointer Id of the given <paramref name="interactor"/>.
+            </summary>
+            <param name="interactor">The interactor.</param>
+            <returns>The pointer Id of the given <paramref name="interactor"/> or -1 if is not registered.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.IsPointerOverGameObject(System.Int32)">
+            <summary>
+            Gets if a pointer is over a GameObject.
+            </summary>
+            <param name="pointerId">The pointer Id.</param>
+            <returns><see langword="true"/> if the pointer is over a gameobject, else <see langword="false"/> if the pointer id does not exist or the pointer is not over a gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.TryGetLastRaycastHit(System.Int32,MAGES.Interaction.MAGESUIInputModule.RaycastHitData@)">
+            <summary>
+            Gets the last raycast hit for the given pointer id.
+            </summary>
+            <param name="pointerId">The pointer id.</param>
+            <param name="hit">The last hit.</param>
+            <returns><see langword="true"/> on success.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.ProcessPointerButtonPress(MAGES.Interaction.TrackedDeviceModel.ButtonState@,MAGES.Interaction.TrackedDeviceEventData)">
+            <summary>
+            Processes the pointer movement. Sends hover enter/exit events to objects.
+            </summary>
+            <param name="button">The button state.</param>
+            <param name="eventData">The event data to use.</param>
+        </member>
+        <member name="M:MAGES.Interaction.MAGESUIInputModule.DoRaycast(MAGES.Interaction.TrackedDeviceEventData)">
+            <summary>
+            Does a raycast against the scene.
+            </summary>
+            <param name="eventData">The event data.</param>
+            <returns>The raycast result.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.MAGESUIInputModule.RaycastHitData">
+            <summary>
+            Information for a hit.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MAGESUIInputModule.RaycastHitData.Position">
+            <summary>
+            The hit position.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MAGESUIInputModule.RaycastHitData.Normal">
+            <summary>
+            The hit normal.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MAGESUIInputModule.RaycastHitData.Distance">
+            <summary>
+            The distance of hit.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MAGESUIInputModule.RaycastHitData.GameObject">
+            <summary>
+            The gameobject that was hit.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MAGESUIInputModule.UIInteractorData.Model">
+            <summary>
+            The model for the tracked device.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.MovementMode">
+            <summary>
+            Defines how the Rig will move.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MovementMode.LookAt">
+            <summary>
+            The rig will move along the camera forward axis.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.MovementMode.Horizontal">
+            <summary>
+            The rig will move parallel to the ground, on the direction of the camera forward axis.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.PlayerRig">
+            <summary>
+            The Player Rig.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.PlayerRig.RootTransform">
+            <summary>
+            Gets or sets the root transform of the rig.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.PlayerRig.CameraOffset">
+            <summary>
+            Gets or sets the Rig's camera offset.
+            </summary>
+            <remarks>
+            Typically the offset the camera has from the ground.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.PlayerRig.Camera">
+            <summary>
+            Gets or sets the Rig's camera component.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.PlayerRig.Reset">
+            <summary>
+            Monobehaviour's Reset. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.SmoothMovementProvider">
+            <summary>
+            A locomotion provider that moves the Rig smoothly.
+            </summary>
+            <remarks>
+            This can be used to create a functional moving Rig.
+            It can also be combined with a turn provider to allow rotation adjustements.
+            </remarks>
+            <seealso cref="T:MAGES.Interaction.SmoothTurnProvider"/>
+            <seealso cref="T:MAGES.Interaction.SnapTurnProvider"/>
+        </member>
+        <member name="P:MAGES.Interaction.SmoothMovementProvider.RigCharacterController">
+            <summary>
+            Gets or sets the Rig's Character Controller. If left empty the provider will try to find it on Awake.
+            If the Character Controller is not found the provider will use direct transform manipulation for movement, therefore no collisions will happen.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.SmoothMovementProvider.Speed">
+            <summary>
+            Gets or sets the speed of the movement.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.SmoothMovementProvider.MovementMode">
+            <summary>
+            Gets or sets a value indicating whether the Rig can fly.
+            </summary>
+            <remarks>
+            If set to true the Rig will move in the direction of the camera's forward vector.
+            This means that if the camera points away from the ground the rig will move up.
+            </remarks>
+        </member>
+        <member name="P:MAGES.Interaction.SmoothMovementProvider.EnableVerticalMovement">
+            <summary>
+            Gets or sets a value indicating whether the user can move the Rig vertically.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothMovementProvider.Awake">
+            <summary>
+            Monobehaviour's Awake. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothMovementProvider.Start">
+            <summary>
+            Monobehaviour's Start. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothMovementProvider.FixedUpdate">
+            <summary>
+            Monobehaviour's FixedUpdate. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothMovementProvider.Reset">
+            <summary>
+            Monobehaviour's Reset. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.SmoothTurnProvider">
+            <summary>
+            A locomotion provider, for providing rotation to the camera using the joystick.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.SmoothTurnProvider.Speed">
+            <summary>
+            Gets or sets the speed of the rotation.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothTurnProvider.RotateRig(UnityEngine.Vector2)">
+            <summary>
+            Rotates the Camera.
+            </summary>
+            <param name="input">The rotation values of each axis.</param>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothTurnProvider.Start">
+            <summary>
+            Monobehaviour's Start. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SmoothTurnProvider.FixedUpdate">
+            <summary>
+            Monobehaviour's FixedUpdate. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.SnapTurnProvider">
+            <summary>
+            A locomotion provider, for providing rotation to the camera using the joystick.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.SnapTurnProvider.SnapRotationAngle">
+            <summary>
+            Gets or sets the snap rotation angle. Only used when <see cref="!:SnapRotation"/> is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SnapTurnProvider.RotateRigAroundCamera(UnityEngine.Vector3,System.Single)">
+            <summary>
+            Rotates the rig around the camera.
+            </summary>
+            <param name="axis">The rotation axis.</param>
+            <param name="angle">The angle in degrees.</param>
+        </member>
+        <member name="M:MAGES.Interaction.SnapTurnProvider.RotateRig(UnityEngine.Vector3)">
+            <summary>
+            Rotates the Rig.
+            </summary>
+            <param name="eulers">The rotation angles of each axis.</param>
+        </member>
+        <member name="M:MAGES.Interaction.SnapTurnProvider.Start">
+            <summary>
+            Monobehaviour's Start. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SnapTurnProvider.FixedUpdate">
+            <summary>
+            Monobehaviour's FixedUpdate. See <see cref="T:UnityEngine.MonoBehaviour"/> for more.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.SnapTurnProvider.OnRotate(System.Single)">
+            <summary>
+            Called by the Device Manager, when the user requests a rotation.
+            </summary>
+            <param name="input">The requested rotation direction input.</param>
+        </member>
+        <member name="T:MAGES.Interaction.TrackedDeviceEventData">
+            <summary>
+            Tracked device event data.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceEventData.#ctor(UnityEngine.EventSystems.EventSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.TrackedDeviceEventData"/> class.
+            </summary>
+            <param name="eventSystem">The event system for this data.</param>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceEventData.PointerId">
+            <summary>
+            Gets the pointer Id.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceEventData.TrackedDevicePosition">
+            <summary>
+            Gets or sets the tracked device position.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceEventData.TrackedDeviceRotation">
+            <summary>
+            Gets or sets the tracked device rotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceEventData.RayLength">
+            <summary>
+            Gets or sets the length of the ray.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.TrackedDeviceModel">
+            <summary>
+            A tracked device model.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.SelectButton">
+            <summary>
+            The select button state.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.HoveredObjects">
+            <summary>
+            The hovered objects.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.TrackedDevicePosition">
+            <summary>
+            The tracked device position.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.TrackedDeviceRotation">
+            <summary>
+            The tracked device rotation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.RayLength">
+            <summary>
+            The ray length.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.TrackedDeviceModel.Position">
+            <summary>
+            The screen position.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceModel.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.TrackedDeviceModel"/> struct.
+            </summary>
+            <param name="pointerId">The pointer id.</param>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.PointerId">
+            <summary>
+            Gets the pointer Id.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceModel.CopyToEventData(MAGES.Interaction.TrackedDeviceEventData)">
+            <summary>
+            Copies the state of this tracked device to the given event data.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceModel.CopyFromEventData(MAGES.Interaction.TrackedDeviceEventData)">
+            <summary>
+            Copies the state of this tracked device from the given event data.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="T:MAGES.Interaction.TrackedDeviceModel.ButtonState">
+            <summary>
+            A struct storing the state of a button.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.IsPressed">
+            <summary>
+            Gets or sets a value indicating whether this button is pressed or not.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.IgnoreNextClick">
+            <summary>
+            Gets or sets a value indicating whether to ignore next click.
+            When we "release" a button other than through user interaction (e.g. through focus switching),
+            we don't want this to count as an actual release that ends up clicking. This flag will cause
+            generated events to have <c>eligibleForClick</c> to be false.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.PressTime">
+            <summary>
+            Gets or sets the time this button was pressed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.ClickedOnSameGameObject">
+            <summary>
+            Gets or sets a value indicating whether this button has clicked on the same gameobject.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.WasPressedThisFrame">
+            <summary>
+            Gets or sets a value indicating whether this button was pressed this frame.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.TrackedDeviceModel.ButtonState.WasReleasedThisFrame">
+            <summary>
+            Gets or sets a value indicating whether this button was released this frame.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceModel.ButtonState.CopyPressStateTo(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Copies the press state to the given event data.
+            </summary>
+            <param name="eventData">The event data to copy the press state to.</param>
+        </member>
+        <member name="M:MAGES.Interaction.TrackedDeviceModel.ButtonState.CopyPressStateFrom(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Copies the press state from the given event data.
+            </summary>
+            <param name="eventData">The event data to copy the press state from.</param>
+        </member>
+        <member name="T:MAGES.Interaction.VelocityBasedTransformProvider">
+            <summary>
+            Will use velocities to try to match the gameobject this component is attached to, to the target.
+            It initially will move the gamobject closer to the target using Rigidbody.MovePosition and Rigidbody.MoveRotation.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.VelocityBasedTransformProvider.PoseWeightMode">
+            <summary>
+            How should the transform be calculated.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.VelocityBasedTransformProvider.PoseWeightMode.First">
+            <summary>
+            Use only the first Interactor's position and rotation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Interaction.VelocityBasedTransformProvider.PoseWeightMode.Average">
+            <summary>
+            Calculate the average position and rotation from all interactors.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.PoseMode">
+            <summary>
+            Gets or sets the pose weight mode.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.VelocityDamping">
+            <summary>
+            Gets or sets a value between 0 and 1, for velocity damping.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.AngularVelocityDamping">
+            <summary>
+            Gets or sets a value between 0 and 1, for angular velocity damping.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.MaxVelocity">
+            <summary>
+            Gets or sets the maximum velocity the object can have.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.MaxAngularVelocity">
+            <summary>
+            Gets or sets the maximum angular velocity the object can have.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.VelocityBasedTransformProvider.TeleportDistance">
+            <summary>
+            Gets or sets a max distance, at which the object will be teleported to the target.
+            </summary>
+            <remarks>
+            Set it less or equals to 0, to disable teleportation.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.Attach(MAGES.IInteractor)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.Process(MAGES.UpdatePhase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.OnInteractorCountChanged(MAGES.IInteractor,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.ProcessOnFixedUpdate">
+            <summary>
+            See <see cref="T:UnityEngine.MonoBehaviour"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.ProcessOnFixedUpdateSingle">
+            <summary>
+            Fixed update for Single Interactor Grab.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.VelocityBasedTransformProvider.ProcessOnFixedUpdateMulti">
+            <summary>
+            Fixed update while multiple interactors are grabbing.
+            </summary>
+        </member>
+    </members>
+</doc>

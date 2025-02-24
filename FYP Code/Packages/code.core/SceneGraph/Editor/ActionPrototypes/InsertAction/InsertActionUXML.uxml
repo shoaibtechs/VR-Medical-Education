@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="InsertObject" binding-path="insertObject" />
+    <uie:PropertyField name="FinalPosition" binding-path="finalPosition" />
+    <uie:PropertyField binding-path="maxInsertAngle" name="MaxInsertAngle" />
+    <uie:PropertyField binding-path="insertionType" name="InsertionType" />
+</ui:UXML>

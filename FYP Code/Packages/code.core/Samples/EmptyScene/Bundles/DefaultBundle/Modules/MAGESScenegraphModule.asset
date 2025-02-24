@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1349704695, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: MAGESScenegraphModule
+  m_EditorClassIdentifier: 
+  hologramMaterial: {fileID: 2100000, guid: 4830947804b2a9a4eab9dba77a420dca, type: 2}
+  performSound: {fileID: 8300000, guid: 857f2f6d384e67f4c8ce64416080aa00, type: 3}
+  undoSound: {fileID: 8300000, guid: dbbef63d9eb1557408da99ef0b36d614, type: 3}
+  infoUI: {fileID: 996262205017023450, guid: a362ff994c646480689bf1e73d1a69ee, type: 3}
+  warningUI: {fileID: 4077535924160438190, guid: f021b350e209448ff8eafe767fad46cc,
+    type: 3}
+  errorUI: {fileID: 2089214479290457458, guid: 63617e40730c649fb8e064ff8f6d281b, type: 3}
+  achievementUI: {fileID: 4112277332220563739, guid: e7bf89b1973fcc4479424ebd4635d727,
+    type: 3}

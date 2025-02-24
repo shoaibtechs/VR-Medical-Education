@@ -1,0 +1,59 @@
+:root {
+    margin: 40px 10px 15px 10px;
+    --c-background: rgb(60, 60, 60);
+}
+
+#background {
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--c-background);
+}
+
+#progress {
+    padding: 30px 10px 20px 10px;
+
+    flex-shrink: 1;
+    flex-grow: 0;
+
+    /*Right seperator border*/
+    border-width: 0 1px 0 0;
+    border-color: var(--c-content-background);
+}
+
+.wz-progress-container {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+Label {
+    font-size: 15px;
+}
+
+.wz-text-container {
+    flex-direction: row;
+}
+
+.wz-separator {
+    width: 2px;
+    height: 20px;
+    background-color: rgb(120, 120, 120);
+    margin-left: 14px;
+}
+
+.wz-step-highlight {
+    color: rgb(255, 255, 255);
+}
+
+.wz-progress-number {
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    -unity-text-align: middle-center;
+}
+
+.wz-progress-text {
+    -unity-text-align: middle-left;
+    padding-left: 4px;
+}

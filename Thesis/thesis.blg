@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: sections/chapter1.aux
+A level-1 auxiliary file: sections/chapter2.aux
+A level-1 auxiliary file: sections/chapter3.aux
+A level-1 auxiliary file: sections/chapter4.aux
+A level-1 auxiliary file: sections/chapter5.aux
+A level-1 auxiliary file: sections/chapter6.aux
+A level-1 auxiliary file: sections/chapter7.aux
+A level-1 auxiliary file: sections/chapter8.aux
+A level-1 auxiliary file: sections/chapter9.aux
+A level-1 auxiliary file: sections/chapter10.aux
+A level-1 auxiliary file: sections/chapter11.aux
+A level-1 auxiliary file: sections/conclusions.aux
+The style file: plain.bst
+Database file #1: bib.bib
+Warning--to sort, need author or key in BookChapter1
+Warning--to sort, need author or key in JournalArticle12
+Warning--to sort, need author or key in JournalArticle10
+Warning--to sort, need author or key in JournalArticle9
+Warning--to sort, need editor, organization, or key in ProceedingsArticle
+Warning--to sort, need author or key in JournalArticle11
+Warning--to sort, need author, editor, or key in BookChapter
+Warning--to sort, need author or key in journalarticle4
+Warning--to sort, need author or key in JournalArticle5
+Warning--to sort, need author or key in JournalArticle8
+Warning--to sort, need author or key in Journal1
+Warning--to sort, need author or key in JournalArticle2
+Warning--to sort, need author or key in JournalArticle3
+Warning--to sort, need author or key in JournalArticle7
+Name 1 in "Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon" has a comma at the end for entry github-logo
+while executing---line 1049 of file plain.bst
+Warning--empty author and editor in BookChapter
+Warning--empty journal in JournalArticle
+Name 1 in "Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon" has a comma at the end for entry github-logo
+while executing---line 1090 of file plain.bst
+Warning--empty publisher in velazquez2021virtual
+You've used 33 entries,
+            2118 wiz_defined-function locations,
+            697 strings with 8920 characters,
+and the built_in function-call counts, 7944 in all, are:
+= -- 735
+> -- 290
+< -- 3
++ -- 131
+- -- 92
+* -- 432
+:= -- 1180
+add.period$ -- 74
+call.type$ -- 33
+change.case$ -- 142
+chr.to.int$ -- 0
+cite$ -- 50
+duplicate$ -- 312
+empty$ -- 800
+format.name$ -- 92
+if$ -- 1753
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 12
+newline$ -- 141
+num.names$ -- 38
+pop$ -- 274
+preamble$ -- 1
+purify$ -- 112
+quote$ -- 0
+skip$ -- 273
+stack$ -- 0
+substring$ -- 363
+swap$ -- 58
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 127
+warning$ -- 17
+while$ -- 53
+width$ -- 35
+write$ -- 285
+(There were 2 error messages)

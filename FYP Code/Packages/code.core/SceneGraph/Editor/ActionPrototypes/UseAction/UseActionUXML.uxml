@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField binding-path="useObject" name="UseObject" />
+    <uie:PropertyField binding-path="useCollider" name="UseCollider" />
+    <uie:PropertyField binding-path="useTime" name="UseTime" />
+    <uie:PropertyField name="UseColliderIsTrigger" binding-path="useColliderIsTrigger" />
+    <uie:PropertyField name="ResetTimerOnExit" binding-path="resetTimerOnExit" />
+</ui:UXML>

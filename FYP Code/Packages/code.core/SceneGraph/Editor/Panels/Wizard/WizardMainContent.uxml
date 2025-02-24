@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/SceneGraph/Editor/Panels/Wizard/WizardStyle.uss?fileID=7433441132597879392&amp;guid=70d56e2672153714fbfc83e2d87af0dc&amp;type=3#WizardStyle" />
+    <ui:Label tabindex="-1" text="Action Pattern Wizard" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 20px;" />
+    <ui:VisualElement name="background" style="flex-grow: 1; flex-direction: row; min-width: 480px; min-height: 270px;">
+        <ui:VisualElement name="progress" />
+        <ui:VisualElement name="step-content" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Action Wizard" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; margin-top: 8px; margin-bottom: 8px; -unity-font-style: bold;" />
+            <ui:VisualElement name="wizardSelectionContent" style="flex-grow: 1; opacity: 1;">
+                <ui:VisualElement name="title" style="flex-grow: 0; flex-direction: row; margin-bottom: 10px;">
+                    <ui:VisualElement style="flex-grow: 0; background-color: rgb(138, 138, 138); min-height: 1px; max-height: 1px; justify-content: flex-start; align-self: center; min-width: 20px; color: rgb(89, 89, 89);" />
+                    <ui:Label tabindex="-1" text="Select Action" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(138, 138, 138); min-height: 1px; max-height: 1px; justify-content: flex-start; align-self: center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="wizardFactoryContent" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Name" value="New Action" tooltip="Enter the name of the new action" name="actionNameField" />
+            </ui:VisualElement>
+            <ui:VisualElement name="wizardMainContent" style="flex-grow: 1;">
+                <ui:VisualElement name="title" style="flex-grow: 0; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 0; background-color: rgb(138, 138, 138); min-height: 1px; max-height: 1px; justify-content: flex-start; align-self: center; min-width: 20px; color: rgb(89, 89, 89);" />
+                    <ui:Label tabindex="-1" text="Aasdadaaaaaaaa" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sectionLabel" style="color: rgb(255, 255, 255);" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(138, 138, 138); min-height: 1px; max-height: 1px; justify-content: flex-start; align-self: center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="wizardContent" style="flex-grow: 1; padding-left: 4px; padding-right: 4px; padding-top: 8px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; align-items: flex-end; margin-bottom: 8px; margin-top: 8px; padding-top: 0; padding-bottom: 8px; padding-right: 8px; flex-direction: row;">
+                <ui:Button text="Previous" parse-escape-sequences="true" display-tooltip-when-elided="true" name="prev" style="flex-shrink: 0;" />
+                <ui:VisualElement style="flex-grow: 1;" />
+                <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" name="next" style="flex-shrink: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

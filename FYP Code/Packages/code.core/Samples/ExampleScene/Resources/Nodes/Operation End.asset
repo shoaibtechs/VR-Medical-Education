@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -516572037, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: Operation End
+  m_EditorClassIdentifier: 
+  actionName: Operation End
+  advancedMode: 0
+  id: 11523eac-88e3-4336-abfd-49dbc6306c08
+  nodePosition: {x: 3901.2205, y: 193.99992}
+  nextActions: []
+  prevActions:
+  - {fileID: 11400000, guid: 1474c2887d0c7484e9422b2ca5466469, type: 2}
+  attachedScripts: []
+  steps:
+    beforeInitializeSteps: []
+    afterInitializeSteps: []
+    beforePerformSteps: []
+    afterPerformSteps: []
+    beforeUndoSteps: []
+    afterUndoSteps: []
+  effects:
+    effects: []
+  operationEndUI: {fileID: 695946910612231727, guid: 80be6f865405a3c4ab211bd19c26cdd8,
+    type: 3}
+  gameObjects: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Interaction/Editor/Scripts/Interaction/Interactors/HandInteractor/HandPoses/HandposeCreatorWindow.uss?fileID=7433441132597879392&amp;guid=9b7b1f288ad8f404b903255ddf2978b7&amp;type=3#HandposeCreatorWindow" />
+    <ui:VisualElement name="pre-edit" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Create New Hand Pose" parse-escape-sequences="true" name="title" class="h1" />
+        <uie:ObjectField label="Grabbable" name="grabbable" tooltip="The grabbable for which to create hand pose for" />
+        <ui:DropdownField label="Hand Interactor" choices="Left Hand,Right Hand" name="hand-selector" />
+        <uie:ObjectField label="Other Interactor" name="other-interactor" tooltip="The hand for which to create hand pose" style="display: none;" />
+        <ui:Label name="error-msg" style="display: none;" />
+        <ui:Button text="Open Hand Pose Editor" parse-escape-sequences="true" display-tooltip-when-elided="true" name="create-button" />
+    </ui:VisualElement>
+</ui:UXML>

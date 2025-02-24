@@ -1,0 +1,35 @@
+:root
+{
+	padding: 10px;
+	--c-pressable-ui-background: #3C3C3C;
+	--c-pressable-ui-text: white;
+	--c-pressable-ui-text-disabled: #3C3C3C;
+
+	--c-list-view-item-hover: #3C3C3C;
+	--c-list-view-item-selected: #3C3C3C;
+}
+
+.h1 {
+	font-size: 20px;
+	-unity-font-style: bold;
+}
+
+.h2 {
+	font-size: 15px;
+	-unity-font-style: bold;
+}
+
+.h3 {
+	font-size: 12px;
+	-unity-font-style: bold;
+}
+
+#title
+{
+	margin-bottom: 20px;
+}
+
+#create-button
+{
+	margin-top: 20px;
+}

@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.UIs</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.UIs.CharacterCustomizationTriggers">
+            <summary>
+            Functions used by the character customization UI.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.CharacterCustomizationTriggers.OperationStartUI">
+            <summary>
+            Gets or sets the operation start UI to spawn.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.CharacterCustomizationTriggers.BodyTypeSprites">
+            <summary>
+            Gets or sets the sprites for the body types.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.CharacterCustomizationTriggers.BodyType1(UnityEngine.UI.Toggle)">
+            <summary>
+            Button to select BodyType1 avatar.
+            </summary>
+            <param name="toggle">The toggle button.</param>
+        </member>
+        <member name="M:MAGES.UIs.CharacterCustomizationTriggers.BodyType0(UnityEngine.UI.Toggle)">
+            <summary>
+            Button to select BodyType0 avatar.
+            </summary>
+            <param name="toggle">The toggle button.</param>
+        </member>
+        <member name="M:MAGES.UIs.CharacterCustomizationTriggers.SaveButton">
+            <summary>
+            Button to save the avatar.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.CreateSessionTriggers">
+            <summary>
+            Creates a session and waits for users to join.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.CreateSessionTriggers.StartSession">
+            <summary>
+            Starts the session.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.NetworkingFunctionTriggers">
+            <summary>
+            UI functions specific to MAGES coop.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.NetworkingFunctionTriggers.CreateSessionUI">
+            <summary>
+            Gets or sets the UI gameobject of the create session.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.NetworkingFunctionTriggers.OperationStartUI">
+            <summary>
+            Gets or sets the UI gameobject of the create session.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.NetworkingFunctionTriggers.SelectedSession">
+            <summary>
+            Gets or sets the UI gameobject of the selected session.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NetworkingFunctionTriggers.CreateRoom">
+            <summary>
+            Creates a room.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NetworkingFunctionTriggers.JoinSession">
+            <summary>
+            Join a coop room.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NetworkingFunctionTriggers.Back">
+            <summary>
+            Goes back to the previous UI.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NetworkingFunctionTriggers.GenerateRandomRoomName">
+            <summary>
+            Generates a new random room name.
+            </summary>
+            <returns>Returns the name ID of the created room.</returns>
+        </member>
+        <member name="T:MAGES.UIs.NetworkingListOfRooms">
+            <summary>
+            Creates and manages the UI for the list of available rooms.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.NotificationBehavior">
+            <summary>
+            Notification behavior.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NotificationBehavior.Text(System.String)">
+            <summary>
+            Sets the text of the notification.
+            </summary>
+            <param name="text">The new text.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.UIs.NotificationBehavior.Lifetime(System.Single)">
+            <summary>
+            Sets the lifetime of the notification.
+            </summary>
+            <param name="lifetime">The lifetime.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.UIs.NotificationBehavior.OnNotificationFinished(UnityEngine.Events.UnityAction)">
+            <summary>
+            Sets the on finished event of the notification.
+            </summary>
+            <param name="action">The action.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="T:MAGES.UIs.NotificationSystem">
+            <summary>
+            Notification system.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.NotificationSystem.NotificationType">
+            <summary>
+            The type of the notification.
+            </summary>
+        </member>
+        <member name="F:MAGES.UIs.NotificationSystem.NotificationType.Info">
+            <summary>
+            General information to the user.
+            </summary>
+        </member>
+        <member name="F:MAGES.UIs.NotificationSystem.NotificationType.Warning">
+            <summary>
+            User should be careful.
+            </summary>
+        </member>
+        <member name="F:MAGES.UIs.NotificationSystem.NotificationType.Error">
+            <summary>
+            User did something wrong.
+            </summary>
+        </member>
+        <member name="F:MAGES.UIs.NotificationSystem.NotificationType.Achievement">
+            <summary>
+            Congratulate the user for doing something good.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.NotificationSystem.Instance">
+            <summary>
+            Gets the instance of the notification system.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.NotificationSystem.SpawnNotification(MAGES.UIs.NotificationSystem.NotificationType,System.String,System.Boolean,System.Single)">
+            <summary>
+            Spawns a notification.
+            </summary>
+            <param name="notificationType">The notification type.</param>
+            <param name="text">The text.</param>
+            <param name="priority">Set true to spawn it immediately. Otherwise if there is another notification it will wait.</param>
+            <param name="time">The duration.</param>
+        </member>
+        <member name="T:MAGES.UIs.OperationExitTriggers">
+            <summary>
+            Functions used by the operation end UI.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationExitTriggers.Exit">
+            <summary>
+            Closes the application and exits VR.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationExitTriggers.ReloadScene">
+            <summary>
+            Reloads the current scene.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.OperationStartTriggers">
+            <summary>
+            Functions used by the operation start UI.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.OperationStartTriggers.NetworkingUI">
+            <summary>
+            Gets or sets the networking UI to spawn.
+            </summary>
+        </member>
+        <member name="P:MAGES.UIs.OperationStartTriggers.AvatarCustomizationUI">
+            <summary>
+            Gets or sets the Avatar Customization UI to spawn.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationStartTriggers.SinglePlayer">
+            <summary>
+            Start a single player session.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationStartTriggers.MultiPlayer">
+            <summary>
+            Start a coop session.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationStartTriggers.Exit">
+            <summary>
+            Exit the application.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.OperationStartTriggers.AvatarConfiguration">
+            <summary>
+            Open the avatar customization UI.
+            </summary>
+        </member>
+        <member name="T:MAGES.UIs.ScrollingSessionTriggers">
+            <summary>
+            Scrolling session triggers.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.ScrollingSessionTriggers.ScrollUp">
+            <summary>
+            Function called to scroll the UI rooms list.
+            </summary>
+        </member>
+        <member name="M:MAGES.UIs.ScrollingSessionTriggers.ScrollDown">
+            <summary>
+            Function called to scroll down the UI rooms list.
+            </summary>
+        </member>
+    </members>
+</doc>

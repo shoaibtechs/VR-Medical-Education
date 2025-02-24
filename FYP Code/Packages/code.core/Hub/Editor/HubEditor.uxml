@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Hub Editor" display-tooltip-when-elided="true" style="-unity-font-style: bold; -unity-text-align: upper-left; font-size: 24px;" />
+    <uie:PropertyField name="AutoStart" binding-path="autoStart" label="Auto Start" tooltip="Start the modules when the application starts." />
+    <uie:PropertyField binding-path="baseBundle" name="BaseBundle" />
+</ui:UXML>

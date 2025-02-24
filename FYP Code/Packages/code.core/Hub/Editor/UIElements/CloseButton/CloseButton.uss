@@ -1,0 +1,42 @@
+.mages-close-icon-base {
+	background-image: resource('Packages/com.oramavr.mages.core/Hub/Editor/UIElements/CloseButton/Assets/mages.cross.sm.png');
+	background-color: rgba(0, 0, 0, 0.0);
+	-unity-background-image-tint-color: rgb(255, 255, 255);
+	-unity-background-scale-mode: scale-to-fit;
+	border-color: rgba(0,0,0,0.0);
+	width: 16px;
+	height: 16px;
+
+	padding: 0px;
+	margin: 4px;
+
+	flex-grow: 0;
+	flex-shrink: 1;
+
+	transition: -unity-background-image-tint-color 0.15s ease-in;
+}
+
+.mages-close-icon-base:hover {
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+}
+
+.mages-close-icon-tiny {
+	width: 12px;
+	height: 12px;
+}
+
+.mages-close-icon-small {
+	width: 16px;
+	height: 16px;
+}
+
+.mages-close-icon-medium {
+	width: 28px;
+	height: 28px;
+}
+
+
+.mages-close-icon-high {
+	width: 36px;
+	height: 36px;
+}

@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1424433794, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: Give the patient some water
+  m_EditorClassIdentifier: 
+  actionName: Give the patient some water
+  advancedMode: 0
+  id: be8ab8a1-712c-489b-9657-e7d8a87a20b8
+  nodePosition: {x: -1906.9998, y: -1162}
+  nextActions:
+  - {fileID: 11400000, guid: e319e269c97c9c342a29071e0669f6a3, type: 2}
+  prevActions:
+  - {fileID: 11400000, guid: a820ab7c79cb8414b84bf112a47a47f3, type: 2}
+  attachedScripts: []
+  steps:
+    beforeInitializeSteps: []
+    afterInitializeSteps: []
+    beforePerformSteps: []
+    afterPerformSteps: []
+    beforeUndoSteps: []
+    afterUndoSteps: []
+  effects:
+    effects:
+    - rid: 7264517817885523980
+    - rid: 7264517817885523981
+  insertObject:
+    actionObject: {fileID: 108605827194661875, guid: f022105c1edcfb440929a5dc1831f731,
+      type: 3}
+    destroyOnPerform: 0
+    parentType: 0
+    parentPath: 
+    parentReference:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+    advancedMode: 0
+    actionGameObjectLabel: Insert Object
+    actionGameObjectTooltip: The object to be inserted.
+  finalPosition:
+    actionObject: {fileID: 1348217252233866917, guid: 76d1bb87c2c182043b9e5498aacf2149,
+      type: 3}
+    destroyOnPerform: 0
+    parentType: 0
+    parentPath: 
+    parentReference:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+    advancedMode: 0
+    actionGameObjectLabel: Final Position
+    actionGameObjectTooltip: The final position of the object.
+  maxInsertAngle: 0
+  insertionType: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7264517817885523980
+      type: {class: GhostEffectData, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        theme:
+          color:
+            isOverridden: 0
+            value: {r: 0, g: 0, b: 0, a: 0}
+          material:
+            isOverridden: 0
+            value: {fileID: 0}
+          animation:
+            isOverridden: 0
+            value: {fileID: 0}
+        showOnInteractable: 1
+        showOnTarget: 1
+    - rid: 7264517817885523981
+      type: {class: LabelEffectData, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        labelData:
+          font:
+            isOverridden: 0
+            value:
+              rid: -2
+        showOnInteractable: 1
+        interactableItemLabel: Press trigger to grab
+        interactableLabelTrajectory: 0
+        showOnTarget: 1
+        targetItemLabel: Place here
+        targetLabelTrajectory: 0

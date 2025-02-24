@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:Toolbar style="justify-content: space-around;">
+        <uie:ToolbarSearchField focusable="true" name="search-field" />
+    </uie:Toolbar>
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
+        <ui:ListView focusable="true" name="items" style="flex-grow: 1;" />
+        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); min-height: 100px; border-top-color: rgb(0, 0, 0); border-top-width: 1px;">
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="title" enable-rich-text="false" style="min-width: auto; font-size: 25px;" />
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" enable-rich-text="true" name="description" style="flex-grow: 1; white-space: normal;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

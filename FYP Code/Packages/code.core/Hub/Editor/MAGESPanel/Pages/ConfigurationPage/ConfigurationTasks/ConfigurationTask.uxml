@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/ConfigurationTask.uss?fileID=7433441132597879392&amp;guid=5c72644ad18beb042a797b8a22bfac69&amp;type=3#ConfigurationTask" />
+    <ui:VisualElement name="icon" style="min-width: 20px;" />
+    <ui:Label text="Message" name="message" style="flex-grow: 1; flex-shrink: 1;" />
+    <ui:Button text="Fix" display-tooltip-when-elided="true" name="fix-button" style="margin-left: auto;" />
+</ui:UXML>

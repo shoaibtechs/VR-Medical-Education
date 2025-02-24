@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationPage.uss?fileID=7433441132597879392&amp;guid=a39b718368c25e3439c5cf1630ebf697&amp;type=3#ConfigurationPage" />
+    <ui:Label text="General Configuration" name="title" class="h1" />
+    <ui:Label name="no-tasks" text="The project configuration is correct. No extra actions are needed." />
+    <ui:Label name="tasks-for-fix" text="The following issues need your attention:" />
+    <ui:ListView name="tasks" />
+</ui:UXML>

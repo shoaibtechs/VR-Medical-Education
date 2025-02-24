@@ -1,0 +1,53 @@
+:root
+{
+	margin: 5px;
+}
+
+#title
+{
+	margin-bottom: 5px;
+
+}
+
+.h1 {
+	font-size: 20px;
+	-unity-font-style: bold;
+}
+
+.h2 {
+	font-size: 15px;
+	-unity-font-style: bold;
+}
+
+.h3 {
+	font-size: 12px;
+	-unity-font-style: bold;
+}
+
+#title
+{
+	margin-bottom: 20px;
+}
+
+#pose-options-pane
+{
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#pose-options-pane Button
+{
+	flex-grow: 1;
+}
+
+#save-options-pane
+{
+	margin-top: 20px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#save-options-pane Button
+{
+	flex-grow: 1;
+}

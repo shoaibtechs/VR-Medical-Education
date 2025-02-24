@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/SceneGraph/Editor/Style.uss?fileID=7433441132597879392&amp;guid=32bf7e4b1e1c80d4d9b49aa08d1d21e9&amp;type=3#Style" />
+    <ui:ListView focusable="false" name="ListView" show-border="false" style="flex-shrink: 0; background-color: rgba(0, 0, 0, 0.76); border-top-left-radius: 16px; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; align-self: auto; justify-content: flex-start; flex-basis: auto; flex-direction: column; flex-grow: 1; bottom: auto;" />
+</ui:UXML>

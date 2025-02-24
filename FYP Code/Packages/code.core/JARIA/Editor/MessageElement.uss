@@ -1,0 +1,37 @@
+:root {
+    --c-avatar-background: rgb(217, 217, 217);
+    --c-overlay-background: rgb(217, 217, 217);
+}
+
+.avatar-container {
+    max-width: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 15px;
+    background-color: var(--c-avatar-background);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.default-avatar {
+    margin-top: 5px;
+    background-image: url('project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/LoginPage/Images/default-avatar.png?fileID=21300000&guid=2a933ad466efe5d4fb6c97edfc3cae33&type=3#default-avatar');
+}
+
+.custom-avatar {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-avatar Label {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    margin: auto;
+    color: black;
+    font-size:8px;
+}
+

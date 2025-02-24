@@ -1,0 +1,2104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.SceneGraph.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.SceneGraph.ActionGameObjectEditor">
+            <summary>
+            property Drawer of the collection of all the properties an object needs in an Action.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionGameObjectEditor.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.ActionGameObjectEditor.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActionLinkageEditorWindow">
+            <summary>
+            Editor window for viewing action linkages.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActionNode">
+            <summary>
+            An Action node.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.ActionNode"/> class.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActionSearchWindow">
+            <summary>
+            The search window.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionSearchWindow.#ctor(UnityEngine.UIElements.UQueryState{UnityEditor.Experimental.GraphView.Node},System.Action{MAGES.SceneGraph.Editor.BaseNode})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.ActionSearchWindow"/> class.
+            </summary>
+            <param name="nodes">The nodes.</param>
+            <param name="onChoice">The on choice.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionSearchWindow.View">
+            <summary>
+            Gets the view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionSearchWindow.Count">
+            <summary>
+            Gets the count.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionSearchWindow.Query(System.String)">
+            <summary>
+            Queries the specified prompt.
+            </summary>
+            <param name="prompt">The query prompt.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActionSearchWindow.SearchResult">
+            <summary>
+            The search result.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionSearchWindow.SearchResult.#ctor(MAGES.SceneGraph.Editor.BaseNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.ActionSearchWindow.SearchResult"/> class.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionSearchWindow.SearchResult.Node">
+            <summary>
+            Gets the node.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActionWizardFactory">
+            <summary>
+            The base class for all action wizard factories.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.StepCount">
+            <summary>
+            Gets the amount of steps in the wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.Title">
+            <summary>
+            Gets the title of the wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.ActionName">
+            <summary>
+            Gets or sets the name of the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.View">
+            <summary>
+            Gets or sets the scene graph view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.InternalNextButton">
+            <summary>
+            Sets the next button.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ActionWizardFactory.NextAllowed">
+            <summary>
+            Gets or sets a value indicating whether the next button enabled state.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.GetStepName(System.Int32)">
+            <summary>
+            Gets the name of the step at the given index.
+            </summary>
+            <param name="index">The step index.</param>
+            <returns>The name of the step.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.Initialize">
+            <summary>
+            Initializes the wizard.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.CreateStepUI(System.Int32)">
+            <summary>
+            Creates the UI for the step at the given index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The generated visual element.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.Finish">
+            <summary>
+            Finalizes the wizard.
+            </summary>
+            <returns>The action data.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.ClearAction">
+            <summary>
+            Clears the action.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.UndoStep(System.Int32)">
+            <summary>
+            Undoes the step at the given index.
+            </summary>
+            <param name="index">The Index.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.OnDestroy">
+            <summary>
+            Called when the wizard is destroyed.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.EnsureCollider(UnityEngine.GameObject,System.Boolean)">
+            <summary>
+            Ensures that the given game object has a collider.
+            Creates one based on renderer bounds if it does not.
+            </summary>
+            <param name="gameObject">The Game Object to check.</param>
+            <param name="trigger">Set to look for trigger or physical colliders.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.GetSavePath">
+            <summary>
+            Gets the save path for the action.
+            </summary>
+            <returns>The path.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.CreateNode``1(``0@)">
+            <summary>
+            Creates a node of the given type and returns the action data.
+            </summary>
+            <typeparam name="T">The action data type.</typeparam>
+            <param name="data">The action data.</param>
+            <returns>The implementor.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ActionWizardFactory.CreateNodeFromData(MAGES.BaseActionData)">
+            <summary>
+            Creates a node from the given data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns>The implementor.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ActivateActionDataEditor">
+            <summary>
+            Custom property drawer for ActivateActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.AddStepWindow">
+            <summary>
+            A window for adding a step.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.AddStepWindow.#ctor(System.Action{System.Type})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.AddStepWindow"/> class.
+            </summary>
+            <param name="onConfirm">The callback when a step is confirmed.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.AddStepWindow.Open">
+            <summary>
+            Opens the window.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.AddStepWindow.Toggle">
+            <summary>
+            Toggles the window.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.AddStepWindow.Close">
+            <summary>
+            Closes the window.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ArrowEffectPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:MAGES.SceneGraph.ArrowEffectData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ArrowEffectPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.BaseActionDataEditor">
+            <summary>
+            BaseClass for custom property drawers for ActionData.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionDataEditor.Root">
+            <summary>
+            Gets the root VisualElement of the inspector.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionDataEditor.ActionInspectorXML">
+            <summary>
+            Gets or sets the UXML file containing the inspector's VisualElements.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionDataEditor.CreateInspectorGUI">
+            <summary>
+            Creates the VisualElement for the Inspector of the Actions component.
+            </summary>
+            <returns>The inspector's VisualElement.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionDataEditor.AfterGUIInitialization">
+            <summary>
+            Called after the GUI has been initialized.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionDataEditor.SetAdvancedVisualElement(System.String)">
+            <summary>
+            Sets which visual elements should be enabled when the advanced mode is enabled.
+            </summary>
+            <param name="visualElement">A string indicating the name of the visual element.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionDataEditor.SetActionGameObject(MAGES.SceneGraph.ActionGameObject)">
+            <summary>
+            Sets the ActionGameObjects linked with this ActionData.
+            </summary>
+            <param name="actionGameObject">The actual ActionGameObject to link.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.BaseActionNode">
+            <summary>
+            Base class of action nodes.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.BaseActionNode.assetName">
+             <summary>
+             The initial asset name.
+             </summary>
+            
+             This may be different from the action name if the action name was changed during editing.
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.BaseActionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.Deleted">
+            <summary>
+            Gets or sets a value indicating whether the node has been deleted.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.BoundToAsset">
+            <summary>
+            Gets or sets a value indicating whether the node is bound to an asset.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.ActionID">
+            <summary>
+            Gets or sets the action id.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.ActionName">
+            <summary>
+            Gets or sets the action name.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.ActionData">
+            <summary>
+            Gets the action data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.SerializedData">
+            <summary>
+            Gets the serialized data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.Identifier">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.HasUnsavedChanges">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.HasAnyIncomingConnections">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.OnCanonicalInputChanged">
+            <summary>
+            Sets the on canonical input changed delegate.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseActionNode.SerializedObject">
+            <summary>
+            Gets the action data serialized object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.DisableRuntimeControls">
+            <summary>
+            Disable the runtime controls.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.EnableRuntimeControls(System.Action,System.Action)">
+            <summary>
+            Enable the runtime controls.
+            </summary>
+            <param name="onNext">Action to invoke when skip is pressed.</param>
+            <param name="onPrev">Action to invoke when prev is pressed.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.Save(System.String)">
+            <summary>
+            Save this node.
+            </summary>
+            <param name="path">The path to save to.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.OnConnectionCreated(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.OnConnectionRemoved(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.OnRemoved">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.SetRuntimeControlsEnalbed(System.Boolean,System.Action,System.Action)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.OnPositionChanged(UnityEngine.Vector2)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.CreateNameField">
+            <summary>
+            Create name field.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.CreateDataEditor">
+            <summary>
+            Create the data editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseActionNode.CreateTitleButtons">
+            <summary>
+            Create the title container buttons.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.BaseNode">
+            <summary>
+            The base node.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.BaseNode"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.Identifier">
+            <summary>
+            Gets the identifier of the node.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.HasUnsavedChanges">
+            <summary>
+            Gets a value indicating whether this instance has unsaved changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.InActionPort">
+            <summary>
+            Gets or sets the in action port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.OutActionPort">
+            <summary>
+            Gets or sets the out action port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.Title">
+            <summary>
+            Gets or sets the title of the node.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.Name">
+            <summary>
+            Gets or sets the name of the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.Deleted">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:MAGES.SceneGraph.Editor.IActionImplementor"/> is deleted.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.InputContainer">
+            <summary>
+            Gets the input container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.SerializedData">
+            <summary>
+            Gets the serialized data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.OutputContainer">
+            <summary>
+            Gets the output container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.ActionData">
+            <summary>
+            Gets the action data instance.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.HasAnyIncomingConnections">
+            <summary>
+            Gets a value indicating whether this instance has any incoming connections.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.BoundToAsset">
+            <summary>
+            Gets or sets a value indicating whether this instance is bound to an asset.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.BaseNode.OnCanonicalInputChanged">
+            <summary>
+            Sets the on canonical input changed delegate.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.SetPosition(UnityEngine.Rect)">
+            <summary>
+            Sets the position.
+            </summary>
+            <param name="newPos">The new pos.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.BaseNode"/> class.
+            </summary>
+            <param name="actionType">The action type.</param>
+            <param name="data">The data.</param>
+            <param name="onNameChanged">The on name changed delegate.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.OnConnectionCreated(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is created.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node.</param>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.OnConnectionRemoved(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is removed.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node.</param>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.OnRemoved">
+            <summary>
+            Called when the node is removed.
+            </summary>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <summary>
+            Restores the node conenctions from a serialized state.
+            </summary>
+            <param name="lookup">The lookup function.</param>
+            <param name="addEdge">The add edge function.</param>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.SetRuntimeControlsEnalbed(System.Boolean,System.Action,System.Action)">
+            <summary>
+            Sets the runtime controls enabled.
+            </summary>
+            <param name="enabled">True to enable controls.</param>
+            <param name="performAction">The action to call to skip this action.</param>
+            <param name="undoAction">The action to call to undo this action.</param>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.Save(System.String)">
+            <summary>
+            Saves the node to a serialized state.
+            </summary>
+            <param name="path">The path to save this node to.</param>
+            <exception cref="T:System.NotImplementedException">This class should never be instantiated.</exception>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.InitPorts">
+            <summary>
+            Draws the node.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BaseNode.OnPositionChanged(UnityEngine.Vector2)">
+            <summary>
+            Called when the position changes.
+            </summary>
+            <param name="newPos">The new pos.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.BeginNode">
+            <summary>
+            The begininning of a graph. Only one of these nodes can exist in a graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BeginNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.BeginNode"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BeginNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.BeginNode.InitPorts">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.CustomActionNodeAttribute">
+            <summary>
+            Use this to designate a custom node to be created for a specific action data type.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.CustomActionNodeAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.CustomActionNodeAttribute"/> class.
+            </summary>
+            <param name="type">The type of node to instantiate.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.CustomActionNodeAttribute.Type">
+            <summary>
+            Gets the type of node to instantiate.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.DefaultActionLabelAttribute">
+            <summary>
+            Sets a label for a newly created action.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.DefaultActionLabelAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.DefaultActionLabelAttribute"/> class.
+            </summary>
+            <param name="label">The label to use.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.DefaultActionLabelAttribute.Label">
+            <summary>
+            Gets the label.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EffectItem">
+            <summary>
+            Represents a <see cref="T:MAGES.EffectData"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectItem.#ctor(UnityEditor.SerializedProperty,MAGES.BaseActionData,System.Int32,System.Action{MAGES.SceneGraph.Editor.EffectItem})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EffectItem"/> class.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="actionData">The action data.</param>
+            <param name="index">The index of the property in the container.</param>
+            <param name="deleteAction">The action to invoke when them item is deleted.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.EffectItem.Index">
+            <summary>
+            Gets or sets the index into the step event list.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EffectPanel">
+            <summary>
+            A panel that contains the visualization data, like ghosts, glyphs, labels and more.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectPanel.#ctor(MAGES.BaseActionData,UnityEditor.SerializedObject,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EffectPanel"/> class.
+            </summary>
+            <param name="data">The action data.</param>
+            <param name="serializedObject">The serialized object.</param>
+            <param name="onClose">Action to call when the panel is closed.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EffectPropertyField">
+            <summary>
+            A custom property field for <see cref="T:MAGES.EffectData"/>, which accepts a <see cref="T:MAGES.BaseActionData"/> as a context.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectPropertyField.#ctor(UnityEditor.SerializedProperty,MAGES.BaseActionData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EffectPropertyField"/> class.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="dataContext">The action data context.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectPropertyField.#ctor(MAGES.BaseActionData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EffectPropertyField"/> class.
+            </summary>
+            <param name="dataContext">The data editing context.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.EffectPropertyField.ActionDataType">
+            <summary>
+            Gets the type of the action data.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectPropertyField.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EffectPropertyPropertyField">
+            <summary>
+            A property field that is meant to be an eventual child of a <see cref="T:MAGES.SceneGraph.Editor.EffectPropertyField"/>.
+            Used in order to filter <see cref="T:MAGES.EffectData"/> derivative properties based on the current action editing context.
+            This result can also be achieved by overriding the whole editor, but it would be much more destructive than this localized solution.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EffectPropertyPropertyField.#ctor(UnityEditor.SerializedProperty,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EffectPropertyPropertyField"/> class.
+            </summary>
+            <param name="property">The property to bind to.</param>
+            <param name="containerType">The container type (i.e. a derived class of <see cref="T:MAGES.EffectData"/>.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.EffectPropertyPropertyField.ContainerType">
+            <summary>
+            Gets the container type.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EndActionDataEditor">
+            <summary>
+            Editor for the EndActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.EndNode">
+            <summary>
+            The ending node of a graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EndNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.EndNode"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EndNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.EndNode.InitPorts">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.Error">
+            <summary>
+            Error class for scenegraph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Error.#ctor(System.String,UnityEngine.Color,UnityEditor.Experimental.GraphView.GraphElement[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.Error"/> class.
+            </summary>
+            <param name="message">Message to display.</param>
+            <param name="color">The color of the highlighted nodes.</param>
+            <param name="nodes">The array of nodes to highlight with that color.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.Error.Message">
+            <summary>
+            Gets the message to display.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.Error.Nodes">
+            <summary>
+            Gets the nodes that produced this error.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ErrorList">
+            <summary>
+            An error list for the scenegraph.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ErrorList.IsClear">
+            <summary>
+            Gets a value indicating whether the list is clear.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ErrorList.Children">
+            <summary>
+            Gets a value indicating the errors.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ErrorList.Add(MAGES.SceneGraph.Editor.Error)">
+            <summary>
+            Add an error.
+            </summary>
+            <param name="error">The error instance.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ErrorList.Clear">
+            <summary>
+            Clear the list.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.GhostEffectPropertyDrawer">
+            <summary>
+            Property drwaer for <see cref="T:MAGES.SceneGraph.GhostEffectData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.GhostEffectPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.GraphRunnerEditor">
+            <summary>
+            Graph runner editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.GraphRunnerEditor.OnInspectorGUI">
+            <summary>
+            Draws the inspector.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.IActionImplementor">
+            <summary>
+            The interface for action implementors in the scene graph view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.Identifier">
+            <summary>
+            Gets the identifier of the node.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.HasUnsavedChanges">
+            <summary>
+            Gets a value indicating whether this instance has unsaved changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.Deleted">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:MAGES.SceneGraph.Editor.IActionImplementor"/> is deleted.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.HasAnyIncomingConnections">
+            <summary>
+            Gets a value indicating whether this instance has any incoming connections.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.BoundToAsset">
+            <summary>
+            Gets or sets a value indicating whether this instance has been bound to an asset (in other words, if it was created in this editing session or not).
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.View">
+            <summary>
+            Gets or sets the parent scene graph view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.InActionPort">
+            <summary>
+            Gets the input port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.OutActionPort">
+            <summary>
+            Gets the output port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.InputContainer">
+            <summary>
+            Gets the input port container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.OutputContainer">
+            <summary>
+            Gets the output port container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.ActionData">
+            <summary>
+            Gets the action data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.SerializedData">
+            <summary>
+            Gets the serialized data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.IActionImplementor.OnCanonicalInputChanged">
+            <summary>
+            Sets the action to be called when the canonical input port of of this implementor changes.
+            </summary>
+            <remarks>
+            This method should be passed the list of all actions that are connected to the canonical input port.
+            </remarks>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <summary>
+            Initialize the implementor.
+            </summary>
+            <param name="actionType">The type of the action.</param>
+            <param name="data">The action data (if available).</param>
+            <param name="onNameChanged">The callback to invoke when the name of the node is changed.</param>
+            <param name="name">The initial name of the node.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.OnConnectionCreated(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is created.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node (can be a scope, or BaseNode).</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.OnConnectionRemoved(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is deleted.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node (can be a scope, or BaseNode).</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.OnRemoved">
+            <summary>
+            Called before this node is removed.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.Save(System.String)">
+            <summary>
+            Save the node to a serialized state.
+            </summary>
+            <param name="path">The path where the node should be saved.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <summary>
+            Restore the node from a serialized state.
+            </summary>
+            <param name="lookup">Used to match action data's to nodes.</param>
+            <param name="addEdge">Used to add edges between nodes.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.SetRuntimeControlsEnalbed(System.Boolean,System.Action,System.Action)">
+            <summary>
+            Set the runtime controls enabled state.
+            </summary>
+            <param name="enabled">Whether the controls should be visible.</param>
+            <param name="performAction">Action to be called when a perform button is pressed.</param>
+            <param name="undoAction">Action to be called when an undo button is pressed.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.IActionImplementor.SetPosition(UnityEngine.Rect)">
+            <summary>
+            Set the position of the node.
+            </summary>
+            <param name="newPosition">The new position.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.InfoWithLink">
+            <summary>
+            A visual element that displays information as well as a link to a web page (optional).
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InfoWithLink.#ctor(System.String,MAGES.SceneGraph.Editor.InfoWithLink.InfoType,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.InfoWithLink"/> class.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="infoType">The type of information.</param>
+            <param name="url">The url, if available.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.InfoWithLink.InfoType">
+            <summary>
+            The type of information.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.InfoWithLink.InfoType.Default">
+            <summary>
+            Simple info.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.InfoWithLink.InfoType.Warning">
+            <summary>
+            Warning.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.InsertActionDataEditor">
+            <summary>
+            Custom property drawer for InsertActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.InsertActionWizard">
+            <summary>
+            Action wizard for <see cref="T:MAGES.SceneGraph.InsertActionData"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.InsertActionWizard.StepCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.InsertActionWizard.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.CreateStepUI(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.Finish">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.UndoStep(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.ClearAction">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.GetStepName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.InsertActionWizard.OnDestroy">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.InsertActionWizardData">
+            <summary>
+            Data for the insert action wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.InsertActionWizardData.InsertObject">
+            <summary>
+            Gets or sets the insert object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.InsertActionWizardData.FinalPosition">
+            <summary>
+            Gets or sets the final position.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.LabelEffectPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:MAGES.SceneGraph.LabelEffectData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.LabelEffectPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.LabelGraphElement">
+            <summary>
+            A graph element that contains a label.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.LabelGraphElement.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.LabelGraphElement"/> class.
+            </summary>
+            <param name="text">The initial text of the label.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.LabelGraphElement.Text">
+            <summary>
+            Gets or sets the text of the label.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.LayoutUtility">
+            <summary>
+            Utility class for loading and saving editor layouts.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.LayoutUtility.SaveLayout(System.String)">
+            <summary>
+            Saves the current layout.
+            </summary>
+            <param name="path"> The path to save the current layout. </param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.LayoutUtility.LoadLayoutbyName(System.String)">
+            <summary>
+            Loads the specified layout.
+            </summary>
+            <param name="assetName"> The name of the layout to load. </param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.LayoutUtility.LoadLayoutByPath(System.String)">
+            <summary>
+            Loads the specified layout.
+            </summary>
+            <param name="path"> The path of the layout to load. </param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage">
+            <summary>
+            A page to be used along with the scenegraph editor.
+            </summary>
+            <remarks>
+            This page hosts tools like the <see cref="T:MAGES.SceneGraph.Editor.WizardMainPanel"/> to guide the user in creating faster and easier scenegraph actions.
+            </remarks>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.ShowBundleSelectionUI">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.RequiresBundleSelection">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.OnSelectedBundleChanged(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.MAGESPanelScenegraphPage.Destroy">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.OldRepeatNode">
+            <summary>
+            The node for <see cref="T:MAGES.SceneGraph.RepeatActionData"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.OldRepeatNode"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.OldRepeatNode.RepeatCount">
+            <summary>
+            Gets or sets the repeat count for the node.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.OnConnectionCreated(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.OnConnectionRemoved(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.InitPorts">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.CreateNameField">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.CreateDataEditor">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.OldRepeatNode.CreateTitleButtons">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.QuestionActionAnswerPropertyDrawer">
+            <summary>
+            Property drawer for the QuestionActionAnswer class.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionAnswerPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.QuestionActionDataEditor">
+            <summary>
+            Custom property drawer for QuestionActionData.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionDataEditor.AfterGUIInitialization">
+            <summary>
+            Called after the GUI has been initialized.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.QuestionActionWizard">
+            <summary>
+            Action wizard for <see cref="T:MAGES.SceneGraph.QuestionActionData"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.QuestionActionWizard.StepCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.QuestionActionWizard.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.CreateStepUI(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.Finish">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.OnDestroy">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.ClearAction">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.UndoStep(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.GetStepName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.QuestionActionWizard.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.QuestionActionWizardData">
+            <summary>
+            Data for the question action wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.QuestionActionWizardData.Position">
+            <summary>
+            Gets or sets the position.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.QuestionActionWizardData.Question">
+            <summary>
+            Gets or sets the question.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.QuestionActionWizardData.Answers">
+            <summary>
+            Gets or sets the answers.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.RemoveActionDataEditor">
+            <summary>
+            Custom property drawer for RemoveActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.RemoveActionWizard">
+            <summary>
+            Action wizard for <see cref="T:MAGES.SceneGraph.RemoveActionData"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.RemoveActionWizard.StepCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.RemoveActionWizard.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.CreateStepUI(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.Finish">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.ClearAction">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.GetStepName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RemoveActionWizard.OnDestroy">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.RemoveActionWizardData">
+            <summary>
+            Data for the remove action wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.RemoveActionWizardData.RemoveObject">
+            <summary>
+            Gets or sets the remove object.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.RepeatNode">
+            <summary>
+            The node for <see cref="T:MAGES.SceneGraph.RepeatActionData"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.RepeatNode.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.Save(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.SetupUI">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.CreateDataEditor">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.OnElementsAdded(System.Collections.Generic.IEnumerable{UnityEditor.Experimental.GraphView.GraphElement})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.RepeatNode.OnElementsRemoved(System.Collections.Generic.IEnumerable{UnityEditor.Experimental.GraphView.GraphElement})">
+            <summary>
+            Called when elements are removed from the graph.
+            </summary>
+            <param name="elements">The removed elements.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SceneGraphDataAssetHandler">
+            <summary>
+            Handles opening the scenegraph data asset.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphDataAssetHandler.OnOpenSceneGraphDataAsset(System.Int32,System.Int32)">
+            <summary>
+            Opens the scenegraph data asset.
+            </summary>
+            <param name="instanceID">Instance id.</param>
+            <param name="line">Line.</param>
+            <returns>True if the asset was a scenegraph.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SceneGraphEditorPanel">
+            <summary>
+            The editor panel for the scene graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorPanel.#ctor(MAGES.SceneGraph.GraphRunner,System.Action{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SceneGraphEditorPanel"/> class.
+            Opens a runtime graph.
+            </summary>
+            <param name="runner">The graph runner.</param>
+            <param name="setTitle">The title set callback.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorPanel.#ctor(MAGES.SceneGraph.SceneGraphData,System.Action{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SceneGraphEditorPanel"/> class.
+            Opens the asset directly.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="setTitle">The title set callback.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorPanel.Save">
+            <summary>
+            Saves the graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorPanel.SetupUI">
+            <summary>
+            Sets up the rest of the UI of the editor (toolbar, search, etc...).
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SceneGraphEditorWindow">
+            <summary>
+            The scene graph editor window.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SceneGraphEditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenGraphRunner(MAGES.SceneGraph.GraphRunner)">
+            <summary>
+            Opens the editor window for a graph runner at runtime.
+            </summary>
+            <param name="runner">The runner.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenWelcomeScreen">
+            <summary>
+            Opens welcome screen.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenSceneAsset">
+            <summary>
+            Opens the scenegraph that exists on the hub in the scene.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenHome">
+            <summary>
+            Opens home screen.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenAsset(MAGES.SceneGraph.SceneGraphData)">
+            <summary>
+            Initializes editor window for a specific scenegraph.
+            </summary>
+            <param name="sceneGraphData">The data instance (from assets) to open.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.OpenRuntime(MAGES.SceneGraph.GraphRunner)">
+            <summary>
+            Open a graph runner at runtime.
+            </summary>
+            <param name="runner">The runner.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphEditorWindow.SaveChanges">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SceneGraphSceneViewOverlay">
+            <summary>
+            The scene graph scene view overlay.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphSceneViewOverlay.Build(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SceneGraphView">
+            <summary>
+            The scene graph view.
+            </summary>
+            <remarks>
+            - This class is responsible for the visual representation of the scene graph.
+            - In the future, it would be beneficial to make a copy of the scene graph during edit time,
+              only applying changes after saving.
+            </remarks>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.sceneGraphData">
+            <summary>
+            Reference to the actual data file, be it an asset or an instance.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.sceneGraphDataPath">
+            <summary>
+            Asset path to data (editor only). This is needed because we may be editing an instance (runtime).
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.sceneGraphDataSerialized">
+            <summary>
+            The serialized object for the scene graph data.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.idtoNode">
+            <summary>
+            Maps scene graph data to the corresponding graph node.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.reservedActionNames">
+            <summary>
+            Used to track the current pool of action names, to avoid node filename conflicts.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.manipulators">
+            <summary>
+            List of the manipulators in the graph. Used to enable/disable them when opening a contextual dialog.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.errorList">
+            <summary>
+            The current list of errors.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.onErrorsChanged">
+            <summary>
+            Reference from creator. To be invoked when <see cref="F:MAGES.SceneGraph.Editor.SceneGraphView.errorList"/> is changed.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.shadow">
+            <summary>
+            A visual element that is used to show a shadow when displaying dialogs.
+            </summary>
+        </member>
+        <member name="F:MAGES.SceneGraph.Editor.SceneGraphView.hint">
+            <summary>
+            This element is used to show a hint when the graph is empty.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.#ctor(MAGES.SceneGraph.SceneGraphData,System.Collections.Generic.List{MAGES.SceneGraph.Editor.Error},System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SceneGraphView"/> class.
+            </summary>
+            <param name="data">The scene graph data.</param>
+            <param name="errorList">The list of errors.</param>
+            <param name="onErrorsChanged">The callback for when the errors change.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.#ctor(MAGES.SceneGraph.GraphRunner,System.Collections.Generic.List{MAGES.SceneGraph.Editor.Error},System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SceneGraphView"/> class, during runtime.
+            </summary>
+            <param name="runner">The runner.</param>
+            <param name="errorList">The list of errors.</param>
+            <param name="onErrorsChanged">The callback for when errors change.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SceneGraphView.DataAsset">
+            <summary>
+            Gets the data asset.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SceneGraphView.LastGeneralState">
+            <summary>
+            Gets the last general state of the scene graph view. This is used to restore the view when a panel is closed.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SceneGraphView.OnBecameDirty">
+            <summary>
+            Gets or sets the Action to invoke when graph becomes dirty.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SceneGraphView.IsRuntime">
+            <summary>
+            Gets a value indicating whether the graph is runtime.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SceneGraphView.SceneGraphDataPath">
+            <summary>
+            Gets or sets the scene graph data path.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.GetCompatiblePorts(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.NodeAdapter)">
+            <summary>
+            Gets the compatible ports.
+            </summary>
+            <param name="startPort">Start port.</param>
+            <param name="nodeAdapter">Adapter.</param>
+            <returns>List of compatible ports.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OpenStepsPanel(MAGES.BaseActionData,UnityEditor.SerializedObject)">
+            <summary>
+            Opens the steps panel.
+            </summary>
+            <param name="data">The action data.</param>
+            <param name="serializedObject">The serialized object reference of the action data.</param>
+            @todo: Add a title to then panel and name it $"{actionName} - Steps"
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OpenScriptsPanel(MAGES.BaseActionData,UnityEditor.SerializedObject)">
+            <summary>
+            Opens the scripts panel.
+            </summary>
+            <param name="data">The action data.</param>
+            <param name="serializedObject">The serialized object reference of the action data.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OpenEffectsPanel(MAGES.BaseActionData,UnityEditor.SerializedObject)">
+            <summary>
+            Opens the effects panel.
+            </summary>
+            <param name="data">The action data.</param>
+            <param name="serializedObject">The serialized object reference of the action data.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.LookupNode(MAGES.BaseActionData)">
+            <summary>
+            Find a node corresponding to the action data.
+            </summary>
+            <param name="data">The action data.</param>
+            <returns>The graph element representing the data, if found.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.AddConnection(MAGES.BaseActionData,MAGES.BaseActionData)">
+            <summary>
+            Adds a new connection between two action datas.
+            </summary>
+            <param name="prev">The previous node (input).</param>
+            <param name="next">The next node (output).</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.RemoveConnection(MAGES.BaseActionData,MAGES.BaseActionData)">
+            <summary>
+            Removes a connection between two action datas.
+            </summary>
+            <param name="data">The first data.</param>
+            <param name="otherData">The second data.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.CreateActionNode(System.Type,UnityEngine.Vector2)">
+            <summary>
+            Create a new action node (not bound to an asset yet).
+            </summary>
+            <param name="type">The type of the action. Must be a subclass of <see cref="T:MAGES.BaseActionData"/>.</param>
+            <param name="position">The position of the node.</param>
+            <returns>The node instance.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.CreateActionNode(MAGES.BaseActionData,UnityEngine.Vector2)">
+            <summary>
+            Create a node from an exisiting action asset.
+            </summary>
+            <param name="data">The asset.</param>
+            <param name="position">The position of the node.</param>
+            <returns>The node instance.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.GenerateNewActionName(System.String)">
+            <summary>
+            Create a new action name that doesn't clash with the existing actions.
+            </summary>
+            <param name="prepend"> Default value: New Action.</param>
+            <returns> The action name.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.Save">
+            <summary>
+            Saves the scene graph data.
+            </summary>
+            <returns>If we saved successfully.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.ClearHighlightClassList(UnityEngine.UIElements.VisualElement)">
+            <summary>
+            Clear any highlight information from the node. For runtime.
+            </summary>
+            <param name="node">The target node.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.BuildContextMenu">
+            <summary>
+            Build the "New Action/*" menus.
+            </summary>
+            <returns>Manipulator.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.BuildCommentContextMenu">
+            <summary>
+            Build the "New Group" menu.
+            </summary>
+            <returns>Manipulator.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.CreateGroup(System.String,UnityEngine.Vector2)">
+            <summary>
+            Create a new group.
+            </summary>
+            <param name="name">The name of the group.</param>
+            <param name="position">The position of the group.</param>
+            <returns>The group instance.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnNodeAdded(UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when an element is added to the graph.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnActionNameChanged(MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String)">
+            <summary>
+            Called when the name of an action node changes.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="from">Previous name.</param>
+            <param name="to">New name.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnActionNodeConnectionDeleted(MAGES.SceneGraph.Editor.IActionImplementor,MAGES.SceneGraph.Editor.IActionImplementor,UnityEditor.Experimental.GraphView.Edge)">
+            <summary>
+            Called when an edge is removed.
+            </summary>
+            <param name="inputNode">The input node (right hand side).</param>
+            <param name="outputNode">The output node (left hand side).</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnActionNodeConnection(MAGES.SceneGraph.Editor.IActionImplementor,MAGES.SceneGraph.Editor.IActionImplementor,UnityEditor.Experimental.GraphView.Edge)">
+            <summary>
+            Called when an edge is created.
+            </summary>
+            <param name="inputNode">The input node (right hand side).</param>
+            <param name="outputNode">The output node (left hand side).</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnActionNodeRemoved(MAGES.SceneGraph.Editor.IActionImplementor)">
+            <summary>
+            Called when an action node is removed.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SceneGraphView.OnGraphViewChanged(UnityEditor.Experimental.GraphView.GraphViewChange)">
+            <summary>
+            The graph view supplies a generic event that hosts all of the possible changes.
+            This function determines what type of change has occurred and calls the appropriate function.
+            </summary>
+            <param name="graphViewChange">The event.</param>
+            <returns>The new state change.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ScopeNode">
+            <summary>
+            The base class for any node that can contain one or more instances of <see cref="T:MAGES.SceneGraph.Editor.BaseNode"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.ScopeNode"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.InActionPort">
+            <summary>
+            Gets or sets the input port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.SerializedData">
+            <summary>
+            Gets the serialized data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.OutActionPort">
+            <summary>
+            Gets or sets the output port.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.Identifier">
+            <summary>
+            Gets or sets the identifier of the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.Title">
+            <summary>
+            Gets or sets the title of the node.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.BoundToAsset">
+            <summary>
+            Gets or sets a value indicating whether this instance is bound to an asset.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.Name">
+            <summary>
+            Gets or sets the name of the action.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.ActionData">
+            <summary>
+            Gets the action data.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.HasUnsavedChanges">
+            <summary>
+            Gets a value indicating whether this instance has unsaved changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.Deleted">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:MAGES.SceneGraph.Editor.IActionImplementor"/> is deleted.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.InputContainer">
+            <summary>
+            Gets the input container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.OutputContainer">
+            <summary>
+            Gets the output container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.HasAnyIncomingConnections">
+            <summary>
+            Gets a value indicating whether this instance has any incoming connections.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.OnCanonicalInputChanged">
+            <summary>
+            Sets the on canonical input changed delegate.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.PortContainer">
+            <summary>
+            Gets the port container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.ExtensionContainer">
+            <summary>
+            Gets the extension container.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.ScopeNode.SerializedActionData">
+            <summary>
+            Gets the serialized object.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.IsRenamable">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.Initialize(System.Type,MAGES.BaseActionData,System.Action{MAGES.SceneGraph.Editor.IActionImplementor,System.String,System.String},System.String)">
+            <summary>
+            Initializes the node.
+            </summary>
+            <param name="actionType">The type of the action.</param>
+            <param name="data">The action data instance. Can be null.</param>
+            <param name="onNameChanged">The delegate to invoke when the name is changed.</param>
+            <param name="name">The initial name of the action.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.OnConnectionCreated(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is created.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.OnConnectionRemoved(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Called when a connection is removed.
+            </summary>
+            <param name="thisPort">The port belonging to this node.</param>
+            <param name="otherPort">The port belonging to the other node.</param>
+            <param name="other">The other node.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.OnRemoved">
+            <summary>
+            Called before this node is removed.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.Restore(System.Func{MAGES.BaseActionData,UnityEditor.Experimental.GraphView.GraphElement},System.Action{UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Port})">
+            <summary>
+            Restores the node connections from a serialized state.
+            </summary>
+            <param name="lookup">The lookup function.</param>
+            <param name="addEdge">The function to add an edge.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.SetRuntimeControlsEnalbed(System.Boolean,System.Action,System.Action)">
+            <summary>
+            Sets the runtime controls enabled.
+            </summary>
+            <param name="enabled">True to enable controls.</param>
+            <param name="performAction">The action to call to skip this action.</param>
+            <param name="undoAction">The action to call to undo this action.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.Save(System.String)">
+            <summary>
+            Saves the node to a serialized state.
+            </summary>
+            <param name="path">The path to save this node to.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.SetPosition(UnityEngine.Rect)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.InitPorts">
+            <summary>
+            Initializes the ports.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.CreateDataEditor">
+            <summary>
+            Creates the data editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScopeNode.SetupUI">
+            <summary>
+            Setups the UI.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.ScriptsPanel">
+            <summary>
+            The panel that displays the attached scripts.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.ScriptsPanel.#ctor(MAGES.BaseActionData,UnityEditor.SerializedObject,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.ScriptsPanel"/> class.
+            </summary>
+            <param name="data">The base action data.</param>
+            <param name="serializedObject">The serialized object ref.</param>
+            <param name="onClose">Action to invoke when panel is closed.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SearchWindow">
+            <summary>
+            The search window.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SearchWindow.#ctor(UnityEngine.UIElements.UQueryState{UnityEditor.Experimental.GraphView.Node},System.Action{MAGES.SceneGraph.Editor.BaseNode})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SearchWindow"/> class.
+            </summary>
+            <param name="nodes">The nodes.</param>
+            <param name="onChoice">The on choice.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SearchWindow.Query(System.String)">
+            <summary>
+            Queries the specified prompt.
+            </summary>
+            <param name="prompt">The query prompt.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SearchWindow.SearchResult">
+            <summary>
+            The search result.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SearchWindow.SearchResult.#ctor(MAGES.SceneGraph.Editor.BaseNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SearchWindow.SearchResult"/> class.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.SearchWindow.SearchResult.Node">
+            <summary>
+            Gets the node.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SelectOrCreatePrefab">
+            <summary>
+            An advanced property field with behavior for selecting a game object from the asset directory, or creating a new one via the Unity scene.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SelectOrCreatePrefab.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.SelectOrCreatePrefab"/> class.
+            </summary>
+            <param name="displayLabel">The label to use for the object field.</param>
+            <param name="prefabName">The name of the prefab to create.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SelectOrCreatePrefab.ObjectSelectedEventHandler">
+            <summary>
+            Event for when the selected object changes.
+            </summary>
+            <param name="newValue">The new value of the object.</param>
+        </member>
+        <member name="E:MAGES.SceneGraph.Editor.SelectOrCreatePrefab.SelectionChanged">
+            <summary>
+            Event for when the selected object changes.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SelectOrCreatePrefab.SetValueWithoutNotify(UnityEngine.GameObject)">
+            <summary>
+            Sets the value of the object field without invoking the selection changed event.
+            </summary>
+            <param name="newValue">The new value.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SetAnimatorPropertyStepDrawer">
+            <summary>
+            Custom property drawer for the SetAnimatorPropertyStep.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SetAnimatorPropertyStepDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.SpawnStepCustomPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:MAGES.SceneGraph.SpawnStep"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.SpawnStepCustomPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.StartActionDataEditor">
+            <summary>
+            Editor for the StartActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.StepItem">
+            <summary>
+            Represents a step item UI in the steps panel.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.StepItem.#ctor(UnityEditor.SerializedProperty,System.Int32,MAGES.StepEvent,System.Action{MAGES.SceneGraph.Editor.StepItem},System.Action{MAGES.SceneGraph.Editor.StepItem,System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.StepItem"/> class.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="index">The index into the step event list.</param>
+            <param name="stepEvent">The step event.</param>
+            <param name="deleteAction">The delete action.</param>
+            <param name="moveAction">The move action.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.StepItem.Event">
+            <summary>
+            Gets or sets the step event.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.StepItem.Index">
+            <summary>
+            Gets or sets the index into the step event list.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.StepSearchWindow">
+            <summary>
+            A search window for steps.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.StepSearchWindow.CreateSearchTree(UnityEditor.Experimental.GraphView.SearchWindowContext)">
+            <summary>
+            Creates the search tree for the search window.
+            </summary>
+            <param name="context">Context.</param>
+            <returns>List of entries.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.StepSearchWindow.OnSelectEntry(UnityEditor.Experimental.GraphView.SearchTreeEntry,UnityEditor.Experimental.GraphView.SearchWindowContext)">
+            <summary>
+            Called when a search tree entry is selected.
+            </summary>
+            <param name="searchTreeEntry">The entry.</param>
+            <param name="context">Context.</param>
+            <returns>True if successfull.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.StepsPanel">
+            <summary>
+            The steps panel is a visual element that displays the steps of a scene graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.StepsPanel.#ctor(MAGES.BaseActionData,UnityEditor.SerializedObject,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.StepsPanel"/> class.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="dataObject">The data object.</param>
+            <param name="onClose">Action to invoke when panel is closed.</param>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.TrajectoryActionDataEditor">
+            <summary>
+            Custom property drawer for TrajectoryActionData.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.TrajectoryActionDataEditor.AfterGUIInitialization">
+            <summary>
+            Called after the GUI has been initialized.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.UseActionDataEditor">
+            <summary>
+            Custom property drawer for UseActionData.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.UseActionWizard">
+            <summary>
+            Action wizard for <see cref="T:MAGES.SceneGraph.UseActionData"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizard.StepCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizard.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.CreateStepUI(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.Finish">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.UndoStep(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.ClearAction">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.GetStepName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.UseActionWizard.OnDestroy">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.UseActionWizardData">
+            <summary>
+            Data for the use action wizard.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizardData.UseObject">
+            <summary>
+            Gets or sets the use object.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizardData.UseCollider">
+            <summary>
+            Gets or sets the use collider.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizardData.UseTime">
+            <summary>
+            Gets or sets the use time.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizardData.UseColliderIsInteractable">
+            <summary>
+            Gets or sets a value indicating whether to use the collider's isInteractable property.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.UseActionWizardData.UseColliderIsTrigger">
+            <summary>
+            Gets or sets a value indicating whether to use the collider's isTrigger property.
+            </summary>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.Utilities">
+            <summary>
+            Utilities for the graph view.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.MouseToGraphViewPosition(UnityEditor.Experimental.GraphView.GraphView,UnityEngine.Vector2)">
+            <summary>
+            Converts mouse relative position to graph position.
+            </summary>
+            Useful for creating nodes at the mouse position.
+            <param name="graphView">The view.</param>
+            <param name="mousePosition">The mouse position; usually obtained via `action.eventInfo.localMousePosition`.</param>
+            <returns>The position in the graph's transformation space.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.FrameNode(UnityEditor.Experimental.GraphView.GraphView,UnityEditor.Experimental.GraphView.GraphElement)">
+            <summary>
+            Frames a specific node in the graph.
+            </summary>
+            <param name="view">The graph view.</param>
+            <param name="node">The node to frame.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.Groups(UnityEditor.Experimental.GraphView.GraphView)">
+            <summary>
+            Gets all groups in a graph.
+            </summary>
+            <param name="view">The graph view.</param>
+            <returns>List of groups.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.HasAnyElement(UnityEditor.Experimental.GraphView.GraphView,System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})">
+            <summary>
+            Returns true if the graph has any nodes.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>True if it has nodes.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.Nodes``1(UnityEditor.Experimental.GraphView.Group)">
+            <summary>
+            Gets all nodes of a specific type in a group.
+            </summary>
+            <typeparam name="T">The type of node.</typeparam>
+            <param name="group">The group instance.</param>
+            <returns>List of nodes that belong in <paramref name="group"/>.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.IsChildOfInclusive(UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.VisualElement)">
+            <summary>
+            Returns true if the element is a child of the test element.
+            </summary>
+            <param name="self">The element.</param>
+            <param name="test">The test element.</param>
+            <returns>Value indicating whether or not <paramref name="test"/> is an ancestor of <paramref name="self"/>, or the same element.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.FindEdgesBetweenNodes(UnityEditor.Experimental.GraphView.GraphView,MAGES.SceneGraph.Editor.IActionImplementor,MAGES.SceneGraph.Editor.IActionImplementor)">
+            <summary>
+            Find all the <i>direct</i> edges between two nodes, regardless of direction.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="node">The first node.</param>
+            <param name="otherNode">The second node.</param>
+            <returns>An array of all the edges that connect those two nodes.</returns>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.TryRemove``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Attempt to remove an item from a list, by index.
+            </summary>
+            <typeparam name="T">The type of the contained list element(s).</typeparam>
+            <param name="list">The list.</param>
+            <param name="item">The instance of the item to be removed.</param>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.Utilities.GetPortImplementor(UnityEditor.Experimental.GraphView.Port)">
+            <summary>
+            Gets the parent node (either <see cref="T:MAGES.SceneGraph.Editor.BaseNode"/> or <see cref="T:MAGES.SceneGraph.Editor.ScopeNode"/>) of a port.
+            </summary>
+            <param name="port">The port.</param>
+            <returns>The parent of the port.</returns>
+        </member>
+        <member name="T:MAGES.SceneGraph.Editor.WizardMainPanel">
+            <summary>
+            The main panel for the wizard.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.WizardMainPanel.#ctor(MAGES.SceneGraph.Editor.SceneGraphView,MAGES.Bundle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.SceneGraph.Editor.WizardMainPanel"/> class.
+            </summary>
+            <param name="view">The scene graph view.</param>
+            <param name="attachedBundle">The attached bundle.</param>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.WizardMainPanel.Root">
+            <summary>
+            Gets the root element.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.WizardMainPanel.SceneGraphView">
+            <summary>
+            Gets or sets the scenegraph view this wizard is associated with.
+            </summary>
+        </member>
+        <member name="P:MAGES.SceneGraph.Editor.WizardMainPanel.Bundle">
+            <summary>
+            Gets or sets the attached bundle.
+            </summary>
+        </member>
+        <member name="M:MAGES.SceneGraph.Editor.WizardMainPanel.Destroy">
+            <summary>
+            Call this to destroy any remaining steps that have been created.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,504 @@
+{
+    "name": "MAGESControls",
+    "maps": [
+        {
+            "name": "GenericEvents",
+            "id": "21d30752-33a6-44c4-815e-df4d28469849",
+            "actions": [
+                {
+                    "name": "Perform",
+                    "type": "Button",
+                    "id": "d797b650-0c7c-48db-82c3-9d6dccc2ce9b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Undo",
+                    "type": "Button",
+                    "id": "585aef62-c1b4-4191-9e47-3938daf2270f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Options",
+                    "type": "Button",
+                    "id": "05f391cb-6b03-4b3f-bdbb-e82477cfa660",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnableMovement",
+                    "type": "Button",
+                    "id": "696e8cc9-6dda-49b1-8d1e-0765c6bb57f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleRaycastActivation",
+                    "type": "Button",
+                    "id": "52175d3a-a85e-48fc-b125-211a1af5b7b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a90ceaf1-c327-4c91-a43a-bf51a4f6ad25",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XREmulaturo;UniversalXR",
+                    "action": "Perform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41f89a60-dee8-4320-910a-5d982c53d2a7",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Undo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8d4d44b-f8ad-47e0-b4fb-19edc5fc59d1",
+                    "path": "<XRController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Options",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f3fa456-37dc-4c97-8e37-4273181a611b",
+                    "path": "<XRController>{LeftHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnableMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf7b4a34-86a5-4b69-ac80-0e19fa13185f",
+                    "path": "<XRController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleRaycastActivation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightHand Locomotion",
+            "id": "b8621e2f-3214-480e-ac73-8ca20ed194de",
+            "actions": [
+                {
+                    "name": "Snap Turn",
+                    "type": "Button",
+                    "id": "05eea6c0-7682-4ef2-81c1-2a601e450525",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Change Height",
+                    "type": "PassThrough",
+                    "id": "1b71ac3f-7a61-409f-b502-5bd488c23abb",
+                    "expectedControlType": "Analog",
+                    "processors": "AxisDeadzone(min=0.3)",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Smooth Turn",
+                    "type": "PassThrough",
+                    "id": "bdf58bee-e94f-4e53-b525-587e89dcac1f",
+                    "expectedControlType": "Vector2",
+                    "processors": "AxisDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ece38ab6-d3b3-4159-ac24-b8bf0716a008",
+                    "path": "<XRController>{RightHand}/Primary2DAxis/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Change Height",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e8e9489-a94b-4ab0-9c3d-e6a3a0da1dad",
+                    "path": "<XRController>{RightHand}/Primary2DAxis/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Smooth Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32efa1b2-864e-41b8-a34c-51b1d14f6f55",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Smooth Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "492c98a1-1dd6-43e3-bf58-eac71bbc2358",
+                    "path": "<XRController>{RightHand}/Primary2DAxis/x",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Snap Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightHand Interaction",
+            "id": "7a7a1efc-7b0e-40a0-8066-79d9bcfb8826",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "35df19cd-32f6-4f70-84e9-a3155fc57af0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Selection Intensity",
+                    "type": "PassThrough",
+                    "id": "4956d369-d352-4bbd-8d02-11b4e4f98d75",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Activate",
+                    "type": "Value",
+                    "id": "d3e3f2b7-30ae-4bb5-82a1-7ab84e66308f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.125)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Activation Intensity",
+                    "type": "PassThrough",
+                    "id": "a24fdf95-5207-452e-84fa-9c02c64ad0bc",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "UISelect",
+                    "type": "Button",
+                    "id": "0bb70366-6540-4722-b256-5b2ece14c2c7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e970afaa-67b1-4262-a3fe-f70c0a87c002",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1c7cf6c-7d7e-4fc8-8349-dab2e50869f9",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cb6f02f-225a-4edc-95a2-4959cbabfd10",
+                    "path": "<XRController>{RightHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Selection Intensity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdafb83c-15e7-486b-a310-cf085b235e1d",
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ef6435a-f665-4727-89b1-5ee60585e659",
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Activation Intensity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b852502-3637-477a-bfc5-fdff87946570",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UISelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LeftHand Locomotion",
+            "id": "34197811-c48f-4e0c-92ed-8d5aa78b3dc9",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "18c08198-e342-414a-b663-137b1fb0fcc5",
+                    "expectedControlType": "Vector2",
+                    "processors": "StickDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a26283dc-2c4b-4e9f-93c3-318a371514c4",
+                    "path": "<XRController>{LeftHand}/Primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Continuous Move",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "867f406a-f811-4fbd-8ff6-ce7cad88bb69",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LeftHand Interaction",
+            "id": "9bbc4966-6785-435d-a5dd-899ba92ed11c",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "66cbffa8-4128-4288-9e8d-db82ab4601b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Selection Intensity",
+                    "type": "PassThrough",
+                    "id": "7dfb8af1-040b-4650-9d0c-8008fa59ff44",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Activate",
+                    "type": "Value",
+                    "id": "28dcc832-108e-4060-aaf8-0bf08218f945",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.125)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Activation Intensity",
+                    "type": "PassThrough",
+                    "id": "105852ab-412d-44c2-b60a-2b139dde2b34",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "UISelect",
+                    "type": "Button",
+                    "id": "29f8c615-3dbb-4113-98aa-bf0ed5913e36",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7d6aed3d-acd3-4214-accf-2d1bf15b78f5",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c9f2515-689f-4163-b5e5-e3eb53e38db2",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "664afbe5-8642-48cf-a77e-47aca30a42cb",
+                    "path": "<XRController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Selection Intensity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9305ddf2-8043-4901-a0d0-9a087859c524",
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Activation Intensity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "611a2c83-ab55-4435-9dd8-0bf206ab3cfc",
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea2cd74f-a825-4040-94c5-23d4fcc8d481",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UISelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "MagesDesktop",
+            "id": "8be89733-a1b0-4bc2-82be-1eed822271c0",
+            "actions": [
+                {
+                    "name": "OpenWheel",
+                    "type": "Button",
+                    "id": "b6d6fc3f-74ba-494b-b696-b7c3a2252f43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "939edb9f-a3cf-421e-89fa-ef12c56cd2a8",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenWheel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": []
+        }
+    ]
+}

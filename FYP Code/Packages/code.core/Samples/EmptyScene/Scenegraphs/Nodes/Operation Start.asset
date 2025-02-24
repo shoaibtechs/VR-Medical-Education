@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1743869373, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: Operation Start
+  m_EditorClassIdentifier: 
+  actionName: Operation Start
+  advancedMode: 0
+  id: 45495447-6058-4d39-b089-859b48389819
+  nodePosition: {x: 0, y: 0}
+  nextActions:
+  - {fileID: 11400000, guid: 34e68f8c2a38c0b48b1dea1535abc266, type: 2}
+  prevActions: []
+  attachedScripts: []
+  steps:
+    beforeInitializeSteps: []
+    afterInitializeSteps: []
+    beforePerformSteps: []
+    afterPerformSteps:
+    - rid: 3076257892302848003
+    - rid: 3076257892302848004
+    - rid: 3076257892302848005
+    beforeUndoSteps: []
+    afterUndoSteps: []
+  effects:
+    effects: []
+  operationStartUI: {fileID: 6427668898083739751, guid: a50d7aac7954fe04291489ffc6986adb,
+    type: 3}
+  avatarCustomizationUI: {fileID: 6490112780918482942, guid: 8d48d0fb72b5be24a922b70bb90b01d0,
+    type: 3}
+  startObjects: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3076257892302848003
+      type: {class: DestroyStep, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        description: Destroy
+        scenePath: OperationStartEmpty(Clone)
+    - rid: 3076257892302848004
+      type: {class: DestroyStep, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        description: Destroy
+        scenePath: NetworkingUIEmpty(Clone)
+    - rid: 3076257892302848005
+      type: {class: DestroyStep, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        description: Destroy
+        scenePath: CharacterCustomizationCanvasEmpty(Clone)

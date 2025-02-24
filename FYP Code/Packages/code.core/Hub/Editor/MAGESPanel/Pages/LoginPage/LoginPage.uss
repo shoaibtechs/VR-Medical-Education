@@ -1,0 +1,219 @@
+:root {
+    flex-grow: 1;
+    margin-top: 110px;
+    margin-left: 20%;
+    margin-right: 20%;
+    flex-direction: column;
+    --c-link: rgb(255, 0, 0);
+    --c-pressable-ui-background: #3C3C3C;
+    --c-pressable-ui-text: white;
+    --c-pressable-ui-text-disabled: #3C3C3C;
+
+    --c-list-view-item-hover: #3C3C3C;
+    --c-list-view-item-selected: #3C3C3C;
+}
+
+#new-user {
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+Label {
+    font-size: 16px;
+    margin: 0;
+}
+
+Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.unity-base-field__input {
+    background-color: var(--c-pressable-ui-background);
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 300px;
+}
+
+.unity-base-popup-field__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+.unity-base-popup-field__text {
+    color: var(--c-pressable-ui-text);
+    font-size: 16px;
+}
+
+.unity-list-view__item {
+    border-radius: 5px;
+    -unity-text-align: middle-left;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.unity-list-view__item:hover {
+    background-color: var(--c-list-view-item-hover);
+}
+
+.unity-collection-view__item--selected {
+    background-color: var(--c-list-view-item-selected);
+}
+
+TextField {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+TextField Label {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+TextField #unity-text-input {
+    border-radius: 5px;
+    border-width: 0;
+}
+
+.unity-base-field:focus .unity-label {
+    color: var(--c-pressable-ui-text);
+}
+
+.unity-base-field:focus #forgot-container Label {
+    color: var(--c-link);
+}
+
+#remember {
+    flex-direction: row;
+    flex-grow: 0;
+    margin-bottom: 25px;
+}
+
+Toggle {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#remember Label {
+    -unity-text-align: middle-left;
+}
+
+Toggle .unity-base-field__input {
+    flex-basis: 0;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+}
+
+Toggle .unity-toggle__checkmark {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#forgot-container {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#forgot {
+    -unity-text-align: middle-right;
+    margin-top: 2px;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+#login-btn {
+    background-color: white;
+    color: black;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+#separator {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#separator VisualElement {
+    flex-grow: 1;
+    height: 1px;
+    background-color: white;
+    margin: 5px;
+}
+
+#google {
+    flex-direction: row;
+    -unity-text-align: middle-left;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-with-google {
+    flex-direction: row;
+    align-items: center;
+}
+
+#login-with-google:hover {
+    cursor: link;
+}
+
+#login-with-google #icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-image: url('./Images/google.png');
+}
+
+#login-with-google #icon:hover {
+    cursor: link;
+}
+
+#login-with-google Label:hover {
+    cursor: link;
+}
+
+.link {
+    color: var(--c-link);
+}
+
+.link:hover {
+    cursor: link;
+}
+
+.h1 {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.h2 {
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.h3 {
+    font-size: 12px;
+    -unity-font-style: bold;
+}

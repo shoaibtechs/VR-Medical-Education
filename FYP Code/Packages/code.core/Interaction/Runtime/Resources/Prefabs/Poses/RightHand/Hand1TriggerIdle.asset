@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1244520665, guid: 82be76b84a6abcb3b15d046192f6d634, type: 3}
+  m_Name: Hand1TriggerIdle
+  m_EditorClassIdentifier: 
+  fingerPoseMap:
+    serializedData:
+    - Key: 1
+      Value:
+        <FingerIndex>k__BackingField: 1
+        <BonePoses>k__BackingField:
+        - position: {x: -0.0015572269, y: 0.021073233, z: 0.014786869}
+          rotation: {x: -0.5507531, y: -0.5395777, z: -0.3514342, w: 0.5310564}
+        - position: {x: 0.0737976, y: -0.000000013043419, z: -0.00000008855649}
+          rotation: {x: 0.0016234698, y: 0.052886963, z: -0.24140383, w: 0.9689812}
+        - position: {x: 0.043286685, y: 0.00000004049319, z: 0.00000014999861}
+          rotation: {x: -0.000085924985, y: -0.005041467, z: -0.1847621, w: 0.9827703}
+        - position: {x: 0.028275186, y: -0.00000003254445, z: -0.00000013172802}
+          rotation: {x: 0.000031359832, y: 0.001165925, z: -0.07645764, w: 0.99707216}
+        - position: {x: 0.0132, y: 0, z: 0}
+          rotation: {x: -0.000000001686057, y: 0.0000000019271649, z: 0.0000000018575544,
+            w: 1}
+  <HandIndex>k__BackingField: 1

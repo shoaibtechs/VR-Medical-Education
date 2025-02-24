@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2049503010, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: Cut the fake skin
+  m_EditorClassIdentifier: 
+  actionName: Cut the fake skin
+  advancedMode: 0
+  id: cbd249b0-d16a-4e05-8c91-1ce28e3db14e
+  nodePosition: {x: -198.66667, y: 585.99994}
+  nextActions: []
+  prevActions:
+  - {fileID: 11400000, guid: 7483cd3caa53bf3419b02289dd59d815, type: 2}
+  attachedScripts: []
+  steps:
+    beforeInitializeSteps: []
+    afterInitializeSteps: []
+    beforePerformSteps: []
+    afterPerformSteps: []
+    beforeUndoSteps: []
+    afterUndoSteps: []
+  effects:
+    effects: []
+  objectUsed:
+    actionObject: {fileID: 7833148477243739317, guid: 5f882da6271bad54784a066ead6e34e4,
+      type: 3}
+    destroyOnPerform: 0
+    parentType: 0
+    parentPath: 
+    parentReference:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+    advancedMode: 0
+    actionGameObjectLabel: Object Used
+    actionGameObjectTooltip: The object to interact with the trajectory
+  trajectoryLine: {fileID: 8039857778618746083, guid: e1765c35a92cf464c9959d7ba1498552,
+    type: 3}
+  animatedObject:
+    serializedGuid: 1c1dbfc92cf29c4fa0a1121179237d35
+    cachedName: SkinBox
+  animatorStateName: SkinIncision
+  animatorStateIndex: 0
+  animatorLayerName: Base Layer
+  animatorLayerIndex: 0
+  requiresActivation: 0
+  references:
+    version: 2
+    RefIds: []

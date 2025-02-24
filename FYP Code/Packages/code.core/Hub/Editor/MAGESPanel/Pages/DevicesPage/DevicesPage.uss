@@ -1,0 +1,136 @@
+:root {
+    flex-grow: 1;
+    margin: 10px;
+    margin-top: 40px;
+    --c-card-container: rgb(60, 60, 60);
+    --c-pressable-ui-background: #3C3C3C;
+    --c-pressable-ui-text: white;
+    --c-pressable-ui-text-disabled: #3C3C3C;
+
+    --c-list-view-item-hover: #3C3C3C;
+    --c-list-view-item-selected: #3C3C3C;
+}
+
+#title {
+    margin-bottom: 10px;
+}
+
+#config #content {
+    flex-direction: column;
+}
+
+#config #content Button {
+    margin-top: 10px;
+    background-color: rgb(121, 118, 118);
+}
+
+#scenegraph #content
+{
+    flex-direction: column;
+}
+
+#scenegraph #content Button
+{
+    margin-top: 10px;
+    background-color: rgb(121, 118, 118);
+}
+
+.card-container {
+    background-color: var(--c-card-container);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.card-container #content {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.card-container .card-container-title {
+    margin-bottom: 10px;
+}
+
+Label {
+    font-size: 16px;
+    margin: 0;
+}
+
+Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.unity-base-field__input {
+    background-color: var(--c-pressable-ui-background);
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 300px;
+}
+
+.unity-base-popup-field__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+.unity-base-popup-field__text {
+    color: var(--c-pressable-ui-text);
+    font-size: 16px;
+}
+
+.unity-list-view__item {
+    border-radius: 5px;
+    -unity-text-align: middle-left;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.unity-list-view__item:hover {
+    background-color: var(--c-list-view-item-hover);
+}
+
+.unity-collection-view__item--selected {
+    background-color: var(--c-list-view-item-selected);
+}
+
+.h1 {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.h2 {
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.h3 {
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+TextField {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+TextField Label {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+TextField #unity-text-input {
+    border-radius: 5px;
+    border-width: 0;
+}

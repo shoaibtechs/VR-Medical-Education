@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-self: stretch; justify-content: flex-start; align-items: flex-start;">
+        <ui:Label text="Camera" display-tooltip-when-elided="true" name="CameraLabel" style="-unity-font-style: bold; -unity-text-align: upper-left; font-size: 24px;" />
+        <ui:FloatField label="Camera Height" value="1.5" binding-path="camHeight" name="CamHeight" style="width: 341px;" />
+        <ui:EnumField label="XR Mode" type="MAGES.DeviceManagerModule+CameraMode, MAGES.Hub.Runtime" name="XR_Mode" include-obsolete-values="false" binding-path="currentMode" value="Mobile3D" style="width: 341px;" />
+        <ui:Button text="Install XR Plugin" display-tooltip-when-elided="true" name="XRPlugin" style="justify-content: flex-start; align-self: center; height: auto; width: auto; align-items: auto; position: relative; left: auto; top: auto; min-width: 150px; max-width: 150px; display: flex; visibility: visible; white-space: nowrap; -unity-text-align: middle-center; text-overflow: clip; right: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

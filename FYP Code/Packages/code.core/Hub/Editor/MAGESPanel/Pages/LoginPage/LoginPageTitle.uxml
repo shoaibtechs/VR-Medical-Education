@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/LoginPage/LoginPageTitle.uss?fileID=7433441132597879392&amp;guid=e08f0e98eda507345bce50c3b246ae59&amp;type=3#LoginPageTitle" />
+    <ui:VisualElement class="avatar-container">
+        <ui:VisualElement name="default-avatar" class="default-avatar" />
+        <ui:VisualElement name="custom-avatar" class="custom-avatar">
+            <ui:Label text="MT" name="username-initials" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label text="Sign In" name="title" style="display: flex;">
+        <ui:VisualElement name="overlay" focusable="false" picking-mode="Ignore" class="overlay" style="display: none;">
+            <ui:VisualElement class="group">
+                <ui:Label text="Loading..." name="username" class="important" style="padding-bottom: 0; margin-bottom: 0;" />
+                <ui:Label text="Loading..." name="mail" class="regular" style="margin-top: 0; padding-top: 0; margin-bottom: 20px; padding-bottom: 0;" />
+                <ui:Label text="Account Type:" class="regular" style="margin-bottom: 0; padding-bottom: 0; margin-top: 0; padding-top: 0;" />
+                <ui:Label name="account-type" text="Loading" class="important" style="padding-top: 0; margin-top: 0; padding-bottom: 0; margin-bottom: 20px;" />
+                <ui:Label text="Expiration Date:" class="regular" style="margin-bottom: 0; padding-bottom: 0;" />
+                <ui:Label name="expiration-date" text="Loading" class="important" style="padding-top: 0; margin-top: 0; padding-bottom: 0; margin-bottom: 20px;" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="support" class="button">
+                    <ui:VisualElement class="icon" />
+                    <ui:Label text="Ask Support" />
+                </ui:Button>
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="forum" class="button">
+                    <ui:VisualElement class="icon" />
+                    <ui:Label text="ORamaVR Forum" />
+                </ui:Button>
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="log-out" class="button">
+                    <ui:VisualElement class="icon" />
+                    <ui:Label text="Sign out" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:Label>
+</ui:UXML>

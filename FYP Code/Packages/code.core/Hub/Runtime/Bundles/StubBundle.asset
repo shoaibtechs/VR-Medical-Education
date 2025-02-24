@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1017812009, guid: 1c1a21e1309d25de02b27da979cbb376, type: 3}
+  m_Name: StubBundle
+  m_EditorClassIdentifier: 
+  dataContainerModule: {fileID: 11400000, guid: 69793371e095dab4a9df742c333beb48,
+    type: 2}
+  interactionSystemModule: {fileID: 11400000, guid: 003d96dcb8313164fafe04fb8a41d4c2,
+    type: 2}
+  networkingModule: {fileID: 11400000, guid: 9c62d308d30079141accdca2d23d4f13, type: 2}
+  analyticsModule: {fileID: 11400000, guid: f7c8e2eb5a0d7484eaaab662b59def6b, type: 2}
+  deviceManagerModule: {fileID: 11400000, guid: 7c0e1cc99fd10554a8f3e339727ae3cf,
+    type: 2}
+  sceneGraphModule: {fileID: 11400000, guid: e6e0a04691954c44a97179e4decb30a0, type: 2}
+  extraModules: []

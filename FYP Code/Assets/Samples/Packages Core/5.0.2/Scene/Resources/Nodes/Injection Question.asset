@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 175751277, guid: dca32fbd7bbe2c25afda7577ebc7ea20, type: 3}
+  m_Name: Injection Question
+  m_EditorClassIdentifier: 
+  actionName: Injection Question
+  advancedMode: 0
+  id: 32f2e175-0f97-40ca-81eb-3e2d8eeaf592
+  nodePosition: {x: -13106.996, y: -1202}
+  nextActions:
+  - {fileID: 11400000, guid: a746392056d699544a5e3c7a5613d011, type: 2}
+  prevActions:
+  - {fileID: 11400000, guid: 7483cd3caa53bf3419b02289dd59d815, type: 2}
+  attachedScripts: []
+  steps:
+    beforeInitializeSteps: []
+    afterInitializeSteps: []
+    beforePerformSteps: []
+    afterPerformSteps: []
+    beforeUndoSteps: []
+    afterUndoSteps: []
+  effects:
+    effects:
+    - rid: 1141434290852331528
+  question: 'In which part of the body should the injection be given? '
+  answers:
+  - answerText: Arm
+    correct: 1
+  - answerText: Leg
+    correct: 0
+  - answerText: Neck
+    correct: 0
+  - answerText: Waist
+    correct: 0
+  numberOfAnswers: 1
+  questionPosition: {x: -3.747, y: 1.731, z: -0.209}
+  questionRotation: {x: -0, y: 0.7154396, z: -0, w: 0.6986746}
+  questionState: 3
+  revealAnswers: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 1141434290852331528
+      type: {class: ArrowEffectData, ns: MAGES.SceneGraph, asm: MAGES.SceneGraph.Runtime}
+      data:
+        theme:
+          arrowPrefab:
+            isOverridden: 0
+            value: {fileID: 0}
+        showOnInteractable: 1

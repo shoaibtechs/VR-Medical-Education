@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Button text="New Question" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewQuestionButton" />
+    <ui:Button text="Edit Question" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EditQuestionButton" />
+    <ui:Button text="Save Question" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SaveQuestionButton" />
+    <uie:PropertyField binding-path="question" name="Question" />
+    <ui:ListView focusable="true" binding-path="answers" name="Answers" fixed-item-height="44" virtualization-method="DynamicHeight" show-add-remove-footer="true" show-border="true" show-foldout-header="true" show-alternating-row-backgrounds="None" header-title="Answers" />
+    <uie:PropertyField binding-path="numberOfAnswers" name="NumberOfAnswers" />
+    <uie:PropertyField binding-path="revealAnswers" name="RevealAnswers" />
+    <ui:Button text="Preview Answers" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PreviewAnswersButton" />
+</ui:UXML>

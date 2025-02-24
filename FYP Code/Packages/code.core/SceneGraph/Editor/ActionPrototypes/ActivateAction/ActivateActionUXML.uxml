@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="ActivateObject" binding-path="activateObject" />
+    <uie:PropertyField binding-path="animationClip" name="AnimationClip" />
+    <uie:PropertyField binding-path="numberOfActivations" name="NumberOfActivations" />
+    <uie:PropertyField name="ActivateOnPress" binding-path="activateOnPress" />
+</ui:UXML>

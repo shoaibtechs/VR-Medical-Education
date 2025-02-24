@@ -1,0 +1,22 @@
+{
+    "name": "MAGES.Networking.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:57c32fc907df0f54e8e6e8f0d2488336",
+        "GUID:3ed10944100fdbc41be9800f288b213a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Editor.dll",
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

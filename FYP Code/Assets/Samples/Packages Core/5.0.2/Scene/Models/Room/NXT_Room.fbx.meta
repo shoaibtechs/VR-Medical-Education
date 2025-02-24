@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 0a1c3b302c1ce4f4b99f291ee21e4114
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed_Stool
+    second: {fileID: 2100000, guid: 8852b6e8e9f17e545ba421ffbbc12a71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bin
+    second: {fileID: 2100000, guid: 21ec1b08c47391944bdc06022cfeac39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair
+    second: {fileID: 2100000, guid: ceb6c35a364a6e249ba1dfe74c7bc05b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 8b00ba6dfb467f340ae081c5af11f190, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Bed
+    second: {fileID: 2100000, guid: f5e8fba1258f634478a3417c641ad784, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Ceiling1
+    second: {fileID: 2100000, guid: f43b0885630f1e345a3cbb5d6e5764a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Ceiling_Emissive
+    second: {fileID: 2100000, guid: 0bd961856485d2e45af7995029d6a6e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Cupboard
+    second: {fileID: 2100000, guid: 1cee29ac1b2d00443aeb9b8ed9dd180c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Cupboard_Glass
+    second: {fileID: 2100000, guid: 9bf0f16c81f937f4e8f17b35bb06ae0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Curtain_Mechanism
+    second: {fileID: 2100000, guid: 41230f780331b694691ae26b98255965, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Desk_1_Frame
+    second: {fileID: 2100000, guid: ed231907780c9d94e9f58f20a378e209, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Desk_1_Top
+    second: {fileID: 2100000, guid: 02e33e35992fcbf47becb6ff47d315a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Desk_2
+    second: {fileID: 2100000, guid: e426a4786d0bcc440aecab468813eb85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Door1
+    second: {fileID: 2100000, guid: 0b2640f3e9a8865469191abac3e4eb2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Floor
+    second: {fileID: 2100000, guid: 45a8118246381664e8c7a2e0abd4f39f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Laptop1
+    second: {fileID: 2100000, guid: f44b26540492f0b45b8ee820547815c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Props_Hanger
+    second: {fileID: 2100000, guid: 45b1b4bb3f43c044ea5cd274c61c28fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Sanitizer1
+    second: {fileID: 2100000, guid: c47cc7d00fa25b540b8e5fc60388babf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Vent
+    second: {fileID: 2100000, guid: 5c31e9d82ef51a440ac7aedb6b2df5bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Walls1
+    second: {fileID: 2100000, guid: af74941e9f75f814ea26cd1f40133306, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Wardrobe
+    second: {fileID: 2100000, guid: e5d9964f22ddec140ab749679302ce05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Wardrobe_Glass
+    second: {fileID: 2100000, guid: a50fe655e5422c446b90f9a3e0783282, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NXT_Window_Curtains
+    second: {fileID: 2100000, guid: d85945370dac4634b8934193019d470d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tablet1
+    second: {fileID: 2100000, guid: f30e4933eda122149b5140444e58ebb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tablet_Screen1
+    second: {fileID: 2100000, guid: 9d2e020874a79844a9c1ac66539628fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tablet_Stand
+    second: {fileID: 2100000, guid: 1c4bd635b943e2b469bd1878b475ab20, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 10
+    secondaryUVAreaDistortion: 60
+    secondaryUVHardAngle: 90
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 55
+    secondaryUVMinObjectScale: 0.01
+    secondaryUVPackMargin: 50
+    useFileScale: 1
+    strictVertexDataChecks: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

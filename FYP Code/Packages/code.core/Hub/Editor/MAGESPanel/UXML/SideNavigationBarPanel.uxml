@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/USS/SideNavigationBarPanel.uss?fileID=7433441132597879392&amp;guid=241ec1d8ceaa7b4458e79e6d128c3ad0&amp;type=3#SideNavigationBarPanel" />
+    <ui:VisualElement name="collapse-btn" style="flex-grow: 1; top: 0; rotate: 90deg; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; background-image: url(&apos;project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Images/down-arrow.png?fileID=2800000&amp;guid=355f1e5660614e84584857c8f032978f&amp;type=3#down-arrow&apos;);" />
+    <ui:VisualElement name="top">
+        <ui:VisualElement name="company-logo" class="company-logo" style="align-items: stretch; max-width: 200px;" />
+        <ui:ListView name="top-pages" view-data-key="top-list-view" />
+    </ui:VisualElement>
+    <ui:VisualElement name="bottom">
+        <ui:ListView name="bottom-pages" view-data-key="bottom-list-view" />
+    </ui:VisualElement>
+</ui:UXML>

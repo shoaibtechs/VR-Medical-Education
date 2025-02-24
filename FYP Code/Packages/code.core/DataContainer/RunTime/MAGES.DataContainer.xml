@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.DataContainer</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.DataContainer.MAGESDataContainer">
+            <summary>
+            Implementation of the DataContainer Interface.
+            </summary>
+        </member>
+        <member name="F:MAGES.DataContainer.MAGESDataContainer.schemas">
+            <summary>
+            Dictionary that stores the schemas.
+            </summary>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.SetSchema(System.String,System.Type)">
+            <summary>
+            Sets the schema for the data container.
+            </summary>
+            <param name="keyPattern">The convention/pattern the Schema is created under, i.e mages.actions.* .</param>
+            <param name="schemaType">The type of the Schema.</param>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.GetSpecificSchemaData(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.DeleteSpecificSchemaData(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.DeleteSchema(System.String)">
+            <summary>
+            Deletes the whole Schema under the given key.
+            </summary>
+            <param name="keyPattern">The given pattern/convention of the schema.</param>
+            <exception cref="T:System.ArgumentException">Throws an exception if the key is not found.</exception>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.DeleteData(System.String)">
+            <summary>
+            Deletes the data under the given key.
+            </summary>
+            <param name="key">Given data key.</param>
+            <exception cref="T:System.ArgumentException">Throws exception if the key is not found.</exception>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.ClearAllData">
+            <summary>
+            Clears all data and all schemas.
+            </summary>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.StoreData(System.String,System.Object)">
+            <summary>
+            Stores data in the schema defined under the given key.
+            </summary>
+            <param name="key">The given key.</param>
+            <param name="value">The value to be stored.</param>
+            <exception cref="T:System.ArgumentException">Throws an exception if the key is not found.</exception>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.GetData(System.String)">
+            <summary>
+            Gets the data stored under the given key.
+            </summary>
+            <param name="key">The given key.</param>
+            <returns>The value stored under the given key.</returns>
+            <exception cref="T:System.ArgumentException">If no data is found under the given key.</exception>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.GetSchemaData(System.String)">
+            <summary>
+            Gets the whole Schema data stored under the given convention/pattern.
+            </summary>
+            <param name="keyPattern">The convention/pattern the Schema is defined under.</param>
+            <returns>A dictionary of the whole Schema data.</returns>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.Startup">
+            <summary>
+            Called when the module is started (usually on application start).
+            </summary>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.Shutdown">
+            <summary>
+            Called when the module is destroyed or replaced.
+            </summary>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.PatternExists(System.String)">
+            <summary>
+            Checks if the given key is valid for the given SchemaType.
+            </summary>
+            <param name="key">The given pattern/convention for the schema.</param>
+            <returns>Returns the SchemaType if the pattern is found under the schemas dictionary or None if not found.</returns>
+        </member>
+        <member name="M:MAGES.DataContainer.MAGESDataContainer.GetExistingSchemaInstance(System.Type)">
+            <summary>
+            Gets the existing schema instance.
+            </summary>
+            <param name="schemaType">The schemaType.</param>
+            <returns>The schema instance.</returns>
+        </member>
+    </members>
+</doc>

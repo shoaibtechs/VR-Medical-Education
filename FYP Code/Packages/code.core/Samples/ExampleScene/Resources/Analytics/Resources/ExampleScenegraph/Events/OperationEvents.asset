@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -236400366, guid: 207089db17bfa0d183618047d0b13300, type: 3}
+  m_Name: OperationEvents
+  m_EditorClassIdentifier: 
+  <AllEvents>k__BackingField:
+    serializedData:
+    - Key: ActionPerformedEvent
+      Value:
+        <Name>k__BackingField: ActionPerformedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+ActionPerformed,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.ActionPerformedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Action Performed
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+    - Key: SessionStartedEvent
+      Value:
+        <Name>k__BackingField: SessionStartedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+SessionStarted,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.SessionStartedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Session Started
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+    - Key: SessionEndedEvent
+      Value:
+        <Name>k__BackingField: SessionEndedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+SessionEnded, MAGES.Analytics.Runtime,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.SessionEndedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Session Ended
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+  <ActionPerformedEvents>k__BackingField:
+    serializedData:
+    - Key: ActionPerformedEvent
+      Value:
+        <Name>k__BackingField: ActionPerformedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+ActionPerformed,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.ActionPerformedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Action Performed
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+        <Action>k__BackingField: Entire Operation
+  <ActionUndoneEvents>k__BackingField:
+    serializedData: []
+  <SessionStartedEvents>k__BackingField:
+    serializedData:
+    - Key: SessionStartedEvent
+      Value:
+        <Name>k__BackingField: SessionStartedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+SessionStarted,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.SessionStartedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Session Started
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+  <SessionEndedEvents>k__BackingField:
+    serializedData:
+    - Key: SessionEndedEvent
+      Value:
+        <Name>k__BackingField: SessionEndedEvent
+        <InternalType>k__BackingField: MAGES.Analytics.EventTypes+SessionEnded, MAGES.Analytics.Runtime,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.SessionEndedEventUI,
+          MAGES.Analytics.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Label>k__BackingField: Session Ended
+        <UIPayload>k__BackingField:
+          serializedData: []
+        <RuntimePayload>k__BackingField:
+          serializedData: []
+  <OnCollisionEvents>k__BackingField:
+    serializedData: []
+  <OnInteractionEvents>k__BackingField:
+    serializedData: []
+  <CustomEventTypeEvents>k__BackingField:
+    serializedData: []

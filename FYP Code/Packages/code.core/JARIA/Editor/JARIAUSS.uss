@@ -1,0 +1,207 @@
+:root {
+    flex-grow: 1;
+    --c-pressable-ui-background: #3C3C3C;
+    --c-pressable-ui-text: white;
+    --c-pressable-ui-text-disabled: #3C3C3C;
+
+    --c-list-view-item-hover: #3C3C3C;
+    --c-list-view-item-selected: #3C3C3C;
+}
+
+#root #ChatScroll {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+#root #ChatScroll #unity-content-container {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#root #UserInputBox {
+    height: auto;
+    flex-direction: row;
+    bottom: 10px;
+}
+
+#root TextField .unity-base-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    top: 10px;
+    min-width: auto;
+}
+
+#root #UserInputBox TextField {
+    flex-grow: 1;
+}
+
+#test #unity-text-input ScrollView TextElement {
+    cursor: text;
+    min-height: 40px;
+}
+
+#unity-text-input TextElement {
+    cursor: text;
+}
+
+#test #unity-text-input TextElement {
+    min-height: 40px;
+}
+
+#SendButton {
+    background-image: url('project://database/Packages/com.oramavr.mages.core/JARIA/Editor/PanelImages/SendButtonShadowBackgroundImage.png?fileID=21300000&guid=44eafe5978cc9034b8ca29618fcf043d&type=3#SendButtonShadowBackgroundImage');
+}
+
+#SendButton:hover {
+    background-image: url('project://database/Packages/com.oramavr.mages.core/JARIA/Editor/PanelImages/SendButtonHover.png?fileID=21300000&guid=12c888e2632bdf445bd019ddb91d69f6&type=3#SendButtonHover');
+}
+
+#root #LabelGroup {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#root .buttongroup {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#root .jarialabelbox {
+    align-self: flex-start;
+    flex-direction: row;
+}
+
+#root #BotPhoto {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#root #JARIARes {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+#root #SettingsElement {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 5px;
+}
+
+#root Label {
+    font-size: 16px;
+    margin: 0;
+}
+
+#root Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#DocButton:hover {
+    background-color: rgb(82, 82, 82);
+}
+
+#ForumButton:hover {
+    background-color: rgb(82, 82, 82);
+}
+
+#root .unity-base-field__input {
+    background-color: var(--c-pressable-ui-background);
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 300px;
+}
+
+#root .unity-base-popup-field__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+#root .unity-base-popup-field__text {
+    color: var(--c-pressable-ui-text);
+    font-size: 16px;
+}
+
+#root .unity-list-view__item {
+    border-radius: 5px;
+    -unity-text-align: middle-left;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#root .unity-list-view__item:hover {
+    background-color: var(--c-list-view-item-hover);
+}
+
+#root .unity-collection-view__item--selected {
+    background-color: var(--c-list-view-item-selected);
+}
+
+#root #InitialButtonGroup {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#InitialButtonGroup Button {
+    background-image: url('project://database/Packages/com.oramavr.mages.core/JARIA/Editor/PanelImages/InputFieldShadowBackgroundImage.png?fileID=21300000&guid=2f7052f223e0357429c33bddcb717fd2&type=3#InputFieldShadowBackgroundImage');
+}
+
+#InitialButtonGroup Button:hover {
+    background-image: url('project://database/Packages/com.oramavr.mages.core/JARIA/Editor/PanelImages/ButtonImagOnHover.png?fileID=21300000&guid=1784c54fb45857f48b07e6c143f4caf7&type=3#ButtonImagOnHover');
+}
+
+#InitialButtonGroup VisualElement {
+    align-items: center;
+    width: 100%;
+}
+
+.full-width {
+    flex-direction: row;
+}
+
+.full-width Button {
+    flex-grow: 0.5;
+}
+
+.half-width {
+    flex-direction: column;
+    align-items: center;
+}
+
+.half-width Button {
+    width: 80%;
+}
+
+.h1 {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.h2 {
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.h3 {
+    font-size: 12px;
+    -unity-font-style: bold;
+}

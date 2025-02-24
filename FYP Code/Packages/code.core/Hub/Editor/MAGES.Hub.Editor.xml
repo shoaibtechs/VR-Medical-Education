@@ -1,0 +1,2280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Hub.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.ComponentLibrary.Editor.ArrowGuideEditor">
+            <summary>
+            Custom editor for <see cref="T:MAGES.ComponentLibrary.ArrowGuide"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.ComponentLibrary.Editor.ArrowGuideEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.ComponentLibrary.Editor.EditTimeApplicationQuit">
+            <summary>
+            Quits the application while playing from editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.ComponentLibrary.Editor.EditTimeApplicationQuit.ApplicationQuit">
+            <inheritdoc cref="M:MAGES.ComponentLibrary.IApplicationQuitter.ApplicationQuit"/>
+        </member>
+        <member name="T:MAGES.ComponentLibrary.Editor.EditTimeCameraLocator">
+            <summary>
+            An edit time camera locator that returns the scene view camera.
+            </summary>
+        </member>
+        <member name="M:MAGES.ComponentLibrary.Editor.EditTimeCameraLocator.LocateCurrentCamera">
+            <summary>
+            Locates the current camera.
+            </summary>
+            <returns>The camera.</returns>
+        </member>
+        <member name="T:MAGES.ComponentLibrary.Editor.LabelEditor">
+            <summary>
+            Custom editor for the Label component.
+            </summary>
+        </member>
+        <member name="M:MAGES.ComponentLibrary.Editor.LabelEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.ComponentLibrary.Editor.RotatingLabelEditor">
+            <summary>
+            Custom editor for the RotatingLabel component.
+            </summary>
+        </member>
+        <member name="M:MAGES.ComponentLibrary.Editor.RotatingLabelEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.BaseConfigurationTask">
+            <summary>
+            A unity projet configuration task. Can be managed by a <see cref="T:MAGES.Editor.IConfigurationTaskCallbacksReceiver"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.Type">
+            <summary>
+            Gets thecurrent task type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.State">
+            <summary>
+            Gets the current task state.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.Priority">
+            <summary>
+            Gets the task's priority.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.Title">
+            <summary>
+            Gets the task title.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.LoadingMessage">
+            <summary>
+            Gets the task message while loading.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.Message">
+            <summary>
+            Gets the task message when fix is available.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.FixMessage">
+            <summary>
+            Gets the task message for fix.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.FixingMessage">
+            <summary>
+            Gets the task message while fixing.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseConfigurationTask.FixedMessage">
+            <summary>
+            Gets the fixed task message.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.Register(MAGES.Editor.IConfigurationTaskCallbacksReceiver)">
+            <summary>
+            Registers this task to a <see cref="T:MAGES.Editor.IConfigurationTaskCallbacksReceiver"/>.
+            </summary>
+            <param name="receiver">The callback receiver to update for task changes.</param>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.Deregister(MAGES.Editor.IConfigurationTaskCallbacksReceiver)">
+            <summary>
+            Deregisters from the handler, if any.
+            </summary>
+            <param name="receiver">The callback receiver to deregister from. This will stop receiving updates for the current task.</param>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.Load">
+            <summary>
+            Called to start loading the task.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.Fix">
+            <summary>
+            Called to start fixing the task, given that it is fixable.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.UpdateType(MAGES.Editor.ConfigurationTaskType)">
+            <summary>
+            Updates the task type.
+            </summary>
+            <param name="newType">New task type.</param>
+            <remarks>Also notifies the <see cref="T:MAGES.Editor.IConfigurationTaskCallbacksReceiver"/>, if registered with one.</remarks>
+        </member>
+        <member name="M:MAGES.Editor.BaseConfigurationTask.UpdateState(MAGES.Editor.ConfigurationTaskState)">
+            <summary>
+            Updates the task state.
+            </summary>
+            <param name="newState">The new state.</param>
+            <remarks>Also notifies the <see cref="T:MAGES.Editor.IConfigurationTaskCallbacksReceiver"/>, if registered with one.</remarks>
+        </member>
+        <member name="T:MAGES.Editor.BaseMAGESPanelPage">
+            <summary>
+            A Page for the MAGES Panel.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.BaseMAGESPanelPage.SideNavigationBarPlacement">
+            <summary>
+            The placement of the page in the MAGES Panel side navigation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.BaseMAGESPanelPage.SideNavigationBarPlacement.Top">
+            <summary>
+            Place on top list view.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.BaseMAGESPanelPage.SideNavigationBarPlacement.Bottom">
+            <summary>
+            Place on bottom list view.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.Visible">
+            <summary>
+            Gets a value indicating whether the page is visible in the side navigation bar.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.Title">
+            <summary>
+            Gets the title to show in the MAGES Panel side navigation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.NavigationBarPlacement">
+            <summary>
+            Gets or sets where to position the page in the MAGES Panel side navigation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.Order">
+            <summary>
+            Gets the order with which to show this page in the MAGES Panel side navigation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.ShowBundleSelectionUI">
+            <summary>
+            Gets a value indicating whether or not to show the bundle selection UI in the MAGES Panel.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.BaseMAGESPanelPage.RequiresBundleSelection">
+            <summary>
+            Gets a value indicating whether this page requires a bundle to be displayed. If no bundle is selected a page informing the user to select a bundle will be shown and the <see cref="M:MAGES.Editor.BaseMAGESPanelPage.CreateGUI(MAGES.Bundle)"/> method will not be called. Once a bundle is selected the <see cref="M:MAGES.Editor.BaseMAGESPanelPage.CreateGUI(MAGES.Bundle)"/> method will be called, immediately after the <see cref="M:MAGES.Editor.BaseMAGESPanelPage.OnSelectedBundleChanged(MAGES.Bundle)"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <summary>
+            Called when the MAGES Panel is opened.
+            </summary>
+            <param name="panel">The panel that initialized this page.</param>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.TrySelect(MAGES.Bundle)">
+            <summary>
+            Called when the user clicks on this page's button in the MAGES Panel side navigation.
+            </summary>
+            <param name="selectedBundle">The selected bundle in the panel.</param>
+            <returns><see langword="true"/> if the page can be selected.</returns>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.CreateGUI(MAGES.Bundle)">
+            <summary>
+            Called after being selected to show the page's GUI.
+            </summary>
+            <param name="selectedBundle">The selected bundle in the panel.</param>
+            <returns>The Page's GUI.</returns>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.Deselect">
+            <summary>
+            Called when the user selects another page in the MAGES Panel side navigation.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.Destroy">
+            <summary>
+            Called when the panel is destroyed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BaseMAGESPanelPage.OnSelectedBundleChanged(MAGES.Bundle)">
+            <summary>
+            Called when the user selects a new Bundle in the MAGES Panel.
+            </summary>
+            <param name="newSelection">The newly selected bundle.</param>
+        </member>
+        <member name="T:MAGES.Editor.BundleEditor">
+            <summary>
+            Custom editor for MAGES.NXT.Runtime.Bundle.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.BundleEditor.CreateInspectorGUI">
+            <summary>
+            Build method.
+            </summary>
+            <returns>Visual Element.</returns>
+        </member>
+        <member name="T:MAGES.Editor.CloneMethodAttribute">
+            <summary>
+            An attribute for specifying a static class that can clone a type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CloneMethodAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CloneMethodAttribute"/> class.
+            </summary>
+            <param name="type">The cloned type.</param>
+        </member>
+        <member name="P:MAGES.Editor.CloneMethodAttribute.ClonedType">
+            <summary>
+            Gets the type that can be cloned.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CloneMethodAttribute.TryClone(System.Object,System.Object@)">
+            <summary>
+            Shorthand for finding, and calling the clone method.
+            </summary>
+            <param name="o">The object to clone.</param>
+            <param name="result">The resulting duplicate object.</param>
+            <returns>Whether or not the object could be cloned.</returns>
+        </member>
+        <member name="T:MAGES.Editor.CloseButton">
+            <summary>
+            Close Icon.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CloseButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CloseButton"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CloseButton.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CloseButton"/> class.
+            </summary>
+            <param name="onClick">The on click event.</param>
+        </member>
+        <member name="T:MAGES.Editor.CloseButton.UxmlFactory">
+            <summary>
+            The UXML factory.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CloseButton.UxmlFactory.uxmlName">
+            <summary>
+            Gets the UXML name.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CloseButton.UxmlFactory.Create(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext)">
+            <summary>
+            Creates the specified element.
+            </summary>
+            <param name="bag">Bag.</param>
+            <param name="cc">Context.</param>
+            <returns>The visual element.</returns>
+        </member>
+        <member name="T:MAGES.Editor.CollapsableTwoPaneSplitView">
+            <summary>
+            A split view like <see cref="T:UnityEngine.UIElements.TwoPaneSplitView"/>.
+            It has a collapsable left pane, which is collapsed into a small but still visible width.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UssClassName">
+            <summary>
+            The USS class name of this element.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CollapsableTwoPaneSplitView"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.#ctor(System.Int32,System.Single,System.Single,System.Single,UnityEngine.UIElements.TwoPaneSplitViewOrientation)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CollapsableTwoPaneSplitView"/> class.
+            Parameterized constructor.
+            </summary>
+            <param name="fixedPaneIndex">0 for setting first child as the fixed pane, 1 for the second child element.</param>
+            <param name="fixedPaneStartDimension">Set an inital width or height for the fixed pane.</param>
+            <param name="fixedPaneMinDimension">Fixed pane min dimension.</param>
+            <param name="fixedPaneCollapseDimension">Fixed pane collapse dimension.</param>
+            <param name="orientation">Orientation of the split view.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.#ctor(System.Int32,System.Single,System.Single,System.Single,UnityEngine.UIElements.TwoPaneSplitViewOrientation,System.Action{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CollapsableTwoPaneSplitView"/> class.
+            </summary>
+            <param name="fixedPaneIndex">0 for setting first child as the fixed pane, 1 for the second child element.</param>
+            <param name="fixedPaneStartDimension">Set an inital width or height for the fixed pane.</param>
+            <param name="fixedPaneMinDimension">Fixed pane min dimension.</param>
+            <param name="fixedPaneCollapseDimension">Fixed pane collapse dimension.</param>
+            <param name="orientation">Orientation of the split view.</param>
+            <param name="onCollapseStateChanged">Event when collapse state changes.</param>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.contentContainer">
+            <summary>
+            Gets the content container.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.FixedPane">
+            <summary>
+            Gets the child element that is set as the fixed size pane.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.FlexedPane">
+            <summary>
+            Gets the child element that is set as the flexable size pane.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.FixedPaneIndex">
+            <summary>
+            Gets or sets 0 for setting first child as the fixed pane, 1 for the second child element.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.FixedPaneInitialDimension">
+            <summary>
+            Gets or sets the initial width or height for the fixed pane.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.Orientation">
+            <summary>
+            Gets or sets orientation of the split view.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.IsCollapsed">
+            <summary>
+            Gets a value indicating whether the pane is collapsed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.FixedPaneDimension">
+            <summary>
+            Gets or sets the fixed pane dimension.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.CollapseChild(System.Int32)">
+            <summary>
+            Collapses a child.
+            </summary>
+            <param name="index">Index of child.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.UnCollapse">
+            <summary>
+            Uncollapses.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.Init(System.Int32,System.Single,UnityEngine.UIElements.TwoPaneSplitViewOrientation,System.Single,System.Single)">
+            <summary>
+            Initializes the split view.
+            </summary>
+            <param name="fixedPaneIndex">The pane index.</param>
+            <param name="fixedPaneInitialDimension">The initial dimension.</param>
+            <param name="orientation">The orientation.</param>
+            <param name="fixedPaneCollapseDimension">The collapse dimension.</param>
+            <param name="fixedPaneMinDimension">The min dimension.</param>
+        </member>
+        <member name="T:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlFactory">
+            <summary>
+            Instantiates a TwoPaneSplitView using the data read from a UXML file.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits">
+            <summary>
+            Defines UxmlTraits for the TwoPaneSplitView.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.fixedPaneIndex">
+            <summary>
+            Index of fixed pane.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.fixedPaneInitialDimension">
+            <summary>
+            Initial dimension of fixed pane.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.orientation">
+            <summary>
+            Orientation of the split view.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.fixedPaneMinDimension">
+            <summary>
+            Minimum dimension of fixed pane.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.fixedPaneCollapseDimension">
+            <summary>
+            Dimension of fixed pane when collapsed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.uxmlChildElementsDescription">
+            <summary>
+            Gets an empty enumeration, as TwoPaneSplitView does not support adding children through UXML.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitView.UxmlTraits.Init(UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext)">
+            <summary>
+            Initializes <see cref="T:UnityEngine.UIElements.TwoPaneSplitView"/> properties using values from the attribute bag.
+            </summary>
+            <param name="ve">Root visual element.</param>
+            <param name="bag">Bag of attributes.</param>
+            <param name="cc">The creation context.</param>
+        </member>
+        <member name="T:MAGES.Editor.CollapsableTwoPaneSplitViewResizer">
+            <summary>
+            Class that allows for collapsing and expanding a two pane split view.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.#ctor(MAGES.Editor.CollapsableTwoPaneSplitView,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.CollapsableTwoPaneSplitViewResizer"/> class.
+            Constructor.
+            </summary>
+            <param name="splitView">The collapsible split view.</param>
+            <param name="dir">The direction.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.ApplyDelta(System.Single)">
+            <summary>
+            Applies the delta.
+            </summary>
+            <param name="delta">The delta.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.RegisterCallbacksOnTarget">
+            <summary>
+            Registers the callbacks on target.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.UnregisterCallbacksFromTarget">
+            <summary>
+            Unregisters the callbacks from target.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)">
+            <summary>
+            Event handler for pointer down events.
+            </summary>
+            <param name="e">The pointer down event.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)">
+            <summary>
+            Event handler for pointer move events.
+            </summary>
+            <param name="e">The pointer move event.</param>
+        </member>
+        <member name="M:MAGES.Editor.CollapsableTwoPaneSplitViewResizer.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)">
+            <summary>
+            Event handler for pointer up events.
+            </summary>
+            <param name="e">The pointer up event.</param>
+        </member>
+        <member name="T:MAGES.Editor.ColourSpaceConfigurationTask">
+            <summary>
+            Checks/Changes the colour space to Linear.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.ColourSpaceConfigurationTask.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.ColourSpaceConfigurationTask.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.ColourSpaceConfigurationTask.FixingMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.ColourSpaceConfigurationTask.FixedMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.ColourSpaceConfigurationTask.Priority">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.ColourSpaceConfigurationTask.Fix">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.ColourSpaceConfigurationTask.Load">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.ConfigurationTaskState">
+            <summary>
+            Specifies the state of a <see cref="T:MAGES.Editor.BaseConfigurationTask"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskState.Loading">
+            <summary>
+            Loading the task data to check if it is available for fix.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskState.Available">
+            <summary>
+            The task is available for fix.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskState.InProgress">
+            <summary>
+            The task is being fixed.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskState.Completed">
+            <summary>
+            The task is fixed.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskState.Failed">
+            <summary>
+            The task's fix is failed.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.ConfigurationTaskType">
+            <summary>
+            The type of a <see cref="T:MAGES.Editor.BaseConfigurationTask"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskType.Info">
+            <summary>
+            An optional task that can be skipped.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskType.Warning">
+            <summary>
+            A task that can be skipped, but without it the project will not work at its best.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskType.Error">
+            <summary>
+            A mandatory task that must be completed.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.ConfigurationTaskUI">
+            <summary>
+            Creates UI for handling a <see cref="T:MAGES.Editor.BaseConfigurationTask"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigurationTaskUI.TaskUIAssetPath">
+            <summary>
+            The UI Asset path for this task.
+            </summary>
+            <remarks>
+            Must contain an #icon VisualElement a #message Label and a #fix-button Button.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.ConfigurationTaskUI"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.ConfigurationTaskUI.FixButton">
+            <summary>
+            Gets the fix button for this task.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.ConfigurationTaskUI.Label">
+            <summary>
+            Gets the label for this task.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.ConfigurationTaskUI.TaskUpdated">
+            <summary>
+            Gets or sets the unity event to be called when the managed task is updated.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.CreateGUI">
+            <summary>
+            Creates the UI for this task.
+            </summary>
+            <returns>The UI's root.</returns>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.BindGUI(UnityEngine.UIElements.VisualElement,MAGES.Editor.BaseConfigurationTask)">
+            <summary>
+            Binds the UI to the given task.
+            </summary>
+            <param name="root">The root of the TaskUI.</param>
+            <param name="task">The task to bind to.</param>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.TaskTypeChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskType,MAGES.Editor.ConfigurationTaskType)">
+            <inheritdoc cref="M:MAGES.Editor.IConfigurationTaskCallbacksReceiver.TaskTypeChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskType,MAGES.Editor.ConfigurationTaskType)"/>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.TaskStateChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskState,MAGES.Editor.ConfigurationTaskState)">
+            <inheritdoc cref="M:MAGES.Editor.IConfigurationTaskCallbacksReceiver.TaskStateChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskState,MAGES.Editor.ConfigurationTaskState)"/>
+        </member>
+        <member name="M:MAGES.Editor.ConfigurationTaskUI.Repaint">
+            <summary>
+            Updates the UI of the task.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.CreatePathReferences">
+            <summary>
+            Creates a scriptable object with all necessary path references in project folder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.CreatePathReferences.CreatePathReferencesCache">
+            <summary>
+            Creates a scriptable object of type cref="GameObjectPathReferences".
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DeveloperAuthentication">
+            <summary>
+            Handles authentication for MAGES.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.ApiURL">
+            <summary>
+            Base API URL for the MAGES server.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.GetUserInfoURL">
+            <summary>
+            URL suffix for the get user info resource.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.HeartbeatURL">
+            <summary>
+            URL suffix for the heartbeat resource.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.authToken">
+            <summary>
+            Stores the access token. If the user is signed in else this is null.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.LoggedIn">
+            <summary>
+            Gets or sets the event invoked immediately after a developer has logged in.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.LoggedOut">
+            <summary>
+            Gets or sets the event invoked immediately after the developer gets logged out.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.LicenseGranted">
+            <summary>
+            Gets or sets the event invoked immediately after the developer's license is granted.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.LicenseRevoked">
+            <summary>
+            Gets or sets the event invoked immediately after the developer's license gets invalidated.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.IsLoggedIn">
+            <summary>
+            Gets a value indicating whether a developer is logged in.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DeveloperAuthentication.HasValidSDKLicense">
+            <summary>
+            Gets a value indicating whether the developer has a valid SDK license.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.Login(System.String,System.String,System.Action{MAGES.Editor.RequestResult})">
+            <summary>
+            Logins to the MAGES server.
+            </summary>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="onRequestCompleted">Action to be invoked when the login request is completed.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.Logout">
+            <summary>
+            Log out from the MAGES server.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetUserInfo(System.Action{MAGES.Editor.RequestResult,System.Nullable{MAGES.Editor.User}},System.Boolean)">
+            <summary>
+            Gets the User Info.
+            </summary>
+            <param name="onRequestCompleted">The action to be invoked when the request has finished.</param>
+            <param name="onlineMode">If set to <see langword="true"/> it will force to refetch user info from the server. Otherwise, if cached info is available will use that.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetLicenseInfo(System.Action{MAGES.Editor.RequestResult,System.Nullable{MAGES.Editor.LicenseInfo}},System.Boolean)">
+            <summary>
+            Gets the checked out license info. If no license is checked out it will check out a license.
+            </summary>
+            <param name="onRequestCompleted">
+                <param name="onRequestCompleted arg1arg1">The result of the request.</param>
+                <param name="onRequestCompleted arg2arg2">The license info. <see langword="null"/> if the user has no license or no user is signed in.</param>
+            </param>
+            <param name="onlineMode">If set to <see langword="true"/> it will force to refetch license info from the server. Otherwise, if cached info is available will use that.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetLicenseLimits(System.Action{MAGES.Editor.RequestResult,System.Nullable{MAGES.LicenseLimits}},System.Boolean)">
+            <summary>
+            Gets the license limits based on the license type.
+            </summary>
+            <param name="onRequestCompleted">The action to be invoked when the request has completed.</param>
+            <param name="onlineMode">Whether to fetch the latest information from the online server or use locally cached results if available.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetLicenseLimitsAsTask(System.Boolean)">
+            <summary>
+            Gets the license data as an asynchronous task.
+            </summary>
+            <param name="onlineMode">Force get limits from online server.</param>
+            <returns>The async task.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SendRequestAsync(System.Net.Http.HttpRequestMessage,System.Net.Http.HttpCompletionOption,System.Threading.CancellationToken)">
+            <summary>
+            Adds the Authorization header and sends the web request.
+            </summary>
+            <param name="msg">The HTTP request message to send.</param>
+            <param name="completionOption">When the operation should complete (as soon as a response is available or after reading the whole response content).</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SendRequestAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Adds the Authorization header and sends the web request.
+            </summary>
+            <param name="msg">The HTTP request message to send.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SendRequestAsync(System.Net.Http.HttpRequestMessage,System.Net.Http.HttpCompletionOption)">
+            <summary>
+            Adds the Authorization header and sends the web request.
+            </summary>
+            <param name="msg">The HTTP request message to send.</param>
+            <param name="completionOption">When the operation should complete (as soon as a response is available or after reading the whole response content).</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SendRequestAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Adds the Authorization header and sends the web request.
+            </summary>
+            <param name="msg">The HTTP request message to send.</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetLicenseType(System.Action{MAGES.Editor.RequestResult,System.Nullable{MAGES.Editor.LicenseInfo.LicenseType}},System.Boolean)">
+            <summary>
+            Gets the checked out license type. If no license is checked out it will check out a license.
+            </summary>
+            <param name="onRequestCompleted">
+                <param name="onRequestCompleted arg1arg1">The result of the request.</param>
+                <param name="onRequestCompleted arg2arg2">The license type. <see langword="null"/> if the user has no license or no user is signed in.</param>
+            </param>
+            <param name="onlineMode">If set to <see langword="true"/> it will force to refetch license info from the server. Otherwise, if cached info is available will use that.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.GetLicenseExpirationDate(System.Action{MAGES.Editor.RequestResult,System.Nullable{System.DateTime}},System.Boolean)">
+            <summary>
+            Gets the checked out license expiration date. If no license is checked out it will check out a license.
+            </summary>
+            <param name="onRequestCompleted">
+                <param name="onRequestCompleted arg1arg1">The result of the request.</param>
+                <param name="onRequestCompleted arg2arg2">The license expiration date. <see langword="null"/> if the user has no license or no user is signed in.</param>
+            </param>
+            <param name="onlineMode">If set to <see langword="true"/> it will force to refetch license info from the server. Otherwise, if cached info is available will use that.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SendHeartbeat">
+            <summary>
+            Communicates with the server to tell the server that a user is using the license now.
+            This must be called every 30 seconds.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.RetrieveTokenFromRegistry">
+            <summary>
+            Retrieves the access token and refresh token from the registry.
+            </summary>
+            <returns>The token if found, <see langword="null"/> otherwise.</returns>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.SaveTokenToRegistry">
+            <summary>
+            Saves the tokens to the registry.
+            </summary>
+            <param name="token">The token info to save.</param>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.ClearTokenFromRegistry">
+            <summary>
+            Clears the current token in the registry.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.EditorUpdate">
+            <summary>
+            Called every EditorUpdate.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DeveloperAuthentication.HeartbeatLicenseRequestBody">
+            <summary>
+            The data needed for the heartbeat license request.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.HeartbeatLicenseRequestBody.UserId">
+            <summary>
+            The user's id.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.HeartbeatLicenseRequestBody.ProductName">
+            <summary>
+            The product name.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DeveloperAuthentication.CheckoutLicenseRequestBody">
+            <summary>
+            The data needed for the checkout license request.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.CheckoutLicenseRequestBody.ProductName">
+            <summary>
+            The product to checkout.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.CheckoutLicenseRequestBody.Version">
+            <summary>
+            The version of the product.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.CheckoutLicenseRequestBody.Platform">
+            <summary>
+            The platform the product is used with.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DeveloperAuthentication.AuthorizationToken">
+            <summary>
+            Contains the access token and refresh token to be used for future requests.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.AccessToken">
+            <summary>
+            The access token for the user.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.RefreshToken">
+            <summary>
+            The refresh token for the user.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.TokenType">
+            <summary>
+            The type of the token.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.ExpiresIn">
+            <summary>
+            The expiration time of the token.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.Scope">
+            <summary>
+            The scope of the token.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DeveloperAuthentication.AuthorizationToken.ToString">
+            <summary>
+            To string.
+            </summary>
+            <returns>The AuthorizationToken data as a string.</returns>
+        </member>
+        <member name="T:MAGES.Editor.DropDownSelect">
+            <summary>
+            A dropdown select button for choosing and instantiating from a list of options.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DropDownSelect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.DropDownSelect"/> class.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DropDownSelect.ItemConfirmedEventHandler">
+            <summary>
+            Invoked when an item is selected and confirmed.
+            </summary>
+            <param name="index">The index into the provided list.</param>
+        </member>
+        <member name="E:MAGES.Editor.DropDownSelect.Selected">
+            <summary>
+            Invoked when an item is selected and confirmed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DropDownSelect.ItemsSource">
+            <summary>
+            Gets or sets the items source.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DropDownSelect.ItemToLabel">
+            <summary>
+            Gets or sets the item to label function.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DropDownSelect.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.DropDownSelect.UxmlFactory">
+            <summary>
+            The UXML factory.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.DropDownSelect.UxmlFactory.m_Text">
+            <summary>
+            The text attribute.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DropDownSelect.UxmlFactory.uxmlName">
+            <summary>
+            Gets the UXML name.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DropDownSelect.UxmlFactory.Create(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext)">
+            <summary>
+            Creates the specified element.
+            </summary>
+            <param name="bag">Bag.</param>
+            <param name="cc">Context.</param>
+            <returns>The visual element.</returns>
+        </member>
+        <member name="T:MAGES.Editor.DropDownToggle">
+            <summary>
+            Toggle that slides.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DropDownToggle.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.DropDownToggle"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DropDownToggle.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.DropDownToggle"/> class.
+            </summary>
+            <param name="onClick">The on click event.</param>
+        </member>
+        <member name="T:MAGES.Editor.DropDownToggle.UxmlFactory">
+            <summary>
+            The UXML factory.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.DropDownToggle.UxmlFactory.uxmlName">
+            <summary>
+            Gets the UXML name.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.DropDownToggle.UxmlFactory.Create(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext)">
+            <summary>
+            Creates the specified element.
+            </summary>
+            <param name="bag">Bag.</param>
+            <param name="cc">Context.</param>
+            <returns>The visual element.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MAGES.Editor.DynamicLabelEditor" -->
+        <member name="M:MAGES.Editor.DynamicLabelEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.Utilities.EditorDelay">
+            <summary>
+            Create Delayed Function Invocations for editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorDelay.#ctor(System.Int32,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.Utilities.EditorDelay"/> class.
+            </summary>
+            <param name="milliseconds">The delay in milliseconds after which the callback will be invoked.</param>
+            <param name="onDelayFinish">The callback to invoke after the delay has finished.</param>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorDelay.Cancel">
+            <summary>
+            Cancels the delay.
+            The onDelayFinished callback will not be invoked.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.Utilities.EditorGameObjectExtensions">
+            <summary>
+            Extensions for GameObject class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.TryGetSceneComponent``1(UnityEngine.GameObject,``0@)">
+            <summary>
+            Try get a component from the same scene as <paramref name="gameObject"/>.
+            </summary>
+            <typeparam name="T">The type of the component.</typeparam>
+            <param name="gameObject">A gameobject in the scene.</param>
+            <param name="component">The component found, else <see langword="null"/>.</param>
+            <returns><see langword="true"/> if a component was found.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.AddPropertyFieldWithChangeCallback(UnityEngine.UIElements.VisualElement,UnityEditor.SerializedProperty,System.Action)">
+            <summary>
+            Add a property field with a change callback.
+            </summary>
+            <param name="element">The parent element.</param>
+            <param name="property">The serialized property.</param>
+            <param name="callback">Action to invoke when property is changed.</param>
+            <returns>The created property field.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.AddWithTooltip(UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.VisualElement,System.String)">
+            <summary>
+            Adds a visual element with a tooltip.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="element">The element to add.</param>
+            <param name="tooltip">The tooltip to add to the element.</param>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Build``1(UnityEngine.UIElements.VisualElement,``0)">
+            <summary>
+            Adds a visual element and returns the element as well.
+            Useful for chaining.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="container">The container element.</param>
+            <param name="element">The element itself.</param>
+            <returns>The new element.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Tooltip``1(``0,System.String)">
+            <summary>
+            Sets the tooltip of the element and returns the element as well.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <param name="tooltip">The tooltip.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Class``1(``0,System.String)">
+            <summary>
+            Adds a class to the element and returns the element as well.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <param name="className">The class to add.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Label``1(``0,System.String)">
+            <summary>
+            Sets the label of the element and returns the element as well.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <param name="label">The label.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Name``1(``0,System.String)">
+            <summary>
+            Sets the name of the element and returns the element as well.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <param name="newName">The new name.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Text(UnityEngine.UIElements.Label,System.String)">
+            <summary>
+            Sets the text of the label.
+            </summary>
+            <param name="element">The label.</param>
+            <param name="text">The text of the label.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.Show``1(``0,System.Boolean)">
+            <summary>
+            Sets an element to be visible or not.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <param name="show">True to show.</param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.EditorGameObjectExtensions.IsShown``1(``0)">
+            <summary>
+            Gets whether an element is shown or not.
+            </summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="element">The element.</param>
+            <returns>A value indicating whether or not it's shown.</returns>
+        </member>
+        <member name="T:MAGES.Editor.Utilities.SerializedObjectExtensions">
+            <summary>
+            Extensions for SerializedObject class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.FindFieldProperty(UnityEditor.SerializedObject,System.String)">
+            <summary>
+            Finds a serialized property field.
+            </summary>
+            <param name="serializedObject">The SerializedObject to search on.</param>
+            <param name="fieldName">The field name.</param>
+            <returns>The serialized property found.</returns>
+            <remarks>
+            In order to find the property it must be serialized with [field: SerializeField] attribute.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.CopyPropertyValue(UnityEditor.SerializedProperty,UnityEditor.SerializedProperty)">
+            <summary>
+            Copies the value of a serialized property to another serialized property.
+            </summary>
+            <param name="source">The property to copy from.</param>
+            <param name="destination">The property to copy to.</param>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyPathParts(UnityEditor.SerializedProperty)">
+            <summary>
+            Splits a property path into its parts.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>Array of paths.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.FixedPropertyPath(UnityEditor.SerializedProperty)">
+            <summary>
+            Fixes the property path for an array to remove the "Array.data" part.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>The fixed property.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.GetFieldUnambiguous(System.Type,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Gets a field from a type, ignoring the base types.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="name">The name.</param>
+            <param name="flags">Fields to look for.</param>
+            <returns>The field info.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.IsPropertyIndexer(System.String,System.String@,System.Int32@)">
+            <summary>
+            Tests if a property part is an indexer (i.e. array).
+            </summary>
+            <param name="propertyPart">The property part.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="index">The index into the path, if it is an indexer.</param>
+            <returns>True if it is an indexer.</returns>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.GetUnderlyingValue(UnityEditor.SerializedProperty)">
+            <summary>
+            Gets the underlying value of a serialized property.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>The object value.</returns>
+            <exception cref="T:System.NullReferenceException">Thrown in the property path is invalid.</exception>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.SetUnderlyingValue(UnityEditor.SerializedProperty,System.Object)">
+            <summary>
+            Sets the underlying value of a serialized property.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="value">The new value.</param>
+            <exception cref="T:System.NullReferenceException">Thrown if property path is invalid.</exception>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.DeepCopy(System.Object)">
+            <summary>
+            Returns a copy of an object that has a <see cref="!:System.Serializable"/> attribute.
+            </summary>
+            <param name="other">The object to copy.</param>
+            <returns>The copy of the object.</returns>
+        </member>
+        <member name="T:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyFieldCallbackListener">
+            <summary>
+            A listener for property field changes.
+            This fixes an issue with listening for value changes in a property field that's displaying a complex object.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyFieldCallbackListener.#ctor(UnityEditor.UIElements.PropertyField,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyFieldCallbackListener"/> class.
+            </summary>
+            <param name="field">The field to listen.</param>
+            <param name="action">Action to call when changes occur.</param>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyFieldCallbackListener.Listen">
+            <summary>
+            Starts listening to changes.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedObjectExtensions.PropertyFieldCallbackListener.Stop">
+            <summary>
+            Stops listening to changes.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.Utilities.SerializedPropertyReflection">
+            <summary>
+            Class that gets the type of a serialized property.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.Utilities.SerializedPropertyReflection.GetTargetObjectOfProperty(UnityEditor.SerializedProperty)">
+            <summary>
+            Gets the type of a serialized property that you can later cast to mach the actual type of the property.
+            </summary>
+            <param name="prop">The serialized property.</param>
+            <returns>The returened object.</returns>
+        </member>
+        <member name="T:MAGES.Editor.GameObjectReferencePropertyDrawer">
+            <summary>
+            A property drawer for <see cref="T:MAGES.GameObjectReference"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.GameObjectReferencePropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.GhostDataPropertyDrawer">
+            <summary>
+            Property drwaer for <see cref="T:MAGES.Ghost.Data"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.GhostDataPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.GhostEditor">
+            <summary>
+            A custom editor for the Ghost component.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.GhostEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.HubEditor">
+            <summary>
+            Custom editor for MAGES.NXT.Runtime.Hub.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.HubEditor.CreateInspectorGUI">
+            <summary>
+            Build method.
+            </summary>
+            <returns>Visual Element.</returns>
+        </member>
+        <member name="T:MAGES.Editor.HubModuleEditor">
+            <summary>
+            A custom editor for the HubModule class.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.HubModulePropertyDrawer">
+            <summary>
+            An editor for the HubModule class that allows for expanding and revealing its options in the inspector.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.HubModulePropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.ICloneable">
+            <summary>
+            An interface for cloning objects.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.ICloneable.Clone">
+            <summary>
+            Creates a deep copy of the object.
+            </summary>
+            <returns>Self.</returns>
+        </member>
+        <member name="T:MAGES.Editor.IConfigurationTaskCallbacksReceiver">
+            <summary>
+            A interface to handle <see cref="T:MAGES.Editor.BaseConfigurationTask"/> update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.IConfigurationTaskCallbacksReceiver.TaskTypeChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskType,MAGES.Editor.ConfigurationTaskType)">
+            <summary>
+            Called when the task type has changed.
+            </summary>
+            <param name="task">The task of which the type has changed.</param>
+            <param name="newType">The new type.</param>
+            <param name="previousType">The previous type.</param>
+        </member>
+        <member name="M:MAGES.Editor.IConfigurationTaskCallbacksReceiver.TaskStateChanged(MAGES.Editor.BaseConfigurationTask,MAGES.Editor.ConfigurationTaskState,MAGES.Editor.ConfigurationTaskState)">
+            <summary>
+            Called when the tas state has changed.
+            </summary>
+            <param name="task">The task of which the state has changed.</param>
+            <param name="newState">The new state.</param>
+            <param name="previousState">The previous state.</param>
+        </member>
+        <member name="T:MAGES.Editor.LicenseInfo">
+            <summary>
+            Stores license information.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.LicenseInfo.Type">
+            <summary>
+            The license type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.LicenseInfo.ExpirationDate">
+            <summary>
+            The license expiration date.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.LicenseInfo.LicenseType">
+            <summary>
+            The SDK License type.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.LicenseInfo.LicenseType.Premium">
+            <summary>
+            Premium SDK license.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.LicenseInfo.LicenseType.Free">
+            <summary>
+            Free SDK license.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.LicenseLimitsExporter">
+            <summary>
+            Used to export the license limits at the time of the build.
+            </summary>
+            <remarks>Such limits may be the action number, etc.</remarks>
+        </member>
+        <member name="P:MAGES.Editor.LicenseLimitsExporter.callbackOrder">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.LicenseLimitsExporter.OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport)">
+            <inheritdoc cref="M:UnityEditor.Build.IPreprocessBuildWithReport.OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport)"/>
+        </member>
+        <member name="M:MAGES.Editor.LicenseLimitsExporter.EncryptString(System.String,System.String,System.Boolean)">
+            <summary>
+            Encrypts the <paramref name="inputString"/> using RSA.
+            </summary>
+            <param name="inputString">The string to encrypt.</param>
+            <param name="publicKey">The public key.</param>
+            <param name="foaep">Flag to use OAEP padding.</param>
+            <returns>The encrypted data.</returns>
+        </member>
+        <member name="M:MAGES.Editor.LicenseLimitsExporter.SaveDataToFile(System.Byte[],System.String)">
+            <summary>
+            Saves a string to a file.
+            </summary>
+            <param name="data">The data to save.</param>
+            <param name="filePath">The filepath.</param>
+        </member>
+        <member name="T:MAGES.Editor.LookAtObjectEditor">
+            <summary>
+            Custom inspector for <see cref="T:MAGES.LookAtObject"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.LookAtObjectEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.MAGESMenuItemPriorities">
+            <summary>
+            A class to get the order of the MAGES Menu Items.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.MAGESMenuItemPriorities.MAGESPanel">
+            <summary>
+            Order for the MAGES Panel Menu Item.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.MAGESMenuItemPriorities.Scenegraph">
+            <summary>
+            Order for the Scenegraph Window Menu Item.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.MAGESMenuItemPriorities.Analytics">
+            <summary>
+            Order for the Analytics Window Menu Item.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.MAGESOverlay">
+            <summary>
+            A UI element that is displayed as an overlay panel in the Scene View window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESOverlay.Build(System.Boolean)">
+            <summary>
+            Builds the overlay.
+            </summary>
+            <param name="isPlaying">True if editor is playing.</param>
+            <returns>The built element.</returns>
+        </member>
+        <member name="T:MAGES.Editor.MAGESOverlayItemAttribute">
+            <summary>
+            The overlay item attribute.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESOverlayItemAttribute.#ctor(MAGES.Editor.OverlayPlayModeState)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.MAGESOverlayItemAttribute"/> class.
+            </summary>
+            <param name="mode">The mode.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESOverlayItemAttribute.IsApplicableToPlayMode(System.Boolean)">
+            <summary>
+            Gets a value indicating whether the overlay is applicable to the current play mode.
+            </summary>
+            <param name="isPlaying">True if playing.</param>
+            <returns>If the item should be shown in this mode.</returns>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanel">
+            <summary>
+            The MAGES Panel is a window that allows the user to login, manage the MAGES settings and easily the initial setup of a project.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanel.SideNavigationBarCollapseStateKey">
+            <summary>
+            Gets the side navigation bar collapse state EditorPref key.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.ShowPanel">
+            <summary>
+            Show the MAGES Panel window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.SelectPage(System.Type)">
+            <summary>
+            Shows the given page.
+            </summary>
+            <param name="page">The page to show.</param>
+            <returns>True if the page was selected successfully.</returns>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.SelectBundle(MAGES.Bundle)">
+            <summary>
+            Selects the given bundle.
+            </summary>
+            <remarks>The bundle must be an asset. If the bundle is not found in the internal list of bundles the list will be refreshed.</remarks>
+            <param name="bundle">The bundle to select.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.RefreshBundles">
+            <summary>
+            Refreshes the list of bundles and updates dropdown UI.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.SetSideNavigationBarCollapseState(System.Boolean)">
+            <summary>
+            Sets the side navigation bar collapse state.
+            </summary>
+            <param name="collapse">Whether the side navigation should collapse or uncollapse.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.CreateGUI">
+            <summary>
+            Creates the GUI for the MAGES Panel window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.OnDestroy">
+            <summary>
+            Unity's OnDestroy method.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.UpdateBundleSelectionUIWithoutNotify">
+            <summary>
+            Updates the dropdown UI for bundle selection without notifying the callback.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.UpdatePageSelectionUIWithoutNotify">
+            <summary>
+            Updates the page selection UI (list views) without notifying the callback.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.EnsureBundleSelection">
+            <summary>
+            Ensures the selected bundle matches the dropdown viewdatakey value, else if it does not exist it selects the first bundle.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.EnsurePageSelection">
+            <summary>
+            Ensures the selected page matches the last value as saved in editor prefs, else if it does not exist it selects the first page.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.FindAllBundles(System.Collections.Generic.Dictionary{System.String,MAGES.Bundle})">
+            <summary>
+            Finds all bundles.
+            </summary>
+            <param name="storage">The dictionary in which to store them. The dictionary will be cleared before appending to it.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanel.FindAllPages">
+            <summary>
+            Finds all pages.
+            </summary>
+            <returns>All the BaseMAGESPanelPage where <see cref="P:MAGES.Editor.BaseMAGESPanelPage.Visible"/> is <see langword="true"/>.</returns>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelConfigurationPage">
+            <summary>
+            A page to check the general configuration of Unity in order to use MAGES.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelConfigurationPage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelConfigurationPage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelConfigurationPage.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelConfigurationPage.ShowBundleSelectionUI">
+            <summary>
+            Gets a value indicating whether should this page be shown in the bundle.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelConfigurationPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelConfigurationPage.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelConfigurationPage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelConfigurationPage.FindAllTasks">
+            <summary>
+            Finds all available Tasks in the Unity project.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelDevicesPage">
+            <summary>
+            A devices set up page for the MAGESPanel.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelDevicesPage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelDevicesPage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelDevicesPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelDevicesPage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelDevicesPage.TrySelect(MAGES.Bundle)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.TrySelect(MAGES.Bundle)"/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelDevicesPage.OnSelectedBundleChanged(MAGES.Bundle)">
+            <inheritdoc cref="M:MAGES.Editor.BaseMAGESPanelPage.OnSelectedBundleChanged(MAGES.Bundle)"/>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelHubPage">
+            <summary>
+            The MAGES Panel Hub Page.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelHubPage.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelHubPage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelHubPage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelHubPage.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelHubPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelHubPage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelHubPage.OnSelectedBundleChanged(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelLoginPage">
+            <summary>
+            A MAGES Panel page for Login.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelLoginPage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelLoginPage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelLoginPage.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelLoginPage.ShowBundleSelectionUI">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.ShowLoginResult(System.String)">
+            <summary>
+            Shows a label that displays the login result info. For example "Wrong credentials", "Successful login"...
+            </summary>
+            <remarks>
+            Colored messages can be displayed using rich text strings.
+            </remarks>
+            <param name="message">The message to show.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.ClearLoginResult">
+            <summary>
+            Hides the LoginResult label, if not hidden already.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelLoginPage.UpdatePageTitle">
+            <summary>
+            Checks if user is logged in to show the initials or show the Sign in text.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelStartupHelper">
+            <summary>
+            Helper class to launch The MAGES Panel once when the Unity Editor first starts.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelStartupHelper.SetMAGESPanelOpenOnStartupOption(System.Boolean)">
+            <summary>
+            Sets if the MAGES Panel should open on startup.
+            </summary>
+            <remarks>Will take effect on the next editor restart.</remarks>
+            <param name="enabled"><see langword="true"/> if the MAGES Panel should open at startup automatically.</param>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelStartupHelper.Startup">
+            <summary>
+            Called every time the Unity Editor reloads.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelStartupHelper.Quit">
+            <summary>
+            Called when the UnityEditor closes.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.MAGESPanelWelcomePage">
+            <summary>
+            A welcome page for the MAGESPanel.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelWelcomePage.Order">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelWelcomePage.NavigationBarPlacement">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelWelcomePage.ShowBundleSelectionUI">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.MAGESPanelWelcomePage.Title">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelWelcomePage.Initialize(MAGES.Editor.MAGESPanel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelWelcomePage.TrySelect(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelWelcomePage.Deselect">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelWelcomePage.CreateGUI(MAGES.Bundle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.MAGESPanelWelcomePage.CreateTasksGUI">
+            <summary>
+            Finds all available Tasks in the Unity project.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.MAGESSceneViewOverlay">
+            <summary>
+            The overlay panel.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MAGESSceneViewOverlay.CreatePanelContent">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.MethodReferencePropertyDrawer">
+            <summary>
+            A property drawer for <see cref="T:MAGES.MethodReference"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.MethodReferencePropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.OverlayPlayModeState">
+            <summary>
+            The overlay play mode state for MAGES overlays.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.OverlayPlayModeState.Both">
+            <summary>
+            The overlay is applicable in both play and edit mode.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.OverlayPlayModeState.PlayModeOnly">
+            <summary>
+            The overlay is applicable in play mode only.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.OverlayPlayModeState.EditModeOnly">
+            <summary>
+            The overlay is applicable in edit mode only.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.OverridablePropertyPropertyDrawer">
+             <summary>
+             Property drawer for <see cref="T:MAGES.OverridableProperty`1"/>.
+             </summary>
+            
+             ┌────────────────────────────────────────────────────────────────────────────────────────────────────┐
+             ┃ This is a very fragile piece of code. It is a workaround for a Unity bug that prevents             ┃
+             │ the property drawer from working properly. Ideally, property change events should bubble up        │
+             │ for more complicated objects, but it turns out they dont. Also property fields refuse to           │
+             │ display anything other than a serialized object; sooo we have to create a dummy scriptable         │
+             │ object that holds the current underlying value and then  copy the value back and forth between     │
+             │ the dummy object and the actual object.                                                            │
+             ┃ ... I know... I know... I hate it too. But it works.                                               ┃
+             └────────────────────────────────────────────────────────────────────────────────────────────────────┘
+        </member>
+        <member name="M:MAGES.Editor.OverridablePropertyPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.PackageManagerUtility">
+            <summary>
+            Functions for Installing/Deleting/Checking packages while in Editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.PackageManagerUtility"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:MAGES.Editor.PackageManagerUtility"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.ListPackages(System.Action{UnityEditor.PackageManager.PackageCollection})">
+            <summary>
+            Lists the packages the project depends on. Computes and returns the set of all packages that the project depends on(the resolved dependency graph) without physically downloading or installing any packages.The operation result contains only the resolved dependency graph as a PackageCollection.
+            </summary>
+            <param name="onListFinished">
+                The action to call when the request finishes.
+                <param name="onListFinished arg1arg1">PackageCollection representing the packages used in the project.</param>
+            </param>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.ListPackages(System.Boolean,System.Action{UnityEditor.PackageManager.PackageCollection})">
+            <summary>
+            Lists the packages the project depends on. Computes and returns the set of all packages that the project depends on(the resolved dependency graph) without physically downloading or installing any packages.The operation result contains only the resolved dependency graph as a PackageCollection.
+            </summary>
+            <param name="offlineMode">Specifies whether or not the Package Manager requests the latest information about the project's packages from the remote Unity package registry. When offlineMode is true, the PackageInfo object returned by the Package Manager contains information obtained from the local package cache, which could be out of date.</param>
+            <param name="onListFinished">
+                The action to call when the request finishes.
+                <param name="onListFinished arg1arg1">PackageCollection representing the packages used in the project.</param>
+            </param>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.ListPackages(System.Boolean,System.Boolean,System.Action{UnityEditor.PackageManager.PackageCollection})">
+            <summary>
+            Lists the packages the project depends on. Computes and returns the set of all packages that the project depends on(the resolved dependency graph) without physically downloading or installing any packages.The operation result contains only the resolved dependency graph as a PackageCollection.
+            </summary>
+            <param name="offlineMode">Specifies whether or not the Package Manager requests the latest information about the project's packages from the remote Unity package registry. When offlineMode is true, the PackageInfo object returned by the Package Manager contains information obtained from the local package cache, which could be out of date.</param>
+            <param name="includeIndirectDependencies">Specifies whether or not the Package Manager includes indirect dependencies in the list of packages returned by the operation.</param>
+            <param name="onListFinished">
+                The action to call when the request finishes.
+                <param name="onListFinished arg1arg1">PackageCollection representing the packages used in the project.</param>
+            </param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:MAGES.Editor.PackageManagerUtility.InstallPackage(System.String,System.Action{System.String,System.Boolean})" -->
+        <member name="M:MAGES.Editor.PackageManagerUtility.SearchPackage(System.String,System.Action{System.String,UnityEditor.PackageManager.PackageInfo[]},System.Boolean)">
+            <summary>
+            Searches the package manager for a package.
+            </summary>
+            <param name="packageNameOrId">The package name or id.</param>
+            <param name="onSearchFinished">
+                The action to call when the search finishes.
+                <param name="onSearchFinished arg1arg1">The package name or id.</param>
+                <param name="onSearchFinished arg2arg2">The search result.</param>
+            </param>
+            <param name="offlineMode">Specifies whether or not the Package Manager requests the latest information about the project's packages from the remote Unity package registry. When offlineMode is true, the PackageInfo object returned by the Package Manager contains information obtained from the local package cache, which could be out of date.</param>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.StartInstallationProcess(System.String)">
+            <summary>
+            Starts the installation process for a package.
+            </summary>
+            <param name="packageName">The name of the package to install.</param>
+        </member>
+        <member name="M:MAGES.Editor.PackageManagerUtility.EditorApplicationUpdate">
+            <summary>
+            Called on every editor update.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.PhotonNetworkingConfigurationTask">
+            <summary>
+            Installs the Photon Unity Networking package.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.PhotonNetworkingConfigurationTask.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.PhotonNetworkingConfigurationTask.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.PhotonNetworkingConfigurationTask.FixingMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.PhotonNetworkingConfigurationTask.FixedMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.PhotonNetworkingConfigurationTask.Priority">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.PhotonNetworkingConfigurationTask.Load">
+            <inheritdoc cref="M:MAGES.Editor.BaseConfigurationTask.Load"/>
+        </member>
+        <member name="M:MAGES.Editor.PhotonNetworkingConfigurationTask.Fix">
+            <inheritdoc cref="M:MAGES.Editor.BaseConfigurationTask.Fix"/>
+        </member>
+        <member name="T:MAGES.Editor.PopupPanel">
+            <summary>
+            A panel that can be instantiated inside a custom editor as a popup.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PopupPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Editor.PopupPanel"/> class.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.PopupPanel.CloseRequestedEventHandler">
+            <summary>
+            Invoked when the panel is requested to be closed.
+            </summary>
+            <returns>Whether (or not) the panel <i>can</i> be closed.</returns>
+        </member>
+        <member name="E:MAGES.Editor.PopupPanel.CloseRequested">
+            <summary>
+            Invoked when the panel is requested to be closed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.PopupPanel.Title">
+            <summary>
+            Gets or sets the title of the panel.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.PopupPanel.Content">
+            <summary>
+            Gets the content container.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.PopupPanel.contentContainer">
+            <summary>
+            Gets the content container.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.PopupPanel.UxmlFactory">
+            <summary>
+            A factory for <see cref="T:MAGES.Editor.PopupPanel"/> elements.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.PopupPanel.UxmlFactory.uxmlName">
+            <summary>
+            Gets the name of the UXML element.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PopupPanel.UxmlFactory.Create(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.PreviewObjectEditor">
+            <summary>
+            Custom inspector for <see cref="T:MAGES.PreviewObject"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PreviewObjectEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility">
+            <summary>
+            An interface for cloning primitive unity types, which don't have a <see cref="T:System.SerializableAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneGradient">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Gradient"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneGradient.Clone(System.Object)">
+            <summary>
+            Clones a Gradient.
+            </summary>
+            <param name="v">The gradient to clone.</param>
+            <returns>Cloned gradient.</returns>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneColor">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Color"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneColor.Clone(System.Object)">
+            <summary>
+            Clones a Color.
+            </summary>
+            <param name="v">The Color to clone.</param>
+            <returns>The cloned Color.</returns>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneQuaternion">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Quaternion"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneQuaternion.Clone(System.Object)">
+            <summary>
+            Clones a Quaternion.
+            </summary>
+            <param name="v">The quaternion to clone.</param>
+            <returns>The cloned quaternion.</returns>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector2">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Vector2"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector2.Clone(System.Object)">
+            <summary>
+            Clones a Vector2.
+            </summary>
+            <param name="v">The vector to clone.</param>
+            <returns>The cloned vector.</returns>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector3">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Vector3"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector3.Clone(System.Object)">
+            <summary>
+            Clones a Vector3.
+            </summary>
+            <param name="v">The vector to clone.</param>
+            <returns>The cloned vector.</returns>
+        </member>
+        <member name="T:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector4">
+            <summary>
+            Clones a <see cref="T:UnityEngine.Vector4"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.PrimitiveTypeCloneUtility.CloneVector4.Clone(System.Object)">
+            <summary>
+            Clones a vector4.
+            </summary>
+            <param name="v">The vector to clone.</param>
+            <returns>The cloned vector.</returns>
+        </member>
+        <member name="T:MAGES.Editor.RequestResult">
+            <summary>
+            A request result.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.RequestResult.ResponseCode">
+            <summary>
+            The response code of the response.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.RequestResult.Message">
+            <summary>
+            A descriptive message for what went wrong.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.SampleEditorWindow">
+            <summary>
+            A window that can be instantiated inside a custom editor as a popup.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.SampleEditorWindow.Show(UnityEngine.UIElements.VisualElement)">
+            <summary>
+            Shows the window.
+            </summary>
+            <param name="e">The visual element to show.</param>
+        </member>
+        <member name="T:MAGES.Editor.SegmentDataPropertyDrawer">
+            <summary>
+            Property drawer for <see cref="T:MAGES.Segment.Data"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.SegmentDataPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.SegmentEditor">
+            <summary>
+            Custom editor for <see cref="T:MAGES.Segment"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.SegmentEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.SettingsUtility">
+            <summary>
+            Utility methods for working with Unity settings.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.SettingsUtility.SetScriptingSymbolEnabledForAllBuildTargets(System.String,System.Boolean)">
+            <summary>
+            Sets the scripting defines for all build targets.
+            </summary>
+            <param name="symbol">The name of the define.</param>
+            <param name="enabled">Whether the define should exist.</param>
+        </member>
+        <member name="T:MAGES.Editor.TagLabelEditor">
+            <summary>
+            Custom editor for <see cref="T:MAGES.TagLabel"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.TagLabelEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.Tenant">
+            <summary>
+            Stores data of the tenant.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.Tenant.Id">
+            <summary>
+            The tenant id.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.Tenant.Name">
+            <summary>
+            The organization name.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.Tenant.Country">
+            <summary>
+            The country.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.Tenant.CreatedDate">
+            <summary>
+            The date of creation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.Tenant.ExpirationDate">
+            <summary>
+            The Expiration Date.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.TextFieldExtensions">
+            <summary>
+            UIElements TextField extensions.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.TextFieldExtensions.SetPlaceholderText(UnityEngine.UIElements.TextField,System.String)">
+            <summary>
+            A placeholder text for a TextField.
+            </summary>
+            <param name="textField">The textfield.</param>
+            <param name="placeholder">The placeholder text.</param>
+        </member>
+        <member name="T:MAGES.Editor.ThemeEditor">
+            <summary>
+            Editor for <see cref="T:MAGES.Theme"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.ThemeEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.TypeReferencePropertyDrawer">
+            <summary>
+            A property drawer for <see cref="T:MAGES.TypeReference"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.TypeReferencePropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.UniqueIdentifierPropertyDrawer">
+            <summary>
+            Property drawer for unique identifier.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.UniqueIdentifierPropertyDrawer.OnInspectorGUI">
+            <summary>
+            Draws the inspector.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.UniqueReferencePropertyDrawer">
+            <summary>
+            Property drawer for unique reference.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.UniqueReferencePropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.UniqueReferencePropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.UniversalRenderPipelineConfigurationTask">
+            <summary>
+            Checks/Install URP Package.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.UniversalRenderPipelineConfigurationTask.TargetDirectory">
+            <summary>
+            The directory in which to place the URP assets.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.UniversalRenderPipelineConfigurationTask.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.UniversalRenderPipelineConfigurationTask.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.UniversalRenderPipelineConfigurationTask.FixingMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.UniversalRenderPipelineConfigurationTask.FixedMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.UniversalRenderPipelineConfigurationTask.Priority">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.UniversalRenderPipelineConfigurationTask.Load">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.UniversalRenderPipelineConfigurationTask.Fix">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.ConfigureRenderSettings">
+            <summary>
+            Class to configure the render settings for the project after URP is compiled.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.ConfigureRenderSettings.TargetDirectory">
+            <summary>
+            The directory in which to place the URP assets.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.URPAsset">
+            <summary>
+            Struct to hold the URP asset paths.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.URPAsset.UniversalRenderPipelineAssetPath">
+            <summary>
+            The URP Asset path.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.URPAsset.UniversalRendererPath">
+            <summary>
+            The URP Renderer path.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.User">
+            <summary>
+            Stores the user information.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.Id">
+            <summary>
+            The id.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.Username">
+            <summary>
+            The Username.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.Email">
+            <summary>
+            The email.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.FirstName">
+            <summary>
+            The firstname.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.LastName">
+            <summary>
+            The lastname.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.Country">
+            <summary>
+            The country.
+            </summary>
+        </member>
+        <member name="F:MAGES.Editor.User.Tenant">
+            <summary>
+            The tenant of this user.
+            </summary>
+        </member>
+        <member name="T:MAGES.Editor.WorldSpaceCanvasEditor">
+            <summary>
+            Custom editor for <see cref="T:MAGES.WorldSpaceCanvas"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.WorldSpaceCanvasEditor.Create(UnityEditor.MenuCommand)">
+            <summary>
+            Creates a new world space canvas.
+            </summary>
+            <param name="menuCommand">the menu command.</param>
+        </member>
+        <member name="T:MAGES.Editor.XRPluginManagementConfigurationTask">
+            <summary>
+            Checks/Install XR Plugin Management Package.
+            </summary>
+        </member>
+        <member name="P:MAGES.Editor.XRPluginManagementConfigurationTask.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.XRPluginManagementConfigurationTask.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.XRPluginManagementConfigurationTask.FixingMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.XRPluginManagementConfigurationTask.FixedMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Editor.XRPluginManagementConfigurationTask.Priority">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.XRPluginManagementConfigurationTask.Load">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Editor.XRPluginManagementConfigurationTask.Fix">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Editor.OpenXRPluginManagementSettingsAfterRecompile">
+            <summary>
+            Helper class to open the XR Plugin Management settings after recompiling.
+            </summary>
+        </member>
+        <member name="M:MAGES.Editor.OpenXRPluginManagementSettingsAfterRecompile.SetEnabled(System.Boolean)">
+            <summary>
+            Enable/Disable the helper.
+            </summary>
+            <param name="value"><see langword="true"/> to open the settings after next compile.</param>
+        </member>
+        <member name="T:MAGES.Attributes.Editor.MAGESTooltipDrawer">
+            <summary>
+            The MAGES Tooltip drawer.
+            </summary>
+        </member>
+        <member name="M:MAGES.Attributes.Editor.MAGESTooltipDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Attributes.Editor.MAGESTooltipDrawer.GetStyledTooltipText(MAGES.Attributes.MAGESTooltipAttribute,System.Type)">
+            <summary>
+            Gets the styled tooltip based on the type of the variable.
+            </summary>
+            <param name="tooltipAttribute">The attribute of this drawer.</param>
+            <param name="fieldType">The type of the variable for this drawer.</param>
+            <returns>The styled string.</returns>
+        </member>
+        <member name="T:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask">
+            <summary>
+            Configuration task for importing Text Mesh Pro.
+            </summary>
+        </member>
+        <member name="P:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.FixingMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.FixedMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.Priority">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.Fix">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask.Load">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

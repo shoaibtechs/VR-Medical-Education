@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="Empty_Space" style="overflow: hidden;" />
+    <ui:Toggle text="Generic Events" name="EventsToggle" value="true" binding-path="genericEvents" focusable="true" style="position: absolute; left: 0; height: auto; width: auto; overflow: hidden; display: flex; margin-left: 4px; margin-top: 2px; margin-bottom: 2px; flex-direction: column;" />
+    <ui:Toggle text="Interaction" name="InteractionToggle" binding-path="interaction" value="true" style="position: absolute; left: 70%;" />
+    <ui:Toggle text="Locomotion" name="LocomotionToggle" binding-path="locomotion" value="true" style="position: absolute; left: 38%; display: flex;" />
+    <ui:VisualElement name="Generic_Events" focusable="false" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 5%; height: auto; overflow: hidden; justify-content: flex-start; align-items: stretch; align-self: auto; visibility: visible; display: flex; -unity-background-scale-mode: stretch-to-fill; flex-direction: column;">
+        <uie:PropertyField name="Perform" binding-path="perform" style="padding-bottom: 0.2%;" />
+        <uie:PropertyField name="Undo" binding-path="undo" style="padding-bottom: 0.2%;" />
+        <uie:PropertyField name="ShowOptions" binding-path="options" style="padding-bottom: 0.2%;" />
+        <uie:PropertyField name="ToggleMovement" binding-path="enableMovement" style="padding-bottom: 0.2%;" />
+        <uie:PropertyField name="ToggleRaycast" binding-path="toggleRaycastActivation" style="padding-bottom: 0.2%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Interaction_Events" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 10%; height: auto; visibility: visible; display: flex; overflow: hidden; justify-content: flex-start; -unity-background-scale-mode: stretch-to-fill;">
+        <uie:PropertyField name="selectLeft" binding-path="selectLeft" style="height: auto; left: auto; top: auto; align-items: stretch; justify-content: flex-start; align-self: auto; overflow: visible; flex-wrap: nowrap; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; visibility: visible; flex-direction: column; width: auto;" />
+        <uie:PropertyField name="activateLeft" binding-path="activateLeft" style="height: auto; overflow: visible; justify-content: flex-start; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; flex-direction: column; align-self: stretch;" />
+        <uie:PropertyField name="gripValueLeft" binding-path="gripValueLeft" style="height: auto; overflow: visible; justify-content: flex-start; flex-direction: column; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; align-self: stretch;" />
+        <uie:PropertyField name="triggerValueLeft" binding-path="triggerValueLeft" style="height: auto; overflow: visible; justify-content: flex-start; flex-direction: column; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; align-self: stretch;" />
+        <uie:PropertyField name="UISelectLeft" binding-path="UISelectLeft" />
+        <uie:PropertyField name="selectRight" binding-path="selectRight" style="height: auto; left: auto; top: auto; align-items: stretch; justify-content: flex-start; align-self: stretch; overflow: visible; flex-wrap: nowrap; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; visibility: visible; flex-direction: column; width: auto;" />
+        <uie:PropertyField name="activateRight" binding-path="activateRight" style="height: auto; overflow: visible; justify-content: flex-start; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; flex-direction: column; align-self: auto;" />
+        <uie:PropertyField name="gripValueRight" binding-path="gripValueRight" style="height: auto; overflow: visible; justify-content: flex-start; flex-direction: column; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; align-self: auto;" />
+        <uie:PropertyField name="triggerValueRight" binding-path="triggerValueRight" style="height: auto; overflow: visible; justify-content: flex-start; flex-direction: column; margin-top: 0; margin-bottom: 0; padding-bottom: 0.2%; align-items: stretch; align-self: auto;" />
+        <uie:PropertyField name="UISelectRight" binding-path="UISelectRight" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Locomotion_Events" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 15%; height: auto; visibility: visible; display: flex; overflow: hidden; justify-content: flex-start; -unity-background-scale-mode: stretch-to-fill;">
+        <uie:PropertyField binding-path="move" name="Movement" style="align-self: stretch; padding-bottom: 0.2%;" />
+        <uie:PropertyField name="Rotate" binding-path="snapRotate" style="padding-bottom: 0.2%; align-self: stretch;" />
+        <uie:PropertyField name="ChangeHeight" binding-path="changeHeight" style="padding-bottom: 0.2%; align-self: stretch;" />
+        <uie:PropertyField name="SmoothRotate" binding-path="smoothRotate" style="align-self: stretch; padding-bottom: 0.2%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 10%; height: 130px; visibility: visible; display: none; overflow: hidden;" />
+</ui:UXML>

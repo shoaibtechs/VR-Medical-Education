@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/DevicesPage/DevicesPage.uss?fileID=7433441132597879392&amp;guid=9f0768f19b0c46f48829b94eb222ad5c&amp;type=3#DevicesPage" />
+    <ui:Label text="Devices" name="title" class="h1" />
+    <ui:Label tabindex="-1" text="Select your device to set the camera and build settings:&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DeviceLabel" />
+    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1">
+        <ui:VisualElement name="samples" class="card-container">
+            <ui:Label tabindex="-1" text="XR Headset" parse-escape-sequences="true" display-tooltip-when-elided="true" class="h2 card-container-title" />
+            <ui:VisualElement name="content" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

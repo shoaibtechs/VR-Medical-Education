@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Foldout text="Ghost" name="ghost">
+        <uie:PropertyField binding-path="ghostMaterial" label="Material" />
+        <uie:PropertyField binding-path="ghostColor" label="Color" />
+        <uie:PropertyField binding-path="ghostAnimatorController" label="Animation" />
+    </ui:Foldout>
+    <ui:Foldout text="Spatial Label" name="spatialLabel">
+        <uie:PropertyField binding-path="spatialLabelFont" label="Font" />
+        <uie:PropertyField binding-path="spatialLabelPadding" label="Padding" />
+    </ui:Foldout>
+    <ui:Foldout text="Trajectory" name="segment">
+        <uie:PropertyField binding-path="segmentMaterial" label="Material" />
+        <uie:PropertyField binding-path="segmentGradient" label="Color" />
+        <uie:PropertyField binding-path="segmentWidth" label="Thickness" />
+    </ui:Foldout>
+</ui:UXML>

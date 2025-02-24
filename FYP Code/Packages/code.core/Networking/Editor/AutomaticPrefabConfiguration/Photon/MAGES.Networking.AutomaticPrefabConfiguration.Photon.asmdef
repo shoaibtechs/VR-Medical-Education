@@ -1,0 +1,24 @@
+{
+    "name": "MAGES.Networking.AutomaticPrefabConfiguration.Photon",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3ed10944100fdbc41be9800f288b213a",
+        "GUID:b3cf5fcbb96fbc5448a21c674a465aed",
+        "GUID:57c32fc907df0f54e8e6e8f0d2488336"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "PHOTON_UNITY_NETWORKING"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Foldout text="Interaction" name="InteractionFoldout" view-data-key="InteractionFoldout">
+        <uie:PropertyField name="InteractionMode" />
+        <uie:PropertyField name="GrabMode" binding-path="grabMode" />
+    </ui:Foldout>
+    <ui:Foldout text="Hand Poses" name="HandPoses" view-data-key="HandPoseFoldout">
+        <ui:VisualElement name="HandPoseInspector" style="flex-grow: 1;" />
+    </ui:Foldout>
+    <ui:Foldout text="Events" name="Events" view-data-key="EventsFoldout" value="false">
+        <uie:PropertyField name="HoverEnteredEvent" />
+        <uie:PropertyField name="HoverExitedEvent" />
+        <uie:PropertyField name="SelectEnteredEvent" />
+        <uie:PropertyField name="SelectExitedEvent" />
+        <uie:PropertyField name="ActivateEnteredEvent" />
+        <uie:PropertyField name="ActivateExitedEvent" />
+    </ui:Foldout>
+    <ui:Foldout text="Advanced Options" name="AdvancedOptions" view-data-key="AdvancedOptionsFoldout" value="false">
+        <uie:PropertyField name="InteractionManager" binding-path="interactionManager" />
+        <uie:PropertyField name="Transform" />
+        <uie:PropertyField name="AttachTransform" />
+        <uie:PropertyField name="Rigidbody" />
+        <uie:PropertyField binding-path="grabbableColliders" name="GrabbableColliders" />
+        <uie:PropertyField name="DisableKinematicOnSelectEnter" />
+        <uie:PropertyField name="EnableKinematicOnSelectExit" />
+        <uie:PropertyField name="EnableHoverMaterial" />
+        <uie:PropertyField name="HoverMaterial" />
+        <uie:PropertyField name="Reticle" binding-path="reticle" />
+        <uie:PropertyField name="ResetDistance" binding-path="resetDistance" />
+        <uie:PropertyField name="ManualReset" binding-path="manualReset" />
+        <uie:PropertyField name="EnableThrow" />
+        <ui:Foldout text="Throw Options" name="ThrowOptionsFoldout">
+            <uie:PropertyField name="ThrowVelocityMultiplier" />
+            <uie:PropertyField name="ThrowVelocityWindow" />
+        </ui:Foldout>
+        <uie:PropertyField name="GrabMovementMode" binding-path="grabMovementMode" />
+        <ui:Foldout text="Advanced Interaction Options" name="AdvancedInteractionFoldout" view-data-key="AdvancedInteractionOptions" value="false">
+            <uie:PropertyField name="JointBreakForce" binding-path="fixedJointBreakForce" />
+            <uie:PropertyField name="JointBreakEvent" binding-path="onFixedJointBreak" />
+            <uie:PropertyField name="MaxVelocity" binding-path="maxVelocity" />
+            <uie:PropertyField name="VelocityDamping" binding-path="velocityDamping" />
+            <uie:PropertyField name="MaxAngularVelocity" binding-path="maxAngularVelocity" />
+            <uie:PropertyField name="AngularVelocityDamping" binding-path="angularVelocityDamping" />
+            <uie:PropertyField name="TeleportDistance" binding-path="teleportDistance" />
+        </ui:Foldout>
+    </ui:Foldout>
+</ui:UXML>

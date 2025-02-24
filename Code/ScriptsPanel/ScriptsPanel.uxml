@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <MAGES.Editor.PopupPanel style="overflow: hidden;">
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Add &lt;b&gt;scripts&lt;/b&gt; that will be called when the action is initialized, performed, or undone.&#10;&#10;Each script should have one or more of the following functions:&#10;- &lt;i&gt;ActionInitialized(BaseActionData data)&lt;/i&gt; : Called when the action is &lt;b&gt;initialized&lt;/b&gt;&#10;- &lt;i&gt;ActionPerformed(BaseActionData data)&lt;/i&gt; : Called when the action is performed&#10;- &lt;i&gt;ActionUndone(BaseActionData data)&lt;/i&gt; : Called when the action is undone" display-tooltip-when-elided="false" style="color: rgb(255, 255, 255);" />
+            <ui:Button text="Add" display-tooltip-when-elided="true" name="add-button" />
+            <ui:ListView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </MAGES.Editor.PopupPanel>
+</ui:UXML>

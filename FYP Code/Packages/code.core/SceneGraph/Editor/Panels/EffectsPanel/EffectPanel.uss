@@ -1,0 +1,15 @@
+EffectPropertyPropertyField.p-indent-0 > .unity-base-field > .unity-label {
+    min-width: 200px;
+}
+
+EffectPropertyPropertyField.p-indent-1 > .unity-base-field > .unity-label {
+    min-width: 185px;
+}
+
+EffectPropertyPropertyField.p-inner-indent-1 > * * > .unity-property-field > .unity-base-field > .unity-label {
+    min-width: 185px;
+}
+
+EffectPropertyPropertyField.p-inner-indent-0 > * * > .unity-property-field > .unity-base-field > .unity-label {
+    min-width: 170px;
+}

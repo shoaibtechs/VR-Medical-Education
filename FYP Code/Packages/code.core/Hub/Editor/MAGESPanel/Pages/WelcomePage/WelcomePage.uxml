@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/WelcomePage/WelcomePage.uss?fileID=7433441132597879392&amp;guid=8ce873a424da5c14f9c93fccbc0f85cc&amp;type=3#WelcomePage" />
+    <ui:Label text="Welcome to MAGES" name="title" class="h1" />
+    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="rootScroll" view-data-key="welcome-key">
+        <ui:VisualElement name="Info" class="card-container">
+            <ui:Foldout text="&lt;b&gt;1. About MAGES SDK&lt;/b&gt;" value="true">
+                <ui:Label tabindex="-1" text="&lt;b&gt;MAGES is a modular SDK consisting of the following modules:&lt;/b&gt;&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/analytics/index.html&quot;&gt;Analytics&lt;/a&gt;: Analyze user behavior and engagement.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/data_container/index.html#data-container&quot;&gt;Data Container&lt;/a&gt;: Efficiently manage and organize data.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/device_manager/index.html#device-manager&quot;&gt;Device Manager&lt;/a&gt;: Seamlessly integrate various hardware devices.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/jaria/index.html#jaria&quot;&gt;JARIA&lt;/a&gt;: AI assistant for streamlined development and documentation exploration.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/interaction/index.html#manual-interaction&quot;&gt;Interaction&lt;/a&gt;: Create realistic user interactions.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/scenegraph/scenegraph_editor/index.html#manual-scenegraph-editor&quot;&gt;SceneGraph&lt;/a&gt;: Build immersive and gamified medical scenarios.&#10;• &lt;a href=&quot;https://mages-docs.oramavr.com/en/latest/manual/networking/index.html#networking&quot;&gt;Networking&lt;/a&gt;: Connect users for collaborative experiences." parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="white-space: normal;" />
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="config" class="card-container">
+            <ui:Foldout text="&lt;b&gt;2. Configuration&lt;/b&gt;">
+                <ui:VisualElement name="content" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Before you get started, checkout general configuration and make sure you have no errors." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal; margin-bottom: 10px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; margin-bottom: 10px;">
+                        <ui:Label tabindex="-1" text="   - Issues with " parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                        <ui:VisualElement style="flex-grow: 0; background-image: url(&apos;project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Images/error.png?fileID=21300000&amp;guid=c0af86501dd29484589b334368c94a6e&amp;type=3#error&apos;); flex-shrink: 1; -unity-background-scale-mode: scale-to-fit; align-self: auto; align-items: auto; min-width: 30px;" />
+                        <ui:Label tabindex="-1" text="are mandatory to correct SDK functionality." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; margin-bottom: 10px;">
+                        <ui:Label tabindex="-1" text="   - Issues with " parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                        <ui:VisualElement style="flex-grow: 0; background-image: url(&apos;project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Images/warning.png?fileID=21300000&amp;guid=e185d6efc9ee6ae469925957c7cfbbc1&amp;type=3#warning&apos;); flex-shrink: 1; -unity-background-scale-mode: scale-to-fit; align-self: auto; align-items: auto; min-width: 30px;" />
+                        <ui:Label tabindex="-1" text="are recommended." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; margin-bottom: 10px;">
+                        <ui:Label tabindex="-1" text="   - Issues with " parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                        <ui:VisualElement style="flex-grow: 0; background-image: url(&apos;project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Images/info.png?fileID=21300000&amp;guid=9c6609d507f694740b6d3d7dfcd8a547&amp;type=3#info&apos;); flex-shrink: 1; -unity-background-scale-mode: scale-to-fit; align-self: auto; align-items: auto; min-width: 30px;" />
+                        <ui:Label tabindex="-1" text="are needed for specific functionalities." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1">
+                        <ui:ListView focusable="true" name="tasks" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="samples" class="card-container">
+            <ui:Foldout text="&lt;b&gt;3. Samples&lt;/b&gt;">
+                <ui:Label tabindex="-1" text="Select a scene to import:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="card-container-title" style="font-size: 14px;" />
+                <ui:VisualElement name="content" style="flex-grow: 1;" />
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="scenegraph" class="card-container" style="flex-grow: 1; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px;">
+            <ui:Foldout text="&lt;b&gt;4. Scenegraph&lt;/b&gt;">
+                <ui:Label tabindex="-1" text="The Scenegraph editor is the main tool to create your XR training scenarios. Click below to explore the scenegraph of the current scene." parse-escape-sequences="true" display-tooltip-when-elided="true" class="card-container-title" style="font-size: 14px; white-space: normal;" />
+                <ui:VisualElement name="content" style="flex-grow: 1;">
+                    <ui:Button text="Open Scenegraph" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OpenScenegraphButton" style="max-width: 200px; margin-top: 10px;" />
+                </ui:VisualElement>
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="devices" class="card-container" style="flex-grow: 1; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px;">
+            <ui:Foldout text="&lt;b&gt;5. Devices&lt;/b&gt;">
+                <ui:Label tabindex="-1" text="Select the target device:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info" class="card-container-title" style="font-size: 14px;" />
+                <ui:VisualElement name="content" style="flex-grow: 1;" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

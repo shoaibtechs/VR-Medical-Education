@@ -1,0 +1,44 @@
+InfoWithLink {
+    flex-direction: row;
+
+    margin-top: 8px;
+}
+
+.iwl-info-icon {
+    background-image: resource("Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Images/info.png");
+    width: 16px;
+    height: 16px;
+
+    margin-right: 16px;
+    margin-left: 16px;
+
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+.iwl-warning-icon {
+    background-image: resource("Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Images/warning.png");
+    width: 16px;
+    height: 16px;
+
+    margin-right: 16px;
+    margin-left: 16px;
+
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+
+.iwl-text-container {
+    align-items: flex-start;
+}
+
+.iwl-text-label {
+    white-space: normal;
+}
+
+.iwl-link-label {
+    color: red;
+    flex-grow: 0;
+    border-bottom-width: 1px; border-bottom-color: red;
+}

@@ -1,0 +1,148 @@
+:root {
+    --c-side-nav-background: rgb(10, 10, 10);
+    --c-collapse-btn-background-hover: grey;
+    --c-pressable-ui-background: rgb(60, 60, 60);
+    --c-pressable-ui-text: white;
+    --c-pressable-ui-text-disabled: rgb(60, 60, 60);
+    --c-list-view-item-hover: rgb(60, 60, 60);
+    --c-list-view-item-selected: rgb(60, 60, 60);
+
+    justify-content: space-between;
+    background-color: var(--c-side-nav-background);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 240px;
+}
+
+.uncollapsed-side-nav {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.collapsed-side-nav {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+#top {
+    width: 100%;
+}
+
+#bottom {
+    width: 100%;
+    overflow: visible;
+}
+
+#bottom #bottom-pages {
+    overflow: visible;
+}
+
+#bottom #unity-content-viewport {
+    overflow: visible;
+}
+
+#bottom #unity-content-container {
+    overflow: visible;
+}
+
+.company-logo {
+    min-height: 50px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Images/oramavr-logo-white.png?fileID=21300000&guid=ac51065fc3ce91d4eb958971fbb6ca4b&type=3#oramavr-logo-white');
+    margin-bottom: 40px;
+}
+
+Label {
+    font-size: 16px;
+    margin: 0;
+}
+
+Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.unity-base-field__input {
+    background-color: var(--c-pressable-ui-background);
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 300px;
+}
+
+.unity-base-popup-field__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+.unity-base-popup-field__text {
+    color: var(--c-pressable-ui-text);
+    font-size: 16px;
+}
+
+.unity-list-view__item {
+    border-radius: 5px;
+    -unity-text-align: middle-left;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.unity-list-view__item:hover {
+    background-color: var(--c-list-view-item-hover);
+}
+
+.unity-collection-view__item--selected {
+    background-color: var(--c-list-view-item-selected);
+}
+
+#collapse-btn {
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    padding: 5px;
+    top: 50%;
+    background-color: var(--c-pressable-ui-background);
+    width: 20px;
+    height: 20px;
+}
+
+#collapse-btn:hover {
+    background-color: var(--c-collapse-btn-background-hover);
+}
+
+.title-enabled {
+    color: var(--c-pressable-ui-text);
+    -unity-background-image-tint-color: var(--c-pressable-ui-text);
+}
+
+.title-disabled {
+    color: var(--c-pressable-ui-text-disabled);
+    -unity-background-image-tint-color: var(--c-pressable-ui-text-disabled);
+}
+
+.h1 {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.h2 {
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.h3 {
+    font-size: 12px;
+    -unity-font-style: bold;
+}

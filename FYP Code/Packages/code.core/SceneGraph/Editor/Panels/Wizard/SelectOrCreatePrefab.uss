@@ -1,0 +1,12 @@
+SelectOrCreatePrefab {
+    flex-direction: row;
+}
+
+.wz-left-hand-side-container {
+    flex-grow: 1;
+}
+
+.wz-right-hand-side-container {
+    flex-grow: 1;
+    flex-direction: column;
+}

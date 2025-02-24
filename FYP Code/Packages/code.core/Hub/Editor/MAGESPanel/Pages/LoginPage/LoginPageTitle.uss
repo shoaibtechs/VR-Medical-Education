@@ -1,0 +1,103 @@
+:root {
+    flex-direction: row;
+    flex-grow: 1;
+    height: 40px;
+    align-items: center;
+    --c-avatar-background: rgb(217, 217, 217);
+    --c-overlay-background: rgb(217, 217, 217);
+}
+
+.avatar-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--c-avatar-background);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.default-avatar {
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    background-image: url('./Images/default-avatar.png');
+}
+
+.custom-avatar {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-avatar Label {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    bottom: -10px;
+    background-color: var(--c-overlay-background);
+    padding: 10px;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+
+.overlay Label {
+    color: black;
+}
+
+.group {
+    flex-direction: column;
+}
+
+.overlay .important {
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+.overlay .regular {
+    font-size: 14px;
+}
+
+.overlay .button {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: link;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    border-width: 0px;
+}
+
+.overlay .button Label {
+    -unity-text-align: middle-left;
+    cursor: link;
+}
+
+.overlay .button .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: link;
+}
+
+#support .icon {
+    background-image: url('./Images/support.png');
+}
+
+#forum .icon {
+    background-image: url('./Images/forum.png');
+}
+
+#log-out .icon {
+    background-image: url('./Images/logout.png');
+}

@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Interaction.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Interaction.Editor.EditHandPoseSceneStage">
+            <summary>
+            A stage in which someone can create/edit a hand pose in isolation.
+            It spawns the Grabbable object and the HandInteractor object in the scene, along with a directional light.
+            The functions like <see cref="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToExtendedPose"/>, <see cref="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToRetractedPose"/>, <see cref="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToPose(MAGES.Interaction.HandPose)"/> can be used to set the hand to a specific pose.
+            Editor auto posing is also available through <see cref="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetEnableAutomaticPose(System.Boolean)"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.DefaultHandPoseSaveFolder">
+            <summary>
+            Gets the default folder where hand poses are saved if a path is not specified.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.OptionsWindow">
+            <summary>
+            Gets or sets the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow"/> that opens when this stage is opened.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.HandPose">
+            <summary>
+            Gets the hand pose that is being edited.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.Grabbable">
+            <summary>
+            Gets the grabbable in the scene.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.Hand">
+            <summary>
+            Gets the hand interactor for which a handpose will be created.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStage.HasUnsavedChanges">
+            <summary>
+            Gets a value indicating whether the hand pose has changed since last save.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.Initialize(MAGES.Interaction.Interactors.HandInteractor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> class.
+            </summary>
+            <param name="hand">The hand for which to create a hand pose.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.Initialize(MAGES.Interaction.Interactors.HandInteractor,MAGES.Interaction.HandPose)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> class.
+            </summary>
+            <param name="hand">The hand to spawn.</param>
+            <param name="handPose">The handpose to edit. Set to <see langword="null"/> if a new one is to be created.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.Initialize(MAGES.Interaction.Interactors.HandInteractor,MAGES.Interaction.Interactables.Grabbable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> class.
+            </summary>
+            <param name="hand">The hand to spawn.</param>
+            <param name="grabbable">The grabbable to spawn.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.Initialize(MAGES.Interaction.Interactors.HandInteractor,MAGES.Interaction.Interactables.Grabbable,MAGES.Interaction.HandPose)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> class.
+            </summary>
+            <param name="hand">The hand to spawn.</param>
+            <param name="grabbable">The grabbable to spawn.</param>
+            <param name="handPose">The handpose to edit. Set to <see langword="null"/> if a new one is to be created.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.RegisterActionOnEditingFinished(UnityEngine.Events.UnityAction{MAGES.Interaction.HandPose})">
+            <summary>
+            Adds an action in the event invoked when the editing finishes.
+            </summary>
+            <param name="onEditingFinished">
+                The action to be called when the editor is closed.
+                <param name="onEditingFinished arg1arg1">The handpose that was edited/created. <see langword="null"/> if the handpose was not saved.</param>
+            </param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.DeregisterActionOnEditingFinished(UnityEngine.Events.UnityAction{MAGES.Interaction.HandPose})">
+            <summary>
+            Removed an action from the event invoked when the editing finishes.
+            </summary>
+            <param name="onEditingFinished">The action to be removed.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SaveHandPose(System.String)">
+            <summary>
+            The current hand pose will be saved to the path specified as new, even if it is already an asset.
+            </summary>
+            <param name="savePath">The path to save the handpose to.</param>
+            <returns>The handpose if the user opted for saving the handpose from the dialog window, <see langword="null"/> otherwise.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SaveHandPose(System.Boolean)">
+            <summary>
+            If the handpose already is an asset then apply changes to it. Else create an new asset in a predefined location and saves it there.
+            </summary>
+            <param name="forceCreateNew">If set to <see langword="true"/> a new handpose will be generated even if the current one is an asset.</param>
+            <returns>The handpose that was saved.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetEnableAutomaticPose(System.Boolean)">
+            <summary>
+            Enables/Disables the automatic pose estimation.
+            </summary>
+            <param name="enabled">Set to <see langword="true"/> to enable the automatic pose estimation.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToExtendedPose">
+            <summary>
+            Sets the extended pose to the hand.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToRetractedPose">
+            <summary>
+            Sets the retracted pose to the hand.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.SetHandToPose(MAGES.Interaction.HandPose)">
+            <summary>
+            Sets a custom pose to the hand.
+            </summary>
+            <param name="pose">The pose to apply to the hand.</param>S
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.OnOptionsWindowClosed">
+            <summary>
+            Called from the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow"/> when the window is closed.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.OnOpenStage">
+            <inheritdoc cref="M:UnityEditor.SceneManagement.PreviewSceneStage.OnOpenStage"/>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.OnCloseStage">
+            <inheritdoc cref="M:UnityEditor.SceneManagement.PreviewSceneStage.OnCloseStage"/>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.OpenOptionsWindow">
+            <summary>
+            Opens the options window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.CloseOptionsWindow">
+            <summary>
+            Closes the OptionsWindow.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStage.CreateHeaderContent">
+            <inheritdoc cref="!:PreviewSceneStage.CreateHeaderContent"/>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow" -->
+        <member name="P:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow.EditingStage">
+            <summary>
+            Gets or sets the <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> that is being edited using this OptionsWindow.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow.ShowHandPoseEditorSettingsWindow(System.String,MAGES.Interaction.Editor.EditHandPoseSceneStage)">
+            <summary>
+            Creates an new <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow"/> or gets the existing one.
+            </summary>
+            <param name="title">The title of the window.</param>
+            <param name="editingStage">The <see cref="T:MAGES.Interaction.Editor.EditHandPoseSceneStage"/> this window is for.</param>
+            <returns>The window created or already open.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.EditHandPoseSceneStageOptionsWindow.OnEditingStageClosed">
+            <summary>
+            Should be called when the editing stage is closed.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Editor.FingerPoserEditor">
+            <summary>
+            Editor for <see cref="T:MAGES.Interaction.FingerPoser"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.FingerPoserEditor.DrawWireCapsule(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Color,System.Single,UnityEngine.Rendering.CompareFunction)">
+            <summary>
+            Draws a wirte capsule between two points.
+            </summary>
+            <param name="pos1">Capsule top position.</param>
+            <param name="pos2">Capsule bottom position.</param>
+            <param name="radius">Radius.</param>
+            <param name="color">Line color.</param>
+            <param name="lineThickness">Line thickness.</param>
+            <param name="depthTest">The depth test compare function.</param>
+        </member>
+        <member name="T:MAGES.Interaction.Editor.GrabbableEditor">
+            <summary>
+            Custom property drawer for Grabbable component.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.GrabbableEditor.CreateInspectorGUI">
+            <summary>
+            Creates the VisualElement for the Inspector of <see cref="T:MAGES.Interaction.Interactables.Grabbable"/> component.
+            </summary>
+            <returns>The inspector's VisualElement.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.Editor.HandPoseListInspector">
+            <summary>
+            An inspector for showing hand poses as a list.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseListInspector.#ctor(MAGES.Interaction.Interactables.Grabbable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Interaction.Editor.HandPoseListInspector"/> class.
+            </summary>
+            <param name="source">The grabbable to get the handposes from.</param>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseListInspector.CreateGUI">
+            <summary>
+            Creates the handpose inspector gui for a grabbable component.
+            </summary>
+            <returns>The root visual element.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseListInspector.OnEnable">
+            <summary>
+            Called when the inspector is enabled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseListInspector.OnDisable">
+            <summary>
+            Called when the inspector is disabled.
+            </summary>
+        </member>
+        <member name="T:MAGES.Interaction.Editor.HandInteractorEditor">
+            <summary>
+            Custom property drawer for Grabbable component.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandInteractorEditor.CreateInspectorGUI">
+            <summary>
+            Creates the VisualElement for the Inspector of <see cref="T:MAGES.Interaction.Interactors.HandInteractor"/> component.
+            </summary>
+            <returns>The inspector's VisualElement.</returns>
+        </member>
+        <member name="T:MAGES.Interaction.Editor.HandPoseCreatorWindow">
+            <summary>
+            A window to help the user create new handposes for <see cref="T:MAGES.Interaction.Interactables.Grabbable"/> objects.
+            </summary>
+            <seealso cref="T:MAGES.Interaction.HandPose"/>
+            <seealso cref="T:MAGES.Interaction.FingerPose"/>
+            <seealso cref="T:MAGES.Interaction.HandPoser"/>
+            <seealso cref="T:MAGES.Interaction.FingerPoser"/>
+            <seealso cref="T:MAGES.Interaction.Interactables.Grabbable"/>
+        </member>
+        <member name="F:MAGES.Interaction.Editor.HandPoseCreatorWindow.uxml">
+            <summary>
+            The UXML file to use for the window.
+            </summary>
+        </member>
+        <member name="P:MAGES.Interaction.Editor.HandPoseCreatorWindow.OnHandPoseCreated">
+            <summary>
+            Gets or sets the UnityAction to call when a handpose is created.
+            </summary>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseCreatorWindow.ShowWindowForGrabbable(MAGES.Interaction.Interactables.Grabbable)">
+            <summary>
+            Shows the window to edit a pose for a grabbable. The grabbable field will be set to the given grabbable.
+            </summary>
+            <param name="g">The grabbable to create a pose for.</param>
+            <returns>The handpose creator window.</returns>
+        </member>
+        <member name="M:MAGES.Interaction.Editor.HandPoseCreatorWindow.ShowWindow">
+            <summary>
+            Shows the window to edit a generic hand pose.
+            </summary>
+        </member>
+    </members>
+</doc>

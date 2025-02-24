@@ -1,0 +1,39 @@
+:root
+{
+	border-radius: 5px;
+    background-color: #0A0A0A;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    -unity-text-align: upper-left;
+    margin-right: 10px;
+}
+
+#sample-title
+{
+    white-space: normal;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#sample-description
+{
+    flex-grow:1;
+    font-size: 14px;
+    -unity-font-style: italic;
+    color: #808080;
+    white-space: normal;
+}
+
+Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}

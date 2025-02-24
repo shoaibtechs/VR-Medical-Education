@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -522960950, guid: 1c1a21e1309d25de02b27da979cbb376, type: 3}
+  m_Name: MAGES Theme (Default)
+  m_EditorClassIdentifier: 
+  ghostMaterial: {fileID: 2100000, guid: 4830947804b2a9a4eab9dba77a420dca, type: 2}
+  ghostColor: {r: 0, g: 1, b: 0, a: 1}
+  ghostAnimatorController: {fileID: 9100000, guid: 17a23856e40760a4b88e8326071b62dc,
+    type: 2}
+  spatialLabelFont:
+    fontAsset: {fileID: 11400000, guid: 4a6e5d33e298f38409c81f6f8a1318a8, type: 2}
+    size: 8
+    style: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    outlineColor: {r: 0, g: 0, b: 0, a: 1}
+    outlineWidth: 0.1
+  spatialLabelPadding: {x: 4, y: 2, z: 4, w: 2}
+  segmentMaterial: {fileID: 2100000, guid: 975520d67e6e52b4d8de28f75cf7f23d, type: 2}
+  segmentGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 0, g: 0, b: 0, a: 0.29411766}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 28527
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 3
+  segmentWidth: 0.00125

@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.oramavr.mages.core/SceneGraph/Editor/StepsPanel/StepsPanel.uss?fileID=7433441132597879392&amp;guid=e392bdde5df0f1849be3cda345d6bbce&amp;type=3#StepsPanel" />
+    <MAGES.Editor.PopupPanel>
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+            <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);">
+                <ui:VisualElement name="step-events-container" class="step-events" style="flex-grow: 1; background-color: rgb(0, 0, 0); justify-content: flex-start; color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgba(255, 255, 255, 0.47); align-items: stretch; margin-right: 0; margin-left: 0; align-self: stretch; padding-right: 8px; padding-left: 8px; padding-top: 4px;">
+                    <ui:Label tabindex="-1" text="Initialize" display-tooltip-when-elided="true" name="step-event-initialize" class="step-event" />
+                    <ui:Label tabindex="-1" text="Perform" display-tooltip-when-elided="true" name="step-event-perform" class="step-event" />
+                    <ui:Label tabindex="-1" text="Undo" display-tooltip-when-elided="true" name="step-event-undo" class="step-event" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Button text="Add Step  ▼" display-tooltip-when-elided="true" name="add-button" />
+                    <ui:VisualElement name="steps-container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 4px; margin-right: 4px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MAGES.Editor.PopupPanel>
+</ui:UXML>

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:PropertyField binding-path="sceneGraphData" label="Scene Graph" name="graph-data-field" />
+    <uie:PropertyField binding-path="dataContainerModule" label="Data Container" />
+    <uie:PropertyField binding-path="interactionSystemModule" label="Interaction System" />
+    <uie:PropertyField binding-path="networkingModule" label="Networking" />
+    <uie:PropertyField binding-path="analyticsModule" label="Analytics" />
+    <uie:PropertyField binding-path="deviceManagerModule" label="Device Manager" />
+    <uie:PropertyField binding-path="sceneGraphModule" label="Scene Graph" />
+    <uie:PropertyField binding-path="extraModules" label="Extra" />
+    <uie:PropertyField binding-path="theme" label="Theme" />
+</ui:UXML>

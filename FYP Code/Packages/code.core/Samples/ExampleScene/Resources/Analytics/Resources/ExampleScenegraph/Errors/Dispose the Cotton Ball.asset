@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 970764676, guid: 207089db17bfa0d183618047d0b13300, type: 3}
+  m_Name: Dispose the Cotton Ball
+  m_EditorClassIdentifier: 
+  <ActionsScore>k__BackingField: 50
+  <AllObjects>k__BackingField:
+    serializedData:
+    - Key: TimeLimitError1
+      Value:
+        <Type>k__BackingField: 0
+        <InternalType>k__BackingField: MAGES.Analytics.AnalyticsTypes+TimeLimit,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.TimeLimitUI, MAGES.Analytics.Editor,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Category>k__BackingField: 3
+        <Name>k__BackingField: TimeLimitError1
+        <Label>k__BackingField: Time limit
+        <Info>k__BackingField: Action took more than 5s.
+        <Penalty>k__BackingField: 50
+        <TypeOfError>k__BackingField: Procedural
+  <TimeLimitObjects>k__BackingField:
+    serializedData:
+    - Key: TimeLimitError1
+      Value:
+        <Type>k__BackingField: 0
+        <InternalType>k__BackingField: MAGES.Analytics.AnalyticsTypes+TimeLimit,
+          MAGES.Analytics.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <InternalTypeUI>k__BackingField: MAGES.Analytics.Editor.TimeLimitUI, MAGES.Analytics.Editor,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        <Category>k__BackingField: 3
+        <Name>k__BackingField: TimeLimitError1
+        <Label>k__BackingField: Time limit
+        <Info>k__BackingField: Action took more than 5s.
+        <Penalty>k__BackingField: 50
+        <TypeOfError>k__BackingField: Procedural
+        <Time>k__BackingField: 5
+        <Action>k__BackingField: Entire Operation
+        <Bound>k__BackingField: Upper bound
+  <ScoreLimitObjects>k__BackingField:
+    serializedData: []
+  <ErrorColliderObjects>k__BackingField:
+    serializedData: []
+  <InteractionRestrictionObjects>k__BackingField:
+    serializedData: []
+  <RotationRestrictionObjects>k__BackingField:
+    serializedData: []
+  <RangeOfMotionLimitObjects>k__BackingField:
+    serializedData: []
+  <ErrorAngleObjects>k__BackingField:
+    serializedData: []
+  <PerformedWrongActionObjects>k__BackingField:
+    serializedData: []
+  <DidNotPerformRequiredActionObjects>k__BackingField:
+    serializedData: []
+  <CustomTypeObjects>k__BackingField:
+    serializedData: []
+  <WrongAnswerObjects>k__BackingField:
+    serializedData: []
